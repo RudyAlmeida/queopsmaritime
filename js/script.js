@@ -42,3 +42,22 @@ function consultaTempoReal() {
         .catch(x => alert("Par de moedas não encontrado"));
     setTimeout(consultaTempoReal, 10000)
 }
+function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    var nome = profile.getName()
+    var img = profile.getImageUrl()
+    var logImg = document.getElementById('loginImg')
+    console.log(logImg)
+    document.getElementById('paragrafo').innerText = "Nome: "+nome+" Link da imagem de perfil: " + img
+    logImg.src = img
+}
+function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+        console.log('User signed out.');
+    });
+}
