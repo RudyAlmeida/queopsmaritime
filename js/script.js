@@ -65,7 +65,7 @@ function onSignIn(googleUser) {
     console.log(logImg)
     document.getElementById('paragrafo').innerText = "Nome: "+nome+" Link da imagem de perfil: " + img
     logImg.src = img
-    document.getElementById('dropHead').insertAdjacentText('beforeend', nome)
+    document.getElementById('dropText').innerText = nome
     /* document.getElementById('loginBtn').removeAttribute("data-onsuccess")
     document.getElementById('loginBtn').removeAttribute("data-gapiscan")
     document.getElementById('loginBtn').removeAttribute("data-onload")
