@@ -52,14 +52,14 @@ function start() {
     });
 }
 function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
+    let profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
     console.log('Name: ' + profile.getName());
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-    var nome = profile.getName()
-    var img = profile.getImageUrl()
-    var logImg = document.getElementById('loginImg')
+    let nome = profile.getName()
+    let img = profile.getImageUrl()
+    let logImg = document.getElementById('loginImg')
     console.log(logImg)
     document.getElementById('paragrafo').innerText = "Nome: "+nome+" Link da imagem de perfil: " + img
     logImg.src = img
@@ -67,9 +67,14 @@ function onSignIn(googleUser) {
     document.getElementById('loginBtn').removeAttribute("data-onsuccess")
     document.getElementById('loginBtn').setAttribute("onclick", "signOut()")
     console.log(document.getElementById('loginBtn'))
-    var id_token = googleUser.getAuthResponse().id_token;
+    let id_token = googleUser.getAuthResponse().id_token;
     console.log("ID Token: " + id_token);
-    localStorage.setItem('userMail', JSON.stringify(profile.getId()))
+    let userData = {}
+    userData.nome =  profile.getName();
+    userData.mail = profile.getEmail()
+    userData.img = profile.getImageUrl()
+    userData.id = profile.getId()
+    localStorage.setItem('userData', JSON.stringify(userData))
 }
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
@@ -78,7 +83,12 @@ function signOut() {
     });
 }
 
-function getMail(){
-    let googleUser = JSON.parse(localStorage.getItem("userMail"));
-    onSignIn(googleUser)
+function getUser(){
+    let userData = JSON.parse(localStorage.getItem("userData"));
+    if(userData != null){
+        let img = userData.img
+        logImg.src = img
+        let nome = userData.nome
+        document.getElementById('dropText').innerText = nome
+    }
 }
