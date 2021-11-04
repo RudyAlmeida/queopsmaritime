@@ -63,16 +63,8 @@ function onSignIn(googleUser) {
     console.log(logImg)
     document.getElementById('paragrafo').innerText = "Nome: "+nome+" Link da imagem de perfil: " + img
     logImg.src = img
+    console.log(getCookie("UsingGoogleSignIn"))
 }
-function start() {
-            gapi.load('auth2', function () {
-                auth2 = gapi.auth2.init({
-                    client_id: '113301151213-ikv65divt4p5v64laeidjmlsnfkmat5d.apps.googleusercontent.com',
-                    // Scopes to request in addition to 'profile' and 'email'
-                    //scope: 'additional_scope'
-                });
-            });
-        }
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
