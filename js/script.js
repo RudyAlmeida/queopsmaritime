@@ -86,6 +86,7 @@ function signOut() {
 function getUser(){
     let userData = JSON.parse(localStorage.getItem("userData"));
     if(userData != null){
+        let logImg = document.getElementById('loginImg')
         let img = userData.img
         logImg.src = img
         let nome = userData.nome
