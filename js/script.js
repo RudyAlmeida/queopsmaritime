@@ -59,11 +59,13 @@ function onSignIn(googleUser) {
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
     var nome = profile.getName()
     var img = profile.getImageUrl()
+    /* logImg = document.createElement('img')
+    logImg.classList.add("nav-link", "dropdown-toggle") */
     var logImg = document.getElementById('loginImg')
     console.log(logImg)
     document.getElementById('paragrafo').innerText = "Nome: "+nome+" Link da imagem de perfil: " + img
     logImg.src = img
-    document.getElementById('dropHead').innerText = nome
+    document.getElementById('dropHead').beforeend.innerText = nome
     /* document.getElementById('loginBtn').removeAttribute("data-onsuccess")
     document.getElementById('loginBtn').removeAttribute("data-gapiscan")
     document.getElementById('loginBtn').removeAttribute("data-onload")
