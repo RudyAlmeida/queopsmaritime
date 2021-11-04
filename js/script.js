@@ -69,7 +69,7 @@ function onSignIn(googleUser) {
     console.log(document.getElementById('loginBtn'))
     var id_token = googleUser.getAuthResponse().id_token;
     console.log("ID Token: " + id_token);
-    localStorage.setItem('userMail', JSON.stringify(profile.getEmail()))
+    localStorage.setItem('userMail', JSON.stringify(profile.getId()))
 }
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
