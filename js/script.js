@@ -63,9 +63,9 @@ function onSignIn(googleUser) {
     console.log(logImg)
     document.getElementById('paragrafo').innerText = "Nome: "+nome+" Link da imagem de perfil: " + img
     logImg.src = img
-    console.log(getCookie("UsingGoogleSignIn"))
     document.getElementById('loginBtn').removeAttribute("data-onsuccess")
     document.getElementById('loginBtn').setAttribute("onclick", "signOut()")
+    console.log(document.getElementById('loginBtn'))
 
 }
 function signOut() {
