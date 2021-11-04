@@ -67,7 +67,8 @@ function onSignIn(googleUser) {
     document.getElementById('loginBtn').removeAttribute("data-onsuccess")
     document.getElementById('loginBtn').setAttribute("onclick", "signOut()")
     console.log(document.getElementById('loginBtn'))
-
+    var id_token = googleUser.getAuthResponse().id_token;
+    console.log("ID Token: " + id_token);
 }
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
