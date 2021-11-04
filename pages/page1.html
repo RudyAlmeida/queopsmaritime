@@ -16,17 +16,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js" defer></script>
-    <script>
-        function start() {
-            gapi.load('auth2', function () {
-                auth2 = gapi.auth2.init({
-                    client_id: '113301151213-ikv65divt4p5v64laeidjmlsnfkmat5d.apps.googleusercontent.com',
-                    // Scopes to request in addition to 'profile' and 'email'
-                    //scope: 'additional_scope'
-                });
-            });
-        }
-    </script>
+
 </head>
 <body onload="consultaCotação()">
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
