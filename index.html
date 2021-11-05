@@ -1,22 +1,399 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
-<body>
 
-    <!--Bernardo passou por aqui-->
-    
+<body class="corpo">
 
-    <!-- Vamos Arrebentar -->
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html"><img src="./imagens/horizontal_on_transparent_by_logaster.png"
+                    style="width: 300px; height: 150px;" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Serviços
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Cadastro</a></li>
+                            <li><a class="dropdown-item" href="#">Cotação</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Reserva</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./imagens/banner1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./imagens/banner2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./imagens/banner3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <nav>
+        
+        <div class="et_pb_section et_pb_section_3 secao-servicos-home et_pb_with_background et_section_regular">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+            <div class="et_pb_row et_pb_row_2 et_pb_row_5col">
+               
+                <div class="et_pb_column et_pb_column_1_5 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough">
+
+                    <div class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_1 et_clickable et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light et_had_animation">
+
+                        <div class="et_pb_blurb_content" style="height: 156px;">
+                            <div class="et_pb_main_blurb_image"><a
+                                    href="./pages/servicos.html"><span
+                                        class="et_pb_image_wrap"><img src="./imagens/home-icon02.png" alt=""
+                                            class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-animated"></span></a>
+                            </div>
+                            <div class="et_pb_blurb_container">
+                                <h3 class="et_pb_module_header"><a
+                                        href="./pages/servicos.html">Transporte Marítimo</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="et_pb_column et_pb_column_1_5 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough">
+
+                    <div class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_1 et_clickable et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light et_had_animation">
+
+                        <div class="et_pb_blurb_content1" style="height: 156px;">
+                            <div class="et_pb_main_blurb_image"><a
+                                    href="./pages/servicos.html"><span
+                                        class="et_pb_image_wrap"><img src="./imagens/cargafracionada.jpg" style="width: 100px;" alt=""
+                                            class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-animated"></span></a>
+                            </div>
+                            <div class="et_pb_blurb_container">
+                                <h3 class="et_pb_module_header"><a
+                                        href="./pages/servicos.html">Carga Fracionada</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="et_pb_column et_pb_column_1_5 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough">
+
+                    <div class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_2 et_clickable et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light et_had_animation">
+
+                        <div class="et_pb_blurb_content2" style="height: 138px;">
+                            <div class="et_pb_main_blurb_image"><a
+                                    href="./pages/servicos.html"><span
+                                        class="et_pb_image_wrap"><img src="./imagens/home-icon03.png" alt=""
+                                            class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-animated"></span></a>
+                            </div>
+                            <div class="et_pb_blurb_container">
+                                <h3 class="et_pb_module_header"><a href="./pages/servicos.html">Transporte Rodoviário</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="et_pb_column et_pb_column_1_5 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough">
+
+                    <div class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_3 et_clickable et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light et_had_animation"style="">
+
+                        <div class="et_pb_blurb_content3" style="height: 138px;">
+                            <div class="et_pb_main_blurb_image"><a
+                                    href="./pages/servicos.html"><span
+                                        class="et_pb_image_wrap"><img
+                                            src="./imagens/home-icon04.png" alt=""
+                                            class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-animated"></span></a>
+                            </div>
+                            <div class="et_pb_blurb_container">
+                                <h3 class="et_pb_module_header"><a href="./pages/servicos.html">Assessoria Aduaneira</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="et_pb_column et_pb_column_1_5 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+                    <div class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_4 et_clickable et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light et_had_animation">
+
+                        <div class="et_pb_blurb_content4">
+                            <div class="et_pb_main_blurb_image"><a
+                                    href="./pages/servicos.html"><span
+                                        class="et_pb_image_wrap"><img
+                                            src="./imagens/shutterstock-459536515icon2.png"alt=""class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-animated"></span></a>
+                            </div>
+                            <div class="et_pb_blurb_container">
+                                <h3 class="et_pb_module_header"><a href="./pages/servicos.html">Seguro e Armazenagem</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="flat-row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card" style="width: 25rem;">
+                            <img src="./imagens/card1_caminhão.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary"></a>
+                                <div class="box-header">
+                                    <h5 class="box-title">
+                                        <a href="services-detail.html">Por que escolher os serviços Queops
+                                            Maritime?</a>
+                                    </h5>
+                                </div>
+                                <div class="box-content">
+                                    <div class="box-desc">Na Queops Maritime, sabemos que o tempo é essencial.
+                                        Usamos nosso serviço legado de Truckload para moldar o que nossa empresa
+                                        é hoje.</div>
+                                    <div class="box-button">
+                                        <a class="button bg-scheme3" href="./pages/page1.html">Leia mais <i
+                                                class="fa fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card" style="width: 25rem; margin: 3;">
+                            <img src="./imagens/card2_conatainer.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary"></a>
+                                <div class="box-header">
+                                    <h5 class="box-title">
+                                        <a href="services-detail-v1.html">Você está otimizando o espaço no seu
+                                            armazém?</a>
+                                    </h5>
+                                </div>
+                                <div class="box-content">
+                                    <div class="box-desc">Serviços de armazenamento e 3PL(Third-party Logistics)
+                                        oferecidos pelo
+                                        grupo Quelps Maritime tornou-se parte integrante dos requisitos do nosso
+                                        cliente.
+                                        O nossos clientes continuaram a exigir maior economia e eficiência em
+                                        seus negócios.</div>
+                                    <div class="box-button">
+                                        <a class="button bg-scheme3" href="about.html">Leia mais <i
+                                                class="fa fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card" style="width: 25rem;">
+                            <img src="./imagens/card3_estoque.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary"></a>
+                                <div class="box-header">
+                                    <h5 class="box-title">
+                                        <a href="services-detail-v2.html">A galeria do transporte Quelps
+                                            Maritime</a>
+                                    </h5>
+                                </div>
+                                <div class="box-content">
+                                    <div class="box-desc">Algumas imagens destacando nosso armazém, transporte,
+                                        experiência em carga e logística.</div>
+                                    <div class="box-button">
+                                        <a class="button bg-scheme3" href="about.html">Leia mais <i
+                                                class="fa fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+        <!-- ***************************************************COMECEI A SECTION************* -->
+        <section class="sectionFooter">
+            <div id="footer1">
+                <nav class=" classfooter">
+                    <ul>
+                        <p id="institucional"> INSTITUCIONAL </p>
+                        <li>Sobre Nós</li>
+                        <li>Cadastro</li>
+                        <li>Cotação</a></li>
+                        <li>Reserva</li>
+                        <li>Seguro Aduaneiro</li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="footer2">
+                <nav class="classfooter">
+                    <ul>
+                        <section class="redesSociais">
+                            <p id="redesSociais"> SIGA NOSSAS REDES </p>
+                            <div id="central">
+                                <div id="div1">
+                                    <li class="linha">
+                                        <img src="https://img.icons8.com/material-outlined/24/000000/twitter.png"
+                                            alt=" ícone do Twitter" a href="" />
+                                    </li>
+                                </div>
+                                <div id="div2">
+                                    <li>
+                                        <img src="https://img.icons8.com/material-rounded/24/000000/linkedin.png"
+                                            alt="ícone do linkedIn " />
+                                    </li>
+                                </div>
+                                <div id="div3">
+                                    <li>
+                                        <img src="https://img.icons8.com/material-outlined/24/000000/instagram-new--v1.png"
+                                            alt="ícone do instagram" />
+                                    </li>
+                                </div>
+                                <div id="div4">
+                                    <li>
+                                        <img src="https://img.icons8.com/material-rounded/24/000000/facebook-new.png"
+                                            alt="ícone do facebook" />
+                                    </li>
+                                </div>
+                            </div>
+                        </section>
+                    </ul>
+                </nav>
+            </div>
+            <div id="footer3">
+                <nav class=" classfooter">
+                    <ul>
+                        <p id="central"> FALE CONOSCO </p>
+                        <li> <img src="https://img.icons8.com/material-sharp/24/000000/no-phones--v1.png"
+                                alt=" ícone de telefone " /> (XX) XXXX-XXXX</li>
+                        <li><img src="https://img.icons8.com/material-outlined/24/000000/email.png"
+                                alt="ícone de email " />
+                            queupsmaritime@gmail.com.br </li>
+                        <li><img src="https://img.icons8.com/material/24/000000/internet.png"
+                                alt="ícone de servidor " />
+                            www.queupsmaritime.com.br </li>
+                        <li><img src="https://img.icons8.com/material/24/000000/marker--v1.png" alt="ícone de mapa" />
+                            Rua Coronel Lisboa, Vila Mariana-SP, Brasil, CEP 04041-050.
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <!-- *******************************************************FECHEI A SECTION*************
+        <!-************************************* DIV PARA FORMAS DE PAGAMENTO -->
+        <!-- <p id="formaPag"> Formas de pagamento:</p>
+        <div id="pagamento">
+            <div class="pagamento">
+                <li>
+                    <img src="https://img.icons8.com/fluency/48/000000/mastercard.png" alt="ícone do cartão " />
+                </li>
+            </div>
+            <div class="pagamento">
+                <li>
+                    <img src="https://img.icons8.com/fluency/48/000000/visa.png" alt="ícone do cartão" />
+                </li>
+            </div>
+            <div class="pagamento">
+                <li>
+                    <img src="https://img.icons8.com/fluency/48/000000/card-in-use-1.png" />
+                </li>
+            </div>
+            <div class="pagamento">
+                <li>
+                    <img src="https://img.icons8.com/color/50/000000/mercado-pago.png" />
+                </li>
+            </div>
+            <div class="pagamento">
+                <li>
+                    <img src="https://img.icons8.com/color/48/000000/paypal.png" />
+                </li>
+            </div>
+            <div class="pagamento">
+                <li>
+                    <img src="https://img.icons8.com/fluency/48/000000/diners-club.png" />
+                </li>
+            </div>
+            <div class="pagamento">
+                <li>
+                    <img src="https://img.icons8.com/color/48/000000/american-express-squared.png" />
+                </li>
+            </div>
+        </div>  -->
+
+    </footer>
+    <section id="rodape">
+        <p>
+            Copyright © 2021 Queops Maritime | Todos os direitos reservados | Políticas de
+            Privacidade | Políticas de
+            Cookies
+        </p>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
