@@ -3,7 +3,7 @@ Projeto desenvolvido durante o curso de Web Full Stack da SoulCode Academy
 
 
 SoulCode Challenge 💡
-Desafio de HTML, CSS , JAVASCRIPT , JQUERY proposto pela Soul Code, EDTECH brasileira com inclusão social.
+Desafio de HTML, CSS , JAVASCRIPT , JQUERY  e BOOTSTRAP proposto pela Soul Code, EDTECH brasileira com inclusão social.
 
 SoulCode
 Techs 🛠
@@ -11,6 +11,8 @@ HTML5
 CSS
 JAVASCRIPT
 JQUERY
+BOOTSTRAP
+
 Authors 👨‍💻
 GitHub: @Polly-BF
 GitHub: @Rodolpho
