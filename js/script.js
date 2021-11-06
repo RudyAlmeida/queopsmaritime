@@ -59,20 +59,18 @@ function onSignIn(googleUser) {
     let img = profile.getImageUrl()
     let logImg = document.getElementById('loginImg')
     console.log(logImg)
-    document.getElementById('paragrafo').innerText = "Nome: " + nome + " Link da imagem de perfil: " + img
     logImg.src = img
     document.getElementById('dropText').innerText = nome
     document.getElementById('loginBtn').removeAttribute("data-onsuccess")
     document.getElementById('loginBtn').setAttribute("onclick", "signOut()")
     console.log(document.getElementById('loginBtn'))
-    let id_token = googleUser.getAuthResponse().id_token;
-    console.log("ID Token: " + id_token);
     let userData = {}
     userData.nome = profile.getName();
     userData.mail = profile.getEmail()
     userData.img = profile.getImageUrl()
     userData.id = profile.getId()
     localStorage.setItem('userData', JSON.stringify(userData))
+    console.log(localStorage)
 }
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
