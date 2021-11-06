@@ -28,7 +28,7 @@ function calcBid(bidList) {
     $('#variacao').text('Variação no Periodo: ' + variacaoBid)
     let bidMedio = (bidTotal / bidList.length).toFixed(2)
     $('#media').text('Media no periodo: ' + bidMedio)
-    
+
 }
 function consultaTempoReal() {
     $('#cotacao').text('Dentro')
@@ -81,7 +81,7 @@ function signOut() {
         localStorage.clear();
         console.log('User signed out.');
         console.log(localStorage)
-        
+
     });
 }
 
@@ -96,7 +96,7 @@ function getUser() {
     }
 }
 
-function cabecalho(){
+function cabecalho() {
     let header = $('header')
     let cabecalho = `<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #e3f2fd;">
     <div class="container-fluid">
@@ -145,7 +145,7 @@ function cabecalho(){
                         <span id="dropText">Cadastre-se / Login</span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink" style="background-color: #e3f2fd;">
-                        <li><button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#exampleModal">
+                        <li><button type="button" class="btn btn-primary dropdown-item" onclick="abrirModal()">
                         Perfil
                       </button></li>
                         <li><a class="dropdown-item" href="#">Historico</a></li>
@@ -156,15 +156,15 @@ function cabecalho(){
         </div>
     </div>
 </nav>`
-header.append(cabecalho)
-        $('a.active').removeClass('active');
-        console.log(location.pathname)
-        $('a[href="' + location.pathname + '"]').addClass('active');
+    header.append(cabecalho)
+    $('a.active').removeClass('active');
+    console.log(location.pathname)
+    $('a[href="' + location.pathname + '"]').addClass('active');
 }
 $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')
-  })
-function rodapePrincipal(){
+})
+function rodapePrincipal() {
     let footer = $("#footer")
     let rodape = `<!-- ***************************************************COMECEI A SECTION************* -->
     <section class="sectionFooter">
@@ -276,7 +276,7 @@ function rodapePrincipal(){
     </div>  -->`
     footer.append(rodape)
 }
-function rodapeSecundario(){
+function rodapeSecundario() {
     let rodape2 = $("#rodape")
     console.log(rodape2)
     let appendRodape = `<p>
@@ -286,13 +286,43 @@ function rodapeSecundario(){
 </p>`
     rodape2.append(appendRodape)
 }
+function criarModal() {
+    let body = $("body")
+    let modal = `
+      <div class="modal" tabindex="-1" id="minhaModal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" onclick="fecharModal()" aria-label="Close"></button>
+                </div>
+                <div class="container prod-zoom">
+                <div id="loginBtn" class="g-signin2" data-onsuccess="onSignIn"></div>
+                </div>
+            </div>
+        </div>
+    </div>`
+    body.append(modal)
+}
 
-function inicar(){
+function inicar() {
     rodapePrincipal();
     cabecalho();
+    criarModal() 
     consultaCotação();
     consultaTempoReal();
     getUser();
     rodapeSecundario();
 }
-
+function abrirModal() {
+    var modal = document.getElementById("minhaModal1");
+    var elementoBootstrap = new bootstrap.Modal(modal);
+    elementoBootstrap.show();
+}
+function fecharModal(){
+   $("#minhaModal1").removeClass("in");
+   $(".modal-backdrop").remove();
+   $('body').removeClass('modal-open');
+   $('body').css('padding-right', '');
+   $("#minhaModal1").hide();
+}
