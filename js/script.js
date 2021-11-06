@@ -75,10 +75,15 @@ function onSignIn(googleUser) {
     localStorage.setItem('userData', JSON.stringify(userData))
 }
 function signOut() {
-    console.log('funcionou')
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
+        document.getElementById('dropText').innerText = "Cadastre-se / Login"
+        let logImg = document.getElementById('loginImg')
+        logImg.src = "/img/person-circle.svg"
+        localStorage.clear();
         console.log('User signed out.');
+        console.log(localStorage)
+        
     });
 }
 
@@ -137,7 +142,7 @@ function cabecalho(){
                 <li class="nav-item dropdown">
                     <a id="dropHead" class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img id='loginImg' alt="" src="../img/person-circle.svg" class="bi bi-person-circle"
+                        <img id='loginImg' alt="" src="/img/person-circle.svg" class="bi bi-person-circle"
                             viewBox="0 0 16 16">
                         <span id="dropText">Cadastre-se / Login</span>
                     </a>
