@@ -5,6 +5,7 @@
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
+    font-size: 1.5vw;
 }
 
 .flat-row{
@@ -96,8 +97,8 @@
 .sectionFooter {
     padding-top: 16px;
     width: 100%;
-    height: 240px;
-    background-color:#e3f2fd;
+    height: 17vw;
+    background-color:#1F6D69;
     color: #0f0f0f;
     border-bottom: solid #E4C54A 1px;
     display: block;
@@ -115,7 +116,7 @@
     float: left;
     position: relative;
     text-align: center;
-    color: #0f0f0f;
+    color: #F1BE07;
  
  }
  
@@ -150,7 +151,7 @@
     float: left;
     position: relative;
     text-align: center;
-    color: #0f0f0f;
+    color: #F1BE07;
  }
  
  #footer3 {
@@ -159,15 +160,15 @@
     float: left;
     position: relative;
     text-align: center;
-    color: #0f0f0f;
+    color: #F1BE07;
  }
  #rodape {
    text-align: center;
-   background-color: #ffffff;
+   background-color: #1F6D69;
    color: #0f0f0f;
    margin: 0px;    
    width: 100%;
-   height: 35px;
+   height: 2vw;
    font-size: small;
   } 
 
@@ -204,7 +205,8 @@
  
 #loginImg{
     border-radius: 50px;
-    width: 20%;
+    width: 4vw;
 }
-
-
+.nav-link{
+    color:#F1BE07 !important;
+}

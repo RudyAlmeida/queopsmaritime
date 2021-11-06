@@ -93,23 +93,24 @@ function getUser() {
         logImg.src = img
         let nome = userData.nome
         document.getElementById('dropText').innerText = nome
+        $("#contato").val(userData.nome)
     }
 }
 
 function cabecalho() {
     let header = $('header')
-    let cabecalho = `<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #e3f2fd;">
+    let cabecalho = `<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #1F6D69;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/queopsmaritime/index.html"><img src="./imagens/horizontal_on_transparent_by_logaster.png"
-                style="width: 300px; height: 150px;" alt=""></a>
+        <a class="navbar-brand" href="/queopsmaritime/index.html"><img src="./imagens/Keops.gif"
+                style="width: 9vw; height: 6.5vw;" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNavDarkDropdown, #navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color: #F1BE07";>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                <li class="nav-item fontColorNav" >
                     <a class="nav-link active" aria-current="page" href="/queopsmaritime/index.html">Home</a>
                 </li>
                 <li class="nav-item">
@@ -135,12 +136,12 @@ function cabecalho() {
                 </li>
             </ul>
         </div>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDarkDropdown" style="background-color: #e3f2fd;">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDarkDropdown" style="background-color: #1F6D69;">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a id="dropHead" class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img id='loginImg' alt="" src="img/person-circle.svg" class="bi bi-person-circle"
+                        <img id='loginImg' alt="" src="imagens/person-circle.svg" class="bi bi-person-circle"
                             viewBox="0 0 16 16">
                         <span id="dropText">Cadastre-se / Login</span>
                     </a>
@@ -216,17 +217,17 @@ function rodapePrincipal() {
             </nav>
         </div>
         <div id="footer3">
-            <nav class=" classfooter">
+            <nav class="classfooter">
                 <ul>
                     <p id="central"> FALE CONOSCO </p>
                     <li> <img src="https://img.icons8.com/material-sharp/24/000000/no-phones--v1.png"
                             alt=" ícone de telefone " /> (XX) XXXX-XXXX</li>
                     <li><img src="https://img.icons8.com/material-outlined/24/000000/email.png"
                             alt="ícone de email " />
-                        queupsmaritime@gmail.com.br </li>
+                        queopsmaritime@gmail.com.br </li>
                     <li><img src="https://img.icons8.com/material/24/000000/internet.png"
                             alt="ícone de servidor " />
-                        www.queupsmaritime.com.br </li>
+                        www.queopsmaritime.com.br </li>
                     <li><img src="https://img.icons8.com/material/24/000000/marker--v1.png" alt="ícone de mapa" />
                         Rua Coronel Lisboa, Vila Mariana-SP, Brasil, CEP 04041-050.
                     </li>
@@ -326,3 +327,143 @@ function fecharModal(){
    $('body').css('padding-right', '');
    $("#minhaModal1").hide();
 }
+var dadosCNPJ = [];
+function getCNPJ(){
+    let cnpj = $("#cnpj").val();
+    console.log(cnpj)
+    consultaCNPJ(cnpj)
+    
+}
+function consultaCNPJ(cnpj) {
+   // Limpa o CNPJ para conter somente numeros, removendo traços e pontos
+   cnpj = cnpj.replace(/\D/g, '');
+
+   $.ajax({
+       'url': 'https://www.receitaws.com.br/v1/cnpj/' + cnpj,
+       'type': "GET",
+        'dataType': 'jsonp',
+        'success': function(dado){
+            console.log(dado)
+            tratarCNPJ(dado)
+        }
+   })
+   
+}
+function tratarCNPJ(dado){
+    var dadosCNPJ = dado
+    console.log(dadosCNPJ.situacao)
+    if(dadosCNPJ.situacao != "ATIVA"){
+        console.log("Parar")
+    }else{
+        $("#situacao").val(dadosCNPJ.situacao);
+        $("#razaoSocial").val(dadosCNPJ.nome);
+        $("#nomeFantasia").val(dadosCNPJ.fantasia);
+        $("#email").val(dadosCNPJ.email);
+        $("#telefone").val(dadosCNPJ.telefone);
+        $("#cep").val(dadosCNPJ.cep);
+        $("#logradouro").val(dadosCNPJ.logradouro);
+        $("#numero").val(dadosCNPJ.numero);
+        $("#complemento").val(dadosCNPJ.complemento);
+        $("#bairro").val(dadosCNPJ.bairro);
+        $("#cidade").val(dadosCNPJ.municipio);
+        $("#estado").val(dadosCNPJ.uf);
+    }
+}
+
+function validarForm(){
+    if ($("#razaoSocial").val().length < 3) {
+        alert("Preencha corretamente a razão social");
+        document.cadastro.razaoSocial.focus()
+        return false;
+    }
+     if ($("#contato").val().length < 3) {
+        alert("Preencha o nome da pessoa de contato");
+        document.cadastro.contato.focus()
+        return false;
+    } 
+    if ($("#email").val().length < 3) {
+        alert("Preencha o e-mail para contato");
+        document.cadastro.email.focus()
+        return false;
+    }
+    if ($("#telefone").val().length < 10) {
+        alert("Preencha o telefone para contato");
+        document.cadastro.telefone.focus()
+        return false;
+    }
+    if ($("#celular").val().length < 10) {
+        alert("Preencha o celular para contato");
+        document.cadastro.celular.focus()
+        return false;
+    }
+    if ($("#cep").val().length < 5) {
+        alert("Preencha o CEP para contato");
+        document.cadastro.cep.focus()
+        return false;
+    }
+    if ($("#logradouro").val().length < 5) {
+        alert("Preencha a Rua corretamente");
+        document.cadastro.logradouro.focus()
+        return false;
+    }
+    if ($("#cidade").val().length < 5) {
+        alert("Preencha a cidade corretamente");
+        document.cadastro.cidade.focus()
+        return false;
+    }
+    if ($("#estado").val().length < 2) {
+        alert("Preencha o estado corretamente");
+        document.cadastro.estado.focus()
+        return false;
+    }
+    if ($("#pais").val().length < 5) {
+        alert("Preencha o País corretamente");
+        document.cadastro.pais.focus()
+        return false;
+    }
+    if ($("#transacao").val() === "") {
+        alert("Selecione o Tipo de Transação");
+        document.cadastro.transacao.focus()
+        return false;
+    }
+    if ($("#carga").val() === "") {
+        alert("Selecione o Tipo de Carga");
+        document.cadastro.carga.focus()
+        return false;
+    }
+    if ($("#quantidadeVol").val().length < 1) {
+        alert("Selecione a Quantidade de volumes");
+        document.cadastro.quantidadeVol.focus()
+        return false;
+    }
+    if ($("#peso").val().length < 1) {
+        alert("Forneça o peso da carga");
+        document.cadastro.peso.focus()
+        return false;
+    }
+    if ($("#cubagem").val().length < 1) {
+        alert("Forneça a metragem da carga");
+        document.cadastro.cubagem.focus()
+        return false;
+    }
+    if ($("#origem").val() === "") {
+        alert("Selecione o porto de Origem");
+        document.cadastro.origem.focus()
+        return false;
+    }
+    if ($("#destino").val() === "") {
+        alert("Selecione o porto de Destino");
+        document.cadastro.destino.focus();
+        return false;
+    }
+    if ($("#valorMer").val() === "") {
+        alert("Forneça o valor da mercadoria");
+        document.cadastro.valorMer.focus()
+        return false;
+    }
+    if ($("#descricaoMercadoria").val() === "") {
+        alert("Forneça o valor da mercadoria");
+        document.cadastro.descricaoMercadoria.focus()
+        return false;
+    }
+}   
