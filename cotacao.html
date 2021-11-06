@@ -19,13 +19,129 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/cotacao.css">
 </head>
 
 <body class="corpo" onload="inicar()">
     <header id="header">
     </header>
-    
+
+    <div class="container mt-4 mb-4">
+        <form class="row g-3">
+            <fieldset class="scheduler-border">
+                <legend>Dados da Empresa:</legend>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <label for="razaoSocial" class="form-label">Razão Social:</label>
+                    <input type="text" class="form-control" id="razaoSocial">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <label for="nomeFantasia" class="form-label">Nome Fantasia:</label>
+                    <input type="text" class="form-control" id="nomeFantasia">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <label for="contato" class="form-label">Contato:</label>
+                    <input type="text" class="form-control" id="contato">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <label for="email" class="form-label">E-mail:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <label for="cnpj" class="form-label">CNPJ:</label>
+                    <input type="number" class="form-control" id="cnpj">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <label for="telefone" class="form-label">Telefone:</label>
+                    <input type="number" class="form-control" id="telefone">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <label for="celular" class="form-label">Celular:</label>
+                    <input type="number" class="form-control" id="celular">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <label for="cep" class="form-label">CEP:</label>
+                    <input type="number" class="form-control" id="cep">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <label for="cidade" class="form-label">Cidade:</label>
+                    <input type="text" class="form-control" id="cidade">
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-12">
+                    <label for="estado" class="form-label">Estado:</label>
+                    <select id="estado" class="form-select">
+                        <option selected>Selecione</option>
+                        <option>...</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset class="border p-2">
+                <legend>Dados da Carga:</legend>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <label for="transacao" class="form-label">Tipo de Transação:</label>
+                    <select id="transacao" class="form-select">
+                        <option selected>Selecione</option>
+                        <option>Exportação</option>
+                        <option>Importação</option>
+                    </select>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <label for="carga" class="form-label">Tipo de Carga:</label>
+                    <select id="carga" class="form-select">
+                        <option selected>Selecione</option>
+                        <option>Refrigerada</option>
+                        <option>Seca</option>
+                    </select>
+                </div>
+                <label for="tamanho">Tamanho da Remessa:</label>
+                <div class="row g-3">
+                    <div class="col-sm-7">
+                        <input type="number" class="form-control" placeholder="Quantidade de Volumes"
+                            aria-label="Quantidade de Volumes">
+                    </div>
+                    <div class="col-sm">
+                        <input type="number" class="form-control" placeholder="Peso da Mercadoria (tonelagem)"
+                            aria-label="Peso da mercadoria em tonelagem">
+                    </div>
+                    <div class="col-sm">
+                        <input type="number" class="form-control" placeholder="Cubagem(m³)"
+                            aria-label="Cubagem em metros cúbicos">
+                    </div>
+                </div>
+                </label>
+                <div class="col-md-4">
+                    <label for="origem" class="form-label">Porto de Origem:</label>
+                    <select id="origem" class="form-select">
+                        <option selected>Selecione</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="destino" class="form-label">Porto de Destino:</label>
+                    <select id="origem" class="form-select">
+                        <option selected>Selecione</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="valor" class="form-label">Valor da Mercadoria:</label>
+                    <input type="number" class="form-control" id="valor">
+                </div>
+                <div class="col-md-6">
+                    <label for="descricaoMercadoria" class="form-label">Descrição da Mercadoria:</label>
+                    <textarea class="form-control" id="descricaoMercadoria"
+                        placeholder="Ex.: Química ou perigosa? Contém bateria? Necessita de controle de temperatura? Pode ser empilhado? Restrições de embarque?"
+                        aria-label="Química ou perigosa? Contém bateria? Necessita de controle de temperatura? Pode ser empilhado? Existe restrições de embarque?"></textarea>
+                </div>
+            </fieldset>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary mx-3 mt-3 mb-3" onclick="enviardados()"
+                    value="Exibir Alert">Enviar</button>
+                <button type="reset" class="btn btn-primary mx-3 mt-3 mb-3">Limpar</button>
+            </div>
+        </form>
+    </div>
+
+
     <footer id="footer">
     </footer>
     <section id="rodape">
