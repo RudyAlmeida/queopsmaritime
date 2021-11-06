@@ -75,6 +75,7 @@ function onSignIn(googleUser) {
     localStorage.setItem('userData', JSON.stringify(userData))
 }
 function signOut() {
+    console.log('funcionou')
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
         console.log('User signed out.');
@@ -145,7 +146,7 @@ function cabecalho(){
                         Perfil
                       </button></li>
                         <li><a class="dropdown-item" href="#">Historico</a></li>
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                        <li><button class="dropdown-item" onclick="signOut()">Logout</button></li>
                     </ul>
                 </li>
             </ul>
