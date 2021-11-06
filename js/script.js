@@ -96,7 +96,7 @@ function cabecalho(){
     let header = $('header')
     let cabecalho = `<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #e3f2fd;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html"><img src="./imagens/horizontal_on_transparent_by_logaster.png"
+        <a class="navbar-brand" href="/queopsmaritime/index.html"><img src="./imagens/horizontal_on_transparent_by_logaster.png"
                 style="width: 300px; height: 150px;" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNavDarkDropdown, #navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -106,23 +106,23 @@ function cabecalho(){
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/queopsmaritime/index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/sobreNos.html">Sobre Nós</a>
+                    <a class="nav-link" href="/queopsmaritime/sobreNos.html">Sobre Nós</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/servicos.html">
+                    <a class="nav-link" href="/queopsmaritime/servicos.html">
                         Serviços
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/reserva.html">
+                    <a class="nav-link" href="/queopsmaritime/reserva.html">
                         Reserva
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/cotacao.html">
+                    <a class="nav-link" href="/queopsmaritime/cotacao.html">
                         Cotação
                     </a>
                 </li>
