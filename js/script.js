@@ -141,8 +141,8 @@ function cabecalho(){
                         <span id="dropText">Cadastre-se / Login</span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink" style="background-color: #e3f2fd;">
-                        <li><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        Launch demo modal
+                        <li><button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#exampleModal">
+                        Perfil
                       </button></li>
                         <li><a class="dropdown-item" href="#">Historico</a></li>
                         <li><a class="dropdown-item" href="#">Logout</a></li>
@@ -282,6 +282,7 @@ function rodapeSecundario(){
 </p>`
     rodape2.append(appendRodape)
 }
+
 function inicar(){
     rodapePrincipal();
     cabecalho();
@@ -290,9 +291,4 @@ function inicar(){
     getUser();
     rodapeSecundario();
 }
-function abrirModal(){
-    $("#modal").css("display", "block");
-}
-function fecharModal() {
-    $("#modal").css("display", "none");
-}
+

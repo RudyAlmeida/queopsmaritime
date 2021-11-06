@@ -22,32 +22,31 @@
 
 </head>
 
-<body class="corpo" onload="inicar()">
+<body class="corpo" onload="inicar()" id="body">
     <header id="header">
     </header>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-      </button>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="loginBtn" class="g-signin2" data-onsuccess="onSignIn"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
             </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
         </div>
-      </div>
-    
+    </div>
+
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -80,24 +79,24 @@
         </button>
     </div>
     <nav>
-        
+
         <div class="et_pb_section et_pb_section_3 secao-servicos-home et_pb_with_background et_section_regular">
 
             <div class="et_pb_row et_pb_row_2 et_pb_row_5col">
-               
+
                 <div class="et_pb_column et_pb_column_1_5 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough">
 
-                    <div class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_1 et_clickable et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light et_had_animation">
+                    <div
+                        class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_1 et_clickable et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light et_had_animation">
 
                         <div class="et_pb_blurb_content" style="height: 156px;">
-                            <div class="et_pb_main_blurb_image"><a
-                                    href="./pages/servicos.html"><span
+                            <div class="et_pb_main_blurb_image"><a href="./pages/servicos.html"><span
                                         class="et_pb_image_wrap"><img src="./imagens/home-icon02.png" alt=""
                                             class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-animated"></span></a>
                             </div>
                             <div class="et_pb_blurb_container">
-                                <h3 class="et_pb_module_header"><a
-                                        href="./pages/servicos.html">Transporte Marítimo</a></h3>
+                                <h3 class="et_pb_module_header"><a href="./pages/servicos.html">Transporte Marítimo</a>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -105,17 +104,18 @@
 
                 <div class="et_pb_column et_pb_column_1_5 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough">
 
-                    <div class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_1 et_clickable et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light et_had_animation">
+                    <div
+                        class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_1 et_clickable et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light et_had_animation">
 
                         <div class="et_pb_blurb_content1" style="height: 156px;">
-                            <div class="et_pb_main_blurb_image"><a
-                                    href="./pages/servicos.html"><span
-                                        class="et_pb_image_wrap"><img src="./imagens/cargafracionada.jpg" style="width: 100px;" alt=""
+                            <div class="et_pb_main_blurb_image"><a href="./pages/servicos.html"><span
+                                        class="et_pb_image_wrap"><img src="./imagens/cargafracionada.jpg"
+                                            style="width: 100px;" alt=""
                                             class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-animated"></span></a>
                             </div>
                             <div class="et_pb_blurb_container">
-                                <h3 class="et_pb_module_header"><a
-                                        href="./pages/servicos.html">Carga Fracionada</a></h3>
+                                <h3 class="et_pb_module_header"><a href="./pages/servicos.html">Carga Fracionada</a>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -123,16 +123,17 @@
 
                 <div class="et_pb_column et_pb_column_1_5 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough">
 
-                    <div class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_2 et_clickable et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light et_had_animation">
+                    <div
+                        class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_2 et_clickable et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light et_had_animation">
 
                         <div class="et_pb_blurb_content2" style="height: 138px;">
-                            <div class="et_pb_main_blurb_image"><a
-                                    href="./pages/servicos.html"><span
+                            <div class="et_pb_main_blurb_image"><a href="./pages/servicos.html"><span
                                         class="et_pb_image_wrap"><img src="./imagens/home-icon03.png" alt=""
                                             class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-animated"></span></a>
                             </div>
                             <div class="et_pb_blurb_container">
-                                <h3 class="et_pb_module_header"><a href="./pages/servicos.html">Transporte Rodoviário</a></h3>
+                                <h3 class="et_pb_module_header"><a href="./pages/servicos.html">Transporte
+                                        Rodoviário</a></h3>
                             </div>
                         </div>
                     </div>
@@ -140,17 +141,17 @@
                 <div class="et_pb_column et_pb_column_1_5 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough">
 
 
-                    <div class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_3 et_clickable et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light et_had_animation"style="">
+                    <div class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_3 et_clickable et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light et_had_animation"
+                        >
 
                         <div class="et_pb_blurb_content3" style="height: 138px;">
-                            <div class="et_pb_main_blurb_image"><a
-                                    href="./pages/servicos.html"><span
-                                        class="et_pb_image_wrap"><img
-                                            src="./imagens/home-icon04.png" alt=""
+                            <div class="et_pb_main_blurb_image"><a href="./pages/servicos.html"><span
+                                        class="et_pb_image_wrap"><img src="./imagens/home-icon04.png" alt=""
                                             class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-animated"></span></a>
                             </div>
                             <div class="et_pb_blurb_container">
-                                <h3 class="et_pb_module_header"><a href="./pages/servicos.html">Assessoria Aduaneira</a></h3>
+                                <h3 class="et_pb_module_header"><a href="./pages/servicos.html">Assessoria Aduaneira</a>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -158,16 +159,18 @@
                 <div
                     class="et_pb_column et_pb_column_1_5 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough et-last-child">
 
-                    <div class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_4 et_clickable et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light et_had_animation">
+                    <div
+                        class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_4 et_clickable et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light et_had_animation">
 
                         <div class="et_pb_blurb_content4">
-                            <div class="et_pb_main_blurb_image"><a
-                                    href="./pages/servicos.html"><span
-                                        class="et_pb_image_wrap"><img
-                                            src="./imagens/shutterstock-459536515icon2.png"alt=""class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-animated"></span></a>
+                            <div class="et_pb_main_blurb_image"><a href="./pages/servicos.html"><span
+                                        class="et_pb_image_wrap"><img src="./imagens/shutterstock-459536515icon2.png"
+                                            alt=""
+                                            class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-animated"></span></a>
                             </div>
                             <div class="et_pb_blurb_container">
-                                <h3 class="et_pb_module_header"><a href="./pages/servicos.html">Seguro e Armazenagem</a></h3>
+                                <h3 class="et_pb_module_header"><a href="./pages/servicos.html">Seguro e Armazenagem</a>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -257,7 +260,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -269,8 +272,17 @@
     </section>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
 </body>
 
