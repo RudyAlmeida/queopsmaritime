@@ -26,10 +26,18 @@
     <header id="header">
     </header>
 
-    <div class="container mt-4 mb-4">
-        <form class="row g-3">
-            <fieldset class="scheduler-border">
+    <div class="container-fluid d-flex justify-content-center mt-4 mb-4">
+        <form class="row g-3 justify-content-center">
+            <fieldset class="border row g-3 p-2 w-75">
                 <legend>Dados da Empresa:</legend>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <label for="cnpj" class="form-label">CNPJ:</label>
+                    <input type="text" class="form-control" id="cnpj">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <label for="situacao" class="form-label">Situação:</label>
+                    <input type="text" class="form-control" id="sitacao" disabled>
+                </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <label for="razaoSocial" class="form-label">Razão Social:</label>
                     <input type="text" class="form-control" id="razaoSocial">
@@ -46,9 +54,13 @@
                     <label for="email" class="form-label">E-mail:</label>
                     <input type="email" class="form-control" id="email">
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <!-- <div class="col-lg-4 col-md-6 col-sm-12">
                     <label for="cnpj" class="form-label">CNPJ:</label>
                     <input type="number" class="form-control" id="cnpj">
+                </div> -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <label for="inscricaoEstadual" class="form-label">Inscrição Estadual:</label>
+                    <input type="text" class="form-control" id="inscricaoEstadual">
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <label for="telefone" class="form-label">Telefone:</label>
@@ -61,6 +73,22 @@
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <label for="cep" class="form-label">CEP:</label>
                     <input type="number" class="form-control" id="cep">
+                </div> 
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <label for="logradouro" class="form-label">Rua/Av:</label>
+                    <input type="text" class="form-control" id="logradouro">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <label for="numero" class="form-label">Número:</label>
+                    <input type="number" class="form-control" id="numero">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <label for="complemento" class="form-label">Complemento:</label>
+                    <input type="text" class="form-control" id="complemento">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <label for="bairro" class="form-label">Bairro:</label>
+                    <input type="text" class="form-control" id="bairro">
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <label for="cidade" class="form-label">Cidade:</label>
@@ -68,13 +96,14 @@
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-12">
                     <label for="estado" class="form-label">Estado:</label>
-                    <select id="estado" class="form-select">
-                        <option selected>Selecione</option>
-                        <option>...</option>
-                    </select>
+                    <input id="estado" class="form-control">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <label for="pais" class="form-label">País:</label>
+                    <input type="text" class="form-control" id="pais">
                 </div>
             </fieldset>
-            <fieldset class="border p-2">
+            <fieldset class="border row g-3 p-2 w-75">
                 <legend>Dados da Carga:</legend>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <label for="transacao" class="form-label">Tipo de Transação:</label>
