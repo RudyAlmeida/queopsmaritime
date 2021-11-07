@@ -17,17 +17,144 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="js/scriptcnpj.js" defer></script>
+    <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="corpo" onload="inicar()" id="body">
     <!-- Button trigger modal -->
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" onclick="zoomImg()">
+    <button type="button" class="btn btn-primary" onclick="abrirModalCotacao()">
         Launch demo modal
     </button>
-    <input type="text" name="" id="cnpj" onblur="getCNPJ()">
+
+    <!-- Modal -->
+    <div class="modal" id="modalCotacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">Confira seu orçamento</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="fecharModalCotacao()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">CNPJ:</div>
+                            <div class="col" id="cnpj"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Razão Social:</div>
+                            <div class="col" id="razaoSocial"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Nome Fantasia:</div>
+                            <div class="col" id="nomeFantasia"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Contato:</div>
+                            <div class="col" id="contato"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">E-mail:</div>
+                            <div class="col" id="email"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Inscrição Estadual:</div>
+                            <div class="col" id="inscricaoEstadual"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Telefone:</div>
+                            <div class="col" id="telefone"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Celular:</div>
+                            <div class="col" id="celular"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">CEP:</div>
+                            <div class="col" id="cep"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Rua/Av:</div>
+                            <div class="col" id="logradouro"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Número:</div>
+                            <div class="col" id="numero"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Complemento:</div>
+                            <div class="col" id="complemento"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Bairro:</div>
+                            <div class="col" id="bairro"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Cidade:</div>
+                            <div class="col" id="cidade"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Estado:</div>
+                            <div class="col" id="estado"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">País:</div>
+                            <div class="col" id="pais"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Tipo de Transação:</div>
+                            <div class="col" id="tipoTransacao"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Tipo de Carga:</div>
+                            <div class="col" id="tipoCarga"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Quantidade de Volumes:</div>
+                            <div class="col" id="qtdVol"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Peso da Mercadoria:</div>
+                            <div class="col" id="peso"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Cubagem:</div>
+                            <div class="col" id="cubagem"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Porto de Origem:</div>
+                            <div class="col" id="origem"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Porto de Destino:</div>
+                            <div class="col" id="destino"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Valor da Mercadoria:</div>
+                            <div class="col" id="valorMer"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Descrição da Mercadoria:</div>
+                            <div class="col" id="descricaoMercadoria"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" onclick="zoomImg()">
+        Launch demo modal
+    </button>
+    <input type="text" name="" id="cnpj" onblur="getCNPJ()"> -->
 
     <!-- Modal -->
     <!-- <div class="modal" tabindex="-1" id="minhaModal1">
@@ -43,7 +170,7 @@
             </div>
         </div>
     </div> -->
-     <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

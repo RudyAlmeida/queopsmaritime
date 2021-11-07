@@ -27,7 +27,7 @@
     </header>
 
     <div class="container-fluid d-flex justify-content-center mt-4 mb-4">
-        <form class="row g-3 justify-content-center" name="cadastro">
+        <form class="row g-3 justify-content-center" name="cadastro" id="cadastro" onclick="event.preventDefault()">
             <fieldset class="border row g-3 p-2 w-75">
                 <legend>Dados da Empresa:</legend>
                 <div class="col-lg-4 col-md-6 col-sm-12">
@@ -54,10 +54,6 @@
                     <label for="email" class="form-label">E-mail:</label>
                     <input type="email" class="form-control" id="email" required>
                 </div>
-                <!-- <div class="col-lg-4 col-md-6 col-sm-12">
-                    <label for="cnpj" class="form-label">CNPJ:</label>
-                    <input type="number" class="form-control" id="cnpj">
-                </div> -->
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <label for="inscricaoEstadual" class="form-label">Inscrição Estadual:</label>
                     <input type="text" class="form-control" id="inscricaoEstadual">
@@ -152,8 +148,8 @@
                     </select>
                 </div>
                 <div class="col-md-6">
-                    <label for="valor" id="valorMer"class="form-label">Valor da Mercadoria:</label>
-                    <input type="number" class="form-control" id="valor" required>
+                    <label for="valor" class="form-label">Valor da Mercadoria:</label>
+                    <input type="text" class="form-control" id="valor" required>
                 </div>
                 <div class="col-md-6">
                     <label for="descricaoMercadoria" class="form-label">Descrição da Mercadoria:</label>
@@ -169,7 +165,127 @@
             </div>
         </form>
     </div>
-
+    <div class="modal" id="modalCotacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">Confira seu orçamento</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="fecharModalCotacao()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">CNPJ:</div>
+                            <div class="col" id="modalcnpj"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Razão Social:</div>
+                            <div class="col" id="modalrazaoSocial"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Nome Fantasia:</div>
+                            <div class="col" id="modalnomeFantasia"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Contato:</div>
+                            <div class="col" id="modalcontato"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">E-mail:</div>
+                            <div class="col" id="modalemail"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Inscrição Estadual:</div>
+                            <div class="col" id="modalinscricaoEstadual"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Telefone:</div>
+                            <div class="col" id="modaltelefone"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Celular:</div>
+                            <div class="col" id="modalcelular"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">CEP:</div>
+                            <div class="col" id="modalcep"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Rua/Av:</div>
+                            <div class="col" id="modallogradouro"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Número:</div>
+                            <div class="col" id="modalnumero"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Complemento:</div>
+                            <div class="col" id="modalcomplemento"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Bairro:</div>
+                            <div class="col" id="modalbairro"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Cidade:</div>
+                            <div class="col" id="modalcidade"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Estado:</div>
+                            <div class="col" id="modalestado"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">País:</div>
+                            <div class="col" id="modalpais"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Tipo de Transação:</div>
+                            <div class="col" id="modaltipoTransacao"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Tipo de Carga:</div>
+                            <div class="col" id="modaltipoCarga"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Quantidade de Volumes:</div>
+                            <div class="col" id="modalqtdVol"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Peso da Mercadoria:</div>
+                            <div class="col" id="modalpeso"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Cubagem:</div>
+                            <div class="col" id="modalcubagem"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Porto de Origem:</div>
+                            <div class="col" id="modalorigem"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Porto de Destino:</div>
+                            <div class="col" id="modaldestino"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Valor da Mercadoria:</div>
+                            <div class="col" id="modalvalorMer"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Descrição da Mercadoria:</div>
+                            <div class="col" id="modaldescricaoMercadoria"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="fecharModalCotacao()">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="enviarOrcamento()"><img src="imagens/whatsapp.svg"></button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer id="footer">
     </footer>
