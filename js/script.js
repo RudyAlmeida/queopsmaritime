@@ -21,13 +21,13 @@ function calcBid(bidList) {
         bidTotal += Number(element)
     });
     let menorBid = bidList.sort((a, b) => a - b)[0]
-    $('#menor').text('Menor cotação: ' + menorBid)
+    $('#menor').text('Menor cotação: R$:' + menorBid)
     let maiorBid = bidList.sort((a, b) => a - b).at(-1)
-    $('#maior').text('Maior cotação: ' + maiorBid)
+    $('#maior').text('Maior cotação: R$:' + parseFloat(maiorBid).toFixed(2) )
     let variacaoBid = (((maiorBid - menorBid) / menorBid) * 100).toFixed(2)
-    $('#variacao').text('Variação no Periodo: ' + variacaoBid)
+    $('#variacao').text('Variação no Periodo: ' + variacaoBid+"%")
     let bidMedio = (bidTotal / bidList.length).toFixed(2)
-    $('#media').text('Media no periodo: ' + bidMedio)
+    $('#media').text('Media no periodo: R$' + bidMedio)
 
 }
 function consultaTempoReal() {
@@ -35,7 +35,7 @@ function consultaTempoReal() {
     fetch(`https://economia.awesomeapi.com.br/last/USD-BRL`)
         .then(response => {
             response.json()
-                .then(data => $('#cotacao').text('Tempo real: ' + data['USDBRL']['bid'] + ' atualiza a cada 10 segundos'))
+                .then(data => $('#cotacao').text('Tempo real: ' + data['USDBRL']['bid']))
         })
         .catch(x => alert("Par de moedas não encontrado"));
     setTimeout(consultaTempoReal, 10000)
@@ -131,9 +131,6 @@ function cabecalho() {
                         Contato
                     </a>
                 </li>
-                <li class="nav-item">
-                <div id="loginBtn" class="g-signin2" data-onsuccess="onSignIn"></div>
-                </li>
             </ul>
         </div>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDarkDropdown" style="background-color: #1F6D69;">
@@ -156,7 +153,15 @@ function cabecalho() {
             </ul>
         </div>
     </div>
-</nav>`
+</nav>
+<div class="row d-flex justify-content-between " style="background-color: #F1BE07; color:#1F6D69">
+    <div class="col-lg-2 col-md-4 col-sm-6" id="cotacao"></div>
+    <div class="col-lg-2 col-md-4 col-sm-6 font-weight-bold">Varição em 360 dias:</div>
+    <div class="col-lg-2 col-md-4 col-sm-6"id="media"></div>
+    <div class="col-lg-2 col-md-4 col-sm-6" id="menor"></div>
+    <div class="col-lg-2 col-md-4 col-sm-6" id="maior"></div>
+    <div class="col-lg-2 col-md-4 col-sm-6" id ="variacao"></div>
+</div>`
     header.append(cabecalho)
     $('a.active').removeClass('active');
     console.log(location.pathname)
