@@ -8,13 +8,28 @@
     /* font-size: 1.5vw; */
 
 }
+.link{
+    text-decoration: none;
+    color: #F1BE07;
+}
+.link:hover{
+    color: #1F6D69;
+}
+.card-title{
+    color: #F1BE07;;
+}
+.card-text{
+    color: #1F6D69;
+}
+.pointer{
+    cursor: pointer;
+}
 
 .flat-row{
     background-color:#ffffff;
     width: 100%;
     height: 100%;
-    margin: 105px 0 0 0;
-    padding: 100px;
+    
 }
 .flat-imagebox .flat-item {
     float: left;
