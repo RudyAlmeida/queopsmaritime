@@ -304,6 +304,20 @@ function criarModal() {
     </div>`
     body.append(modal)
 }
+function vLibras(){
+    let vLibras = `
+    <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>`
+  $("#rodape").after(vLibras)
+}
 
 function inicar() {
     rodapePrincipal();
@@ -313,6 +327,7 @@ function inicar() {
     consultaTempoReal();
     getUser();
     rodapeSecundario();
+    vLibras();
 }
 function abrirModal() {
     var modal = document.getElementById("minhaModal1");
