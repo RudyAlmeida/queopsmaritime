@@ -309,7 +309,7 @@ function criarModal() {
 function inicar() {
     rodapePrincipal();
     cabecalho();
-    criarModal() 
+    criarModal() ;
     consultaCotação();
     consultaTempoReal();
     getUser();
@@ -534,8 +534,8 @@ function enviarOrcamento(){
     document.getElementById("cadastro").reset();
 }
 function abrirModalCotacao(){
-    var modal = document.getElementById("modalCotacao");
-    var elementoBootstrap = new bootstrap.Modal(modal);
+    var modal2 = document.getElementById("modalCotacao");
+    var elementoBootstrap = new bootstrap.Modal(modal2);
     elementoBootstrap.show();
 }
 function fecharModalCotacao(){
