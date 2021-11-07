@@ -286,55 +286,12 @@ function rodapeSecundario() {
 </p>`
     rodape2.append(appendRodape)
 }
-function criarModal() {
-    let body = $("body")
-    let modalLog = `
-    <div class="modal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
-        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLongTitle">Confira seu orçamento</h3>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
-                        onclick="fecharModal()">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div id="loginBtn" class="g-signin2" data-onsuccess="onSignIn"></div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="fecharModal()">Close</button>
-                    
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>    
-    `
-    /* <div class="modal" tabindex="-1" id="minhaModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Login</h5>
-                    <button type="button" class="btn-close" onclick="fecharModal()" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container prod-zoom">
-                        <div id="loginBtn" class="g-signin2" data-onsuccess="onSignIn"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div */
-    body.append(modalLog)
-}
+
 
 
 function inicar() {
     rodapePrincipal();
     cabecalho();
-    criarModal() ;
     consultaCotação();
     consultaTempoReal();
     getUser();
@@ -346,11 +303,7 @@ function abrirModal() {
     elementoBootstrap.show();
 }
 function fecharModal(){
-   $("#modalLogin").removeClass("in");
-   $(".modal-backdrop").remove();
-   $('body').removeClass('modal-open');
-   $('body').css('padding-right', '');
-   $("#modalLogin").hide();
+   $("#modalLogin").modal("hide");
 }
 var dadosCNPJ = [];
 function getCNPJ(){
@@ -557,6 +510,7 @@ function salvarDados(){
 function enviarOrcamento(){
     window.open("https://api.whatsapp.com/send?phone=5527996998347&text=Voc%C3%AA%20acaba%20de%20receber%20um%20or%C3%A7amento%3A%20"+mensagemWhatsapp, '_blank');
     document.getElementById("cadastro").reset();
+    fecharModalCotacao()
 }
 function abrirModalCotacao(){
     var modal2 = document.getElementById("modalCotacao");
@@ -564,9 +518,5 @@ function abrirModalCotacao(){
     elementoBootstrap.show();
 }
 function fecharModalCotacao(){
-   $("#modalCotacao").removeClass("in");
-   $(".modal-backdrop").remove();
-   $('body').removeClass('modal-open');
-   $('body').css('padding-right', '');
-   $("#modalCotacao").hide();
+    $("#modalCotacao").modal("hide");
 }
