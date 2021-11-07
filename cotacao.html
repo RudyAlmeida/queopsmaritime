@@ -28,15 +28,14 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title" id="exampleModalLongTitle">Cadstre-se ou Faça seu login</h3>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
-                        onclick="fecharModal()">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="fecharModal()">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="container">
                         <div id="loginBtn" class="g-signin2" data-onsuccess="onSignIn"></div>
-                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -92,7 +91,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <label for="cep" class="form-label">CEP:</label>
                     <input type="text" class="form-control" id="cep" required>
-                </div> 
+                </div>
                 <div class="col-lg-8 col-md-7 col-sm-12">
                     <label for="logradouro" class="form-label">Rua/Av:</label>
                     <input type="text" class="form-control" id="logradouro" required>
@@ -141,47 +140,378 @@
                     </select>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4">
-                    <label for="valor" id="valorMer"class="form-label">Valor da Mercadoria:</label>
+                    <label for="valor" id="valorMer" class="form-label">Valor da Mercadoria:</label>
                     <input type="number" class="form-control" id="valor" required>
                 </div>
 
-                    <label for="tamanho" class="form-label">Tamanho da Remessa:</label>
-                    <div class="col-lg-4  col-md-4 col-sm-12">
-                        <input type="number" id="quantidadeVol" class="form-control" placeholder="Quantidade de Volumes"
-                            aria-label="Quantidade de Volumes" required>
-                    </div>
-                    <div class="col-lg-4  col-md-4 col-sm-12">
-                        <input type="number" id="peso" class="form-control" placeholder="Peso da Mercadoria (tonelagem)"
-                            aria-label="Peso da mercadoria em tonelagem" required>
-                    </div>
-                    <div class="col-lg-4  col-md-4 col-sm-12">
-                        <input type="number" id="cubagem" class="form-control" placeholder="Cubagem (m³)"
-                            aria-label="Cubagem em metros cúbicos" required>
-                    </div>
-               
+                <label for="tamanho" class="form-label">Tamanho da Remessa:</label>
+                <div class="col-lg-4  col-md-4 col-sm-12">
+                    <input type="number" id="quantidadeVol" class="form-control" placeholder="Quantidade de Volumes"
+                        aria-label="Quantidade de Volumes" required>
+                </div>
+                <div class="col-lg-4  col-md-4 col-sm-12">
+                    <input type="number" id="peso" class="form-control" placeholder="Peso da Mercadoria (tonelagem)"
+                        aria-label="Peso da mercadoria em tonelagem" required>
+                </div>
+                <div class="col-lg-4  col-md-4 col-sm-12">
+                    <input type="number" id="cubagem" class="form-control" placeholder="Cubagem (m³)"
+                        aria-label="Cubagem em metros cúbicos" required>
+                </div>
+
                 </label>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <label for="origem" class="form-label">Porto de Origem:</label>
                     <select id="origem" class="form-select" required>
                         <option value="" selected>Selecione</option>s
-                        <option value="value">Vitoria</option>
+                        <option value="CapeTown">África do Sul - Cape Town</option>
+                        <option value="Saldanha">África do Sul - Saldanha</option>
+                        <option value="Bremen">Alemanha - Bremen</option>
+                        <option value="Hamburgo">Alemanha - Hamburgo</option>
+                        <option value="Lobito">Angola - Lobito</option>
+                        <option value="Luanda">Angola - Luanda</option>
+                        <option value="BarbudaSaintJohns">Antígua e Barbuda - Saint John's</option>
+                        <option value="Jeddah">Arábia Saudita - Jeddah</option>
+                        <option value="Jubail">Arábia Saudita - Jubail</option>
+                        <option value="Algiers">Argélia - Algiers</option>
+                        <option value="BahiaBlanca">Argentina - Bahia Blanca</option>
+                        <option value="BuenosAires">Argentina - Buenos Aires</option>
+                        <option value="MardelPlata">Argentina - Mar del Plata</option>
+                        <option value="PuertoDeseado">Argentina - Puerto Deseado</option>
+                        <option value="PuertoMadryn">Argentina - Puerto Madryn</option>
+                        <option value="Ushuaya">Argentina - Ushuaya</option>
+                        <option value="Zarate">Argentina - Zarate</option>
+                        <option value="Oranjestad">Aruba - Oranjestad</option>
+                        <option value="Adelaide">Austrália - Adelaide</option>
+                        <option value="BelBay">Austrália - Bel Bay</option>
+                        <option value="Brisbaine">Austrália - Brisbaine</option>
+                        <option value="Melbourne">Austrália - Melbourne</option>
+                        <option value="NewCastle">Austrália - New Castle</option>
+                        <option value="Townsville">Austrália - Townsville</option>
+                        <option value="Freeport">Bahamas - Freeport</option>
+                        <option value="Nassau">Bahamas - Nassau</option>
+                        <option value="Mongla">Bangladeche - Mongla</option>
+                        <option value="Bridgetown">Barbados - Bridgetown</option>
+                        <option value="Antuerpia">Bélgica - Antuérpia</option>
+                        <option value="Belize">Belize - Belize</option>
+                        <option value="Chibatao">Brasil - Chibatão</option>
+                        <option value="DPWorldSantos">Brasil - DP World Santos</option>
+                        <option value="Itajai">Brasil - Itajaí</option>
+                        <option value="Itapoa">Brasil - Itapoá</option>
+                        <option value="Paranagua">Brasil - Paranaguá</option>
+                        <option value="PortoDeRioGrande">Brasil - Porto de Rio Grande</option>
+                        <option value="Portonave">Brasil - Portonave</option>
+                        <option value="RioDeJaneiro">Brasil - Rio de Janeiro</option>
+                        <option value="Suape">Brasil - Suape</option>
+                        <option value="Vitoria">Brasil - Vitória</option>
+                        <option value="Santos">Brasil - Santos</option>
+                        <option value="Portogrande">Cabo Verde - Porto grande</option>
+                        <option value="Praia">Cabo Verde - Praia</option>
+                        <option value="Sihanoukville">Camboja - Sihanoukville</option>
+                        <option value="Halifax">Canadá - Halifax</option>
+                        <option value="Hamilton">Canadá - Hamilton</option>
+                        <option value="Montreal">Canadá - Montreal</option>
+                        <option value="PrinceRupert">Canadá - Prince Rupert</option>
+                        <option value="SaintJohn">Canadá - Saint John</option>
+                        <option value="CanadaSaintJohns">Canadá - Saint John's</option>
+                        <option value="Toronto">Canadá - Toronto</option>
+                        <option value="Vancouver">Canadá - Vancouver</option>
+                        <option value="Doha">Catar - Doha</option>
+                        <option value="Antofagasta">Chile - Antofagasta</option>
+                        <option value="Arica">Chile - Arica</option>
+                        <option value="Iquique">Chile - Iquique</option>
+                        <option value="Lirquen">Chile - Lirquen</option>
+                        <option value="Mejillones">Chile - Mejillones</option>
+                        <option value="PuntaArenas">Chile - Punta Arenas</option>
+                        <option value="SanAntonio">Chile - San Antonio</option>
+                        <option value="SanVicente">Chile - San Vicente</option>
+                        <option value="Talcahuano">Chile - Talcahuano</option>
+                        <option value="Valparaiso">Chile - Valparaiso</option>
+                        <option value="Guangzhou">China - Guangzhou</option>
+                        <option value="HongKong">China - Hong Kong</option>
+                        <option value="NingboZhoushan">China - Ningbo-Zhoushan</option>
+                        <option value="Qingdao">China - Qingdao</option>
+                        <option value="Shenzhen">China - Shenzhen</option>
+                        <option value="Tianjin">China - Tianjin</option>
+                        <option value="Xangai">China - Xangai</option>
+                        <option value="Cingapura">Cingapura - Cingapura</option>
+                        <option value="Barranquilla">Colômbia - Barranquilla</option>
+                        <option value="Buenaventura">Colômbia - Buenaventura</option>
+                        <option value="Cartagena">Colômbia - Cartagena</option>
+                        <option value="SantaMarta">Colômbia - Santa Marta</option>
+                        <option value="Busan">Coreia do Sul - Busan</option>
+                        <option value="SanPedro">Costa do Marfim - San-Pédro</option>
+                        <option value="Caldera">Costa Rica - Caldera</option>
+                        <option value="Limon">Costa Rica - Limon</option>
+                        <option value="Moin">Costa Rica - Moin</option>
+                        <option value="Aarhus">Dinamarca - Aarhus</option>
+                        <option value="Alexandria">Egito - Alexandria</option>
+                        <option value="PortSaid">Egito - Port Said</option>
+                        <option value="Acajutla">El Salvador - Acajutla</option>
+                        <option value="AbuDhabi">Emirados Árabes Unidos - Abu Dhabi</option>
+                        <option value="Dubai">Emirados Árabes Unidos - Dubai</option>
+                        <option value="Guayaquil">Equador - Guayaquil</option>
+                        <option value="Manta">Equador - Manta</option>
+                        <option value="Algeciras">Espanha - Algeciras</option>
+                        <option value="Barcelona">Espanha - Barcelona</option>
+                        <option value="Valencia">Espanha - Valência</option>
+                        <option value="NovaYork">Estador Unidos - Nova York</option>
+                        <option value="Lautoka">Fiji - Lautoka</option>
+                        <option value="Suva">Fiji - Suva</option>
+                        <option value="Manila">Filipinas - Manila</option>
+                        <option value="SaintGeorges">Granada - Saint George's</option>
+                        <option value="PointeAPitre">Guadalupe - Pointe-a-Pitre</option>
+                        <option value="Barrios">Guatemala - Barrios</option>
+                        <option value="Quetzal">Guatemala - Quetzal</option>
+                        <option value="Georgetown">Guiana - Georgetown</option>
+                        <option value="Conakry">Guiné - Conakry</option>
+                        <option value="CapHaitien">Haiti - Cap Haitien</option>
+                        <option value="PortAuPrince">Haiti - Port au Prince</option>
+                        <option value="Rotterdam">Holanda - Rotterdam</option>
+                        <option value="Castilla">Honduras - Castilla</option>
+                        <option value="Cortes">Honduras - Cortes</option>
+                        <option value="SanLorenzo">Honduras - San Lorenzo</option>
+                        <option value="HongKong">Hong Kong - Hong Kong</option>
+                        <option value="GeorgeTown">Ilhas Caiman - George Town</option>
+                        <option value="Honiara">Ilhas Salomão - Honiara</option>
+                        <option value="SaintThomas">Ilhas Virgens Americanas - Saint Thomas</option>
+                        <option value="Bangalore">Índia - Bangalore</option>
+                        <option value="Calcutta">Índia - Calcutta</option>
+                        <option value="Haldia">Índia - Haldia</option>
+                        <option value="Belawan">Indonésia - Belawan</option>
+                        <option value="Jakarta">Indonésia - Jakarta</option>
+                        <option value="BandarAbbas">Irã - Bandar Abbas</option>
+                        <option value="Chabahar">Irã - Chabahar</option>
+                        <option value="Eliat">Israel - Eliat</option>
+                        <option value="Halifa">Israel - Halifa</option>
+                        <option value="Cagliari">Itália - Cagliari</option>
+                        <option value="Kingston">Jamaica - Kingston</option>
+                        <option value="MontegoBay">Jamaica - Montego Bay</option>
+                        <option value="Akita">Japão - Akita</option>
+                        <option value="Chiba">Japão - Chiba</option>
+                        <option value="Oita">Japão - Oita</option>
+                        <option value="Osaka">Japão - Osaka</option>
+                        <option value="Tokyo">Japão - Tokyo</option>
+                        <option value="Aqaba">Jordânia - Aqaba</option>
+                        <option value="Beirut">Líbano - Beirut</option>
+                        <option value="Agadir">Marrocos - Agadir</option>
+                        <option value="Tangier">Marrocos - Tangier</option>
+                        <option value="FortDeFrance">Martinica - Fort de France</option>
+                        <option value="Altamira">México - Altamira</option>
+                        <option value="Ensenada">México - Ensenada</option>
+                        <option value="LazaroCardenas">México - Lázaro Cardenas</option>
+                        <option value="Manzanillo">México - Manzanillo</option>
+                        <option value="Manzatlan">México - Manzatlan</option>
+                        <option value="Tampico">México - Tampico</option>
+                        <option value="Veracruz">México - Veracruz</option>
+                        <option value="Beira">Moçambique - Beira</option>
+                        <option value="Pemba">Moçambique - Pemba</option>
+                        <option value="LittleBay">Montserrat - Little Bay</option>
+                        <option value="Corinto">Nicarágua - Corinto</option>
+                        <option value="ElBluff">Nicarágua - El Bluff</option>
+                        <option value="Apapa">Nigéria - Apapa</option>
+                        <option value="Lagos">Nigéria - Lagos</option>
+                        <option value="Almirante">Panamá - Almirante</option>
+                        <option value="Balboa">Panamá - Balboa</option>
+                        <option value="Colon">Panamá - Colon</option>
+                        <option value="Cristobal">Panamá - Cristobal</option>
+                        <option value="Manzanillo">Panamá - Manzanillo</option>
+                        <option value="Lae">Papuásia-Nova Guiné - Lae</option>
+                        <option value="Madang">Papuásia-Nova Guiné - Madang</option>
+                        <option value="Rabaul">Papuásia-Nova Guiné - Rabaul</option>
+                        <option value="Asuncion">Paraguai - Asuncion</option>
+                        <option value="Callao">Peru - Callao</option>
+                        <option value="Ilo">Peru - Ilo</option>
+                        <option value="Matarani">Peru - Matarani</option>
+                        <option value="Paita">Peru -Paita</option>
+                        <option value="Ponce">Porto Rico - Ponce</option>
+                        <option value="SanJuan">Porto Rico - San Juan</option>
+                        <option value="Lisboa">Portugal - Lisboa</option>
+                        <option value="Sines">Portugal - Sines</option>
+                        <option value="Mombasa">Quénia - Mombasa</option>
+                        <option value="Felixstowe">Reino Unido - Felixstowe</option>
                     </select>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <label for="destino" class="form-label">Porto de Destino:</label>
                     <select id="destino" class="form-select" required>
                         <option value="" selected>Selecione</option>
-                        <option value="vitoria">Vitoria</option>
+                        <option value="CapeTown">África do Sul - Cape Town</option>
+                        <option value="Saldanha">África do Sul - Saldanha</option>
+                        <option value="Bremen">Alemanha - Bremen</option>
+                        <option value="Hamburgo">Alemanha - Hamburgo</option>
+                        <option value="Lobito">Angola - Lobito</option>
+                        <option value="Luanda">Angola - Luanda</option>
+                        <option value="BarbudaSaintJohns">Antígua e Barbuda - Saint John's</option>
+                        <option value="Jeddah">Arábia Saudita - Jeddah</option>
+                        <option value="Jubail">Arábia Saudita - Jubail</option>
+                        <option value="Algiers">Argélia - Algiers</option>
+                        <option value="BahiaBlanca">Argentina - Bahia Blanca</option>
+                        <option value="BuenosAires">Argentina - Buenos Aires</option>
+                        <option value="MardelPlata">Argentina - Mar del Plata</option>
+                        <option value="PuertoDeseado">Argentina - Puerto Deseado</option>
+                        <option value="PuertoMadryn">Argentina - Puerto Madryn</option>
+                        <option value="Ushuaya">Argentina - Ushuaya</option>
+                        <option value="Zarate">Argentina - Zarate</option>
+                        <option value="Oranjestad">Aruba - Oranjestad</option>
+                        <option value="Adelaide">Austrália - Adelaide</option>
+                        <option value="BelBay">Austrália - Bel Bay</option>
+                        <option value="Brisbaine">Austrália - Brisbaine</option>
+                        <option value="Melbourne">Austrália - Melbourne</option>
+                        <option value="NewCastle">Austrália - New Castle</option>
+                        <option value="Townsville">Austrália - Townsville</option>
+                        <option value="Freeport">Bahamas - Freeport</option>
+                        <option value="Nassau">Bahamas - Nassau</option>
+                        <option value="Mongla">Bangladeche - Mongla</option>
+                        <option value="Bridgetown">Barbados - Bridgetown</option>
+                        <option value="Antuerpia">Bélgica - Antuérpia</option>
+                        <option value="Belize">Belize - Belize</option>
+                        <option value="Chibatao">Brasil - Chibatão</option>
+                        <option value="DPWorldSantos">Brasil - DP World Santos</option>
+                        <option value="Itajai">Brasil - Itajaí</option>
+                        <option value="Itapoa">Brasil - Itapoá</option>
+                        <option value="Paranagua">Brasil - Paranaguá</option>
+                        <option value="PortoDeRioGrande">Brasil - Porto de Rio Grande</option>
+                        <option value="Portonave">Brasil - Portonave</option>
+                        <option value="RioDeJaneiro">Brasil - Rio de Janeiro</option>
+                        <option value="Suape">Brasil - Suape</option>
+                        <option value="Vitoria">Brasil - Vitória</option>
+                        <option value="Santos">Brasil - Santos</option>
+                        <option value="Portogrande">Cabo Verde - Porto grande</option>
+                        <option value="Praia">Cabo Verde - Praia</option>
+                        <option value="Sihanoukville">Camboja - Sihanoukville</option>
+                        <option value="Halifax">Canadá - Halifax</option>
+                        <option value="Hamilton">Canadá - Hamilton</option>
+                        <option value="Montreal">Canadá - Montreal</option>
+                        <option value="PrinceRupert">Canadá - Prince Rupert</option>
+                        <option value="SaintJohn">Canadá - Saint John</option>
+                        <option value="CanadaSaintJohns">Canadá - Saint John's</option>
+                        <option value="Toronto">Canadá - Toronto</option>
+                        <option value="Vancouver">Canadá - Vancouver</option>
+                        <option value="Doha">Catar - Doha</option>
+                        <option value="Antofagasta">Chile - Antofagasta</option>
+                        <option value="Arica">Chile - Arica</option>
+                        <option value="Iquique">Chile - Iquique</option>
+                        <option value="Lirquen">Chile - Lirquen</option>
+                        <option value="Mejillones">Chile - Mejillones</option>
+                        <option value="PuntaArenas">Chile - Punta Arenas</option>
+                        <option value="SanAntonio">Chile - San Antonio</option>
+                        <option value="SanVicente">Chile - San Vicente</option>
+                        <option value="Talcahuano">Chile - Talcahuano</option>
+                        <option value="Valparaiso">Chile - Valparaiso</option>
+                        <option value="Guangzhou">China - Guangzhou</option>
+                        <option value="HongKong">China - Hong Kong</option>
+                        <option value="NingboZhoushan">China - Ningbo-Zhoushan</option>
+                        <option value="Qingdao">China - Qingdao</option>
+                        <option value="Shenzhen">China - Shenzhen</option>
+                        <option value="Tianjin">China - Tianjin</option>
+                        <option value="Xangai">China - Xangai</option>
+                        <option value="Cingapura">Cingapura - Cingapura</option>
+                        <option value="Barranquilla">Colômbia - Barranquilla</option>
+                        <option value="Buenaventura">Colômbia - Buenaventura</option>
+                        <option value="Cartagena">Colômbia - Cartagena</option>
+                        <option value="SantaMarta">Colômbia - Santa Marta</option>
+                        <option value="Busan">Coreia do Sul - Busan</option>
+                        <option value="SanPedro">Costa do Marfim - San-Pédro</option>
+                        <option value="Caldera">Costa Rica - Caldera</option>
+                        <option value="Limon">Costa Rica - Limon</option>
+                        <option value="Moin">Costa Rica - Moin</option>
+                        <option value="Aarhus">Dinamarca - Aarhus</option>
+                        <option value="Alexandria">Egito - Alexandria</option>
+                        <option value="PortSaid">Egito - Port Said</option>
+                        <option value="Acajutla">El Salvador - Acajutla</option>
+                        <option value="AbuDhabi">Emirados Árabes Unidos - Abu Dhabi</option>
+                        <option value="Dubai">Emirados Árabes Unidos - Dubai</option>
+                        <option value="Guayaquil">Equador - Guayaquil</option>
+                        <option value="Manta">Equador - Manta</option>
+                        <option value="Algeciras">Espanha - Algeciras</option>
+                        <option value="Barcelona">Espanha - Barcelona</option>
+                        <option value="Valencia">Espanha - Valência</option>
+                        <option value="NovaYork">Estador Unidos - Nova York</option>
+                        <option value="Lautoka">Fiji - Lautoka</option>
+                        <option value="Suva">Fiji - Suva</option>
+                        <option value="Manila">Filipinas - Manila</option>
+                        <option value="SaintGeorges">Granada - Saint George's</option>
+                        <option value="PointeAPitre">Guadalupe - Pointe-a-Pitre</option>
+                        <option value="Barrios">Guatemala - Barrios</option>
+                        <option value="Quetzal">Guatemala - Quetzal</option>
+                        <option value="Georgetown">Guiana - Georgetown</option>
+                        <option value="Conakry">Guiné - Conakry</option>
+                        <option value="CapHaitien">Haiti - Cap Haitien</option>
+                        <option value="PortAuPrince">Haiti - Port au Prince</option>
+                        <option value="Rotterdam">Holanda - Rotterdam</option>
+                        <option value="Castilla">Honduras - Castilla</option>
+                        <option value="Cortes">Honduras - Cortes</option>
+                        <option value="SanLorenzo">Honduras - San Lorenzo</option>
+                        <option value="HongKong">Hong Kong - Hong Kong</option>
+                        <option value="GeorgeTown">Ilhas Caiman - George Town</option>
+                        <option value="Honiara">Ilhas Salomão - Honiara</option>
+                        <option value="SaintThomas">Ilhas Virgens Americanas - Saint Thomas</option>
+                        <option value="Bangalore">Índia - Bangalore</option>
+                        <option value="Calcutta">Índia - Calcutta</option>
+                        <option value="Haldia">Índia - Haldia</option>
+                        <option value="Belawan">Indonésia - Belawan</option>
+                        <option value="Jakarta">Indonésia - Jakarta</option>
+                        <option value="BandarAbbas">Irã - Bandar Abbas</option>
+                        <option value="Chabahar">Irã - Chabahar</option>
+                        <option value="Eliat">Israel - Eliat</option>
+                        <option value="Halifa">Israel - Halifa</option>
+                        <option value="Cagliari">Itália - Cagliari</option>
+                        <option value="Kingston">Jamaica - Kingston</option>
+                        <option value="MontegoBay">Jamaica - Montego Bay</option>
+                        <option value="Akita">Japão - Akita</option>
+                        <option value="Chiba">Japão - Chiba</option>
+                        <option value="Oita">Japão - Oita</option>
+                        <option value="Osaka">Japão - Osaka</option>
+                        <option value="Tokyo">Japão - Tokyo</option>
+                        <option value="Aqaba">Jordânia - Aqaba</option>
+                        <option value="Beirut">Líbano - Beirut</option>
+                        <option value="Agadir">Marrocos - Agadir</option>
+                        <option value="Tangier">Marrocos - Tangier</option>
+                        <option value="FortDeFrance">Martinica - Fort de France</option>
+                        <option value="Altamira">México - Altamira</option>
+                        <option value="Ensenada">México - Ensenada</option>
+                        <option value="LazaroCardenas">México - Lázaro Cardenas</option>
+                        <option value="Manzanillo">México - Manzanillo</option>
+                        <option value="Manzatlan">México - Manzatlan</option>
+                        <option value="Tampico">México - Tampico</option>
+                        <option value="Veracruz">México - Veracruz</option>
+                        <option value="Beira">Moçambique - Beira</option>
+                        <option value="Pemba">Moçambique - Pemba</option>
+                        <option value="LittleBay">Montserrat - Little Bay</option>
+                        <option value="Corinto">Nicarágua - Corinto</option>
+                        <option value="ElBluff">Nicarágua - El Bluff</option>
+                        <option value="Apapa">Nigéria - Apapa</option>
+                        <option value="Lagos">Nigéria - Lagos</option>
+                        <option value="Almirante">Panamá - Almirante</option>
+                        <option value="Balboa">Panamá - Balboa</option>
+                        <option value="Colon">Panamá - Colon</option>
+                        <option value="Cristobal">Panamá - Cristobal</option>
+                        <option value="Manzanillo">Panamá - Manzanillo</option>
+                        <option value="Lae">Papuásia-Nova Guiné - Lae</option>
+                        <option value="Madang">Papuásia-Nova Guiné - Madang</option>
+                        <option value="Rabaul">Papuásia-Nova Guiné - Rabaul</option>
+                        <option value="Asuncion">Paraguai - Asuncion</option>
+                        <option value="Callao">Peru - Callao</option>
+                        <option value="Ilo">Peru - Ilo</option>
+                        <option value="Matarani">Peru - Matarani</option>
+                        <option value="Paita">Peru -Paita</option>
+                        <option value="Ponce">Porto Rico - Ponce</option>
+                        <option value="SanJuan">Porto Rico - San Juan</option>
+                        <option value="Lisboa">Portugal - Lisboa</option>
+                        <option value="Sines">Portugal - Sines</option>
+                        <option value="Mombasa">Quénia - Mombasa</option>
+                        <option value="Felixstowe">Reino Unido - Felixstowe</option>
                     </select>
                 </div>
 
-               
+
                 <div class="col-lg-12 col-md-12 col-sm-12">
 
                     <label for="descricaoMercadoria" class="form-label">Descrição da Mercadoria:</label>
                     <textarea class="form-control" id="descricaoMercadoria"
                         placeholder="Exemplo: É carga química ou perigosa? Contém bateria? Necessita de controle de temperatura? Pode ser empilhada? Existe restrições de embarque?"
-                        aria-label="Química ou perigosa? Contém bateria? Necessita de controle de temperatura? Pode ser empilhado? Existe restrições de embarque?" required></textarea>
+                        aria-label="Química ou perigosa? Contém bateria? Necessita de controle de temperatura? Pode ser empilhado? Existe restrições de embarque?"
+                        required></textarea>
                 </div>
             </fieldset>
             <div class="d-flex justify-content-center">
@@ -306,8 +636,10 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="fecharModalCotacao()">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="enviarOrcamento()"><img src="imagens/whatsapp.svg"></button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                        onclick="fecharModalCotacao()">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="enviarOrcamento()"><img
+                            src="imagens/whatsapp.svg"></button>
                 </div>
             </div>
         </div>
