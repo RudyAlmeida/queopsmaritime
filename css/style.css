@@ -211,3 +211,7 @@
 .nav-link{
     color:#F1BE07 !important;
 }
+a .nav-link .active 
+{
+    color: black !important;
+}
