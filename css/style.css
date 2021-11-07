@@ -215,3 +215,16 @@
 {
     color: #C49B08 !important;
 }
+.btn-success{
+    background-color: #1F6D69 !important;
+    color: #f0b707 !important;
+}
+
+@media(max-width: 540px){
+    img{
+        width: 50% !important;        
+    }
+    .titulo{
+        margin-top: 20px;
+    }
+}
