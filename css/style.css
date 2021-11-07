@@ -115,82 +115,11 @@
     margin-bottom: 20px;
 }
 
-.sectionFooter {
-    padding-top: 16px;
-    width: 100%;
-    height: 17vw;
-    background-color:#1F6D69;
-    color: #0f0f0f;
-    border-bottom: solid #E4C54A 1px;
-    display: block;
-    clear: both;
-    text-decoration: none;
- }
- 
- .sectionFooter ul p {
-     padding-bottom: 16px;
- }
- 
- #footer1 {
-    width: 33%;
-    height: 200px;
-    float: left;
-    position: relative;
-    text-align: center;
-    color: #F1BE07;
- 
- }
- 
  #links {
     color: #0f0f0f;
     text-decoration: underline;
  } 
- 
- /*  ----------------------------------------------- LINK DAS REDES SOCIAIS --------------- */
- .redesSociais { 
-    width: 100%;
-    height: auto;
-    border-bottom: solid #E4C54A 1px;
-    text-decoration: none;
- }
- 
- .redesSociais div {
-    justify-content: center;
-    text-decoration: none;
- }
- 
-p.redesSociais{
-    width: 100%;
-    text-align: center;
- }  
- 
- /*  ----------------------------------------------- FOOTER 2 E 3--------------------------- */
- #footer2 {
-    width: 33%;
-    height: auto;
-    float: left;
-    position: relative;
-    text-align: center;
-    color: #F1BE07;
- }
- 
- #footer3 {
-    width: 33%;
-    height: 200px;
-    float: left;
-    position: relative;
-    text-align: center;
-    color: #F1BE07;
- }
- #rodape {
-   text-align: center;
-   background-color: #1F6D69;
-   color: #0f0f0f;
-   margin: 0px;    
-   width: 100%;
-   height: 2vw;
-   font-size: small;
-  } 
+
 
 #btnNews{
    border: none;
@@ -233,4 +162,17 @@ p.redesSociais{
 .active 
 {
     color: #C49B08 !important;
+}
+.btn-success{
+    background-color: #1F6D69 !important;
+    color: #f0b707 !important;
+}
+
+@media(max-width: 540px){
+    .img{
+        width: 50% !important;        
+    }
+    .titulo{
+        margin-top: 20px;
+    }
 }

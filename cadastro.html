@@ -17,20 +17,39 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+        <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body class="corpo" onload="inicar()">
+<body onload="inicar()">
+    <div class="modal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">Cadstre-se ou Faça seu login</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="fecharModal()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div id="loginBtn" class="g-signin2" data-onsuccess="onSignIn"></div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <header id="header">
     </header>
    
     <footer id="footer">
     </footer>
-    <section id="rodape">
-    </section>
-
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
