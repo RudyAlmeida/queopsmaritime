@@ -289,15 +289,17 @@ function rodapeSecundario() {
 function criarModal() {
     let body = $("body")
     let modalLog = `
-      <div class="modal" tabindex="-1" id="minhaModal">
+    <div class="modal" tabindex="-1" id="minhaModal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Login</h5>
                     <button type="button" class="btn-close" onclick="fecharModal()" aria-label="Close"></button>
                 </div>
-                <div class="container prod-zoom modal-body">
-                <div id="loginBtn" class="g-signin2" data-onsuccess="onSignIn"></div>
+                <div class="modal-body">
+                    <div class="container prod-zoom">
+                        <div id="loginBtn" class="g-signin2" data-onsuccess="onSignIn"></div>
+                    </div>
                 </div>
             </div>
         </div>
