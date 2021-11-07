@@ -288,21 +288,21 @@ function rodapeSecundario() {
 }
 function criarModal() {
     let body = $("body")
-    let modal = `
-      <div class="modal" tabindex="-1" id="minhaModal1">
+    let modalLog = `
+      <div class="modal" tabindex="-1" id="minhaModal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Login</h5>
                     <button type="button" class="btn-close" onclick="fecharModal()" aria-label="Close"></button>
                 </div>
-                <div class="container prod-zoom">
+                <div class="container prod-zoom modal-body">
                 <div id="loginBtn" class="g-signin2" data-onsuccess="onSignIn"></div>
                 </div>
             </div>
         </div>
     </div>`
-    body.append(modal)
+    body.append(modalLog)
 }
 
 
@@ -316,16 +316,16 @@ function inicar() {
     rodapeSecundario();
 }
 function abrirModal() {
-    var modal = document.getElementById("minhaModal1");
+    var modal = document.getElementById("minhaModal");
     var elementoBootstrap = new bootstrap.Modal(modal);
     elementoBootstrap.show();
 }
 function fecharModal(){
-   $("#minhaModal1").removeClass("in");
+   $("#minhaModal").removeClass("in");
    $(".modal-backdrop").remove();
    $('body').removeClass('modal-open');
    $('body').css('padding-right', '');
-   $("#minhaModal1").hide();
+   $("#minhaModal").hide();
 }
 var dadosCNPJ = [];
 function getCNPJ(){
