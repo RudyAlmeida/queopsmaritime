@@ -289,7 +289,30 @@ function rodapeSecundario() {
 function criarModal() {
     let body = $("body")
     let modalLog = `
-    <div class="modal" tabindex="-1" id="minhaModal">
+    <div class="modal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">Confira seu orçamento</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="fecharModal()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div id="loginBtn" class="g-signin2" data-onsuccess="onSignIn"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="fecharModal()">Close</button>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    `
+    /* <div class="modal" tabindex="-1" id="minhaModal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -303,7 +326,7 @@ function criarModal() {
                 </div>
             </div>
         </div>
-    </div>`
+    </div */
     body.append(modalLog)
 }
 
@@ -318,16 +341,16 @@ function inicar() {
     rodapeSecundario();
 }
 function abrirModal() {
-    var modal = document.getElementById("minhaModal");
+    var modal = document.getElementById("modalLogin");
     var elementoBootstrap = new bootstrap.Modal(modal);
     elementoBootstrap.show();
 }
 function fecharModal(){
-   $("#minhaModal").removeClass("in");
+   $("#modalLogin").removeClass("in");
    $(".modal-backdrop").remove();
    $('body').removeClass('modal-open');
    $('body').css('padding-right', '');
-   $("#minhaModal").hide();
+   $("#modalLogin").hide();
 }
 var dadosCNPJ = [];
 function getCNPJ(){
