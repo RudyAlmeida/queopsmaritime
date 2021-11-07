@@ -122,13 +122,13 @@ function cabecalho() {
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/queopsmaritime/reserva.html">
-                        Reserva
-                    </a>
+                <a class="nav-link" href="/queopsmaritime/cotacao.html">
+                Cotação
+            </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/queopsmaritime/cotacao.html">
-                        Cotação
+                    <a class="nav-link" href="/queopsmaritime/contato.html">
+                        Contato
                     </a>
                 </li>
                 <li class="nav-item">
@@ -279,7 +279,6 @@ function rodapePrincipal() {
 }
 function rodapeSecundario() {
     let rodape2 = $("#rodape")
-    console.log(rodape2)
     let appendRodape = `<p>
     Copyright © 2021 Queops Maritime | Todos os direitos reservados | Políticas de
     Privacidade | Políticas de
@@ -456,9 +455,9 @@ function validarForm(){
         document.cadastro.destino.focus();
         return false;
     }
-    if ($("#valorMer").val() === "") {
+    if ($("#valor").val().length < 1) {
         alert("Forneça o valor da mercadoria");
-        document.cadastro.valorMer.focus()
+        document.cadastro.valor.focus()
         return false;
     }
     if ($("#descricaoMercadoria").val() === "") {
@@ -466,4 +465,82 @@ function validarForm(){
         document.cadastro.descricaoMercadoria.focus()
         return false;
     }
-}   
+    salvarDados()
+} 
+var mensagemWhatsapp = ''
+function salvarDados(){
+    let orcamento = {}
+    orcamento.cnpj = $("#cnpj").val()
+    $("#modalcnpj").text($("#cnpj").val())
+    orcamento.razaoSocial = $("#razaoSocial").val()
+    $("#modalrazaoSocial").text($("#razaoSocial").val())
+    orcamento.nomeFantasia = $("#nomeFantasia").val()
+    $("#modalnomeFantasia").text($("#nomeFantasia").val())
+    orcamento.contato = $("#contato").val()
+    $("#modalcontato").text($("#contato").val())
+    orcamento.email = $("#email").val()
+    $("#modalemail").text($("#email").val())
+    orcamento.inscricaoEstadual = $("#inscricaoEstadual").val()
+    $("#modalinscricaoEstadual").text($("#inscricaoEstadual").val())
+    orcamento.telefone = $("#telefone").val()
+    $("#modaltelefone").text($("#telefone").val())
+    orcamento.celular = $("#celular").val()
+    $("#modalcelular").text($("#celular").val())
+    orcamento.cep = $("#cep").val()
+    $("#modalcep").text($("#cep").val())
+    orcamento.logradouro = $("#logradouro").val()
+    $("#modallogradouro").text($("#logradouro").val())
+    orcamento.numero = $("#numero").val()
+    $("#modalnumero").text($("#numero").val())
+    orcamento.complemento = $("#complemento").val()
+    $("#modalcomplemento").text($("#complemento").val())
+    orcamento.bairro = $("#bairro").val()
+    $("#modalbairro").text($("#bairro").val())
+    orcamento.cidade = $("#cidade").val()
+    $("#modalcidade").text($("#cidade").val())
+    orcamento.estado = $("#estado").val()
+    $("#modalestado").text($("#estado").val())
+    orcamento.pais= $("#pais").val()
+    $("#modalpais").text($("#pais").val())
+    orcamento.transacao= $("#transacao").val()
+    $("#modaltipoTransacao").text($("#transacao").val())
+    orcamento.carga= $("#carga").val()
+    $("#modaltipoCarga").text($("#carga").val())
+    orcamento.quantidadeVol= $("#quantidadeVol").val()
+    $("#modalqtdVol").text($("#quantidadeVol").val())
+    orcamento.peso= $("#peso").val()
+    $("#modalpeso").text($("#peso").val())
+    orcamento.cubagem= $("#cubagem").val()
+    $("#modalcubagem").text($("#cubagem").val())
+    orcamento.origem= $("#origem").val()
+    $("#modalorigem").text($("#origem").val())
+    orcamento.destino= $("#destino").val()
+    $("#modaldestino").text($("#destino").val())
+    orcamento.valor= $("#valor").val()
+    $("#modalvalorMer").text($("#valor").val())
+    orcamento.descricaoMercadoria= $("#descricaoMercadoria").val()
+    $("#modaldescricaoMercadoria").text($("#descricaoMercadoria").val())
+    mensagemWhatsapp 
+    var mensagem = encodeURIComponent(JSON.stringify(orcamento));
+    /* https://api.whatsapp.com/send?phone=5527996998347&text=Voc%C3%AA%20acaba%20de%20receber%20um%20or%C3%A7amento%3A%20 */
+    mensagemWhatsapp = mensagem
+    console.log(mensagem)
+    console.log(orcamento)
+    abrirModalCotacao()
+}  
+function enviarOrcamento(){
+    window.open("https://api.whatsapp.com/send?phone=5527996998347&text=Voc%C3%AA%20acaba%20de%20receber%20um%20or%C3%A7amento%3A%20"+mensagemWhatsapp, '_blank');
+    document.getElementById("cadastro").reset();
+}
+function abrirModalCotacao(){
+    var modal = document.getElementById("modalCotacao");
+    var elementoBootstrap = new bootstrap.Modal(modal);
+    elementoBootstrap.show();
+}
+function fecharModalCotacao(){
+   $("#modalCotacao").removeClass("in");
+   $(".modal-backdrop").remove();
+   $('body').removeClass('modal-open');
+   $('body').css('padding-right', '');
+   $("#modalCotacao").hide();
+}
