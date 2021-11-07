@@ -244,117 +244,8 @@ function rodapePrincipal() {
             </div>
         </div>
     `
-    /* <!-- ***************************************************COMECEI A SECTION************* -->
-    <section class="sectionFooter">
-        <div id="footer1">
-            <nav class=" classfooter">
-                <ul>
-                    <p id="institucional"> INSTITUCIONAL </p>
-                    <li>Sobre Nós</li>
-                    <li>Cadastro</li>
-                    <li>Cotação</a></li>
-                    <li>Reserva</li>
-                    <li>Seguro Aduaneiro</li>
-                </ul>
-            </nav>
-        </div>
-        <div id="footer2">
-            <nav class="classfooter">
-                <ul>
-                    <section class="redesSociais">
-                        <p id="redesSociais"> SIGA NOSSAS REDES </p>
-                        <div id="central">
-                            <div id="div1">
-                                <li class="linha">
-                                    <img src="https://img.icons8.com/material-outlined/24/000000/twitter.png"
-                                        alt=" ícone do Twitter" a href="" />
-                                </li>
-                            </div>
-                            <div id="div2">
-                                <li>
-                                    <img src="https://img.icons8.com/material-rounded/24/000000/linkedin.png"
-                                        alt="ícone do linkedIn " />
-                                </li>
-                            </div>
-                            <div id="div3">
-                                <li>
-                                    <img src="https://img.icons8.com/material-outlined/24/000000/instagram-new--v1.png"
-                                        alt="ícone do instagram" />
-                                </li>
-                            </div>
-                            <div id="div4">
-                                <li>
-                                    <img src="https://img.icons8.com/material-rounded/24/000000/facebook-new.png"
-                                        alt="ícone do facebook" />
-                                </li>
-                            </div>
-                        </div>
-                    </section>
-                </ul>
-            </nav>
-        </div>
-        <div id="footer3">
-            <nav class="classfooter">
-                <ul>
-                    <p id="central"> FALE CONOSCO </p>
-                    <li> <img src="https://img.icons8.com/material-sharp/24/000000/no-phones--v1.png"
-                            alt=" ícone de telefone " /> (XX) XXXX-XXXX</li>
-                    <li><img src="https://img.icons8.com/material-outlined/24/000000/email.png"
-                            alt="ícone de email " />
-                        queopsmaritime@gmail.com.br </li>
-                    <li><img src="https://img.icons8.com/material/24/000000/internet.png"
-                            alt="ícone de servidor " />
-                        www.queopsmaritime.com.br </li>
-                    <li><img src="https://img.icons8.com/material/24/000000/marker--v1.png" alt="ícone de mapa" />
-                        Rua Coronel Lisboa, Vila Mariana-SP, Brasil, CEP 04041-050.
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </section>
-    <!-- *******************************************************FECHEI A SECTION*************
-    <!-************************************* DIV PARA FORMAS DE PAGAMENTO -->
-    <!-- <p id="formaPag"> Formas de pagamento:</p>
-    <div id="pagamento">
-        <div class="pagamento">
-            <li>
-                <img src="https://img.icons8.com/fluency/48/000000/mastercard.png" alt="ícone do cartão " />
-            </li>
-        </div>
-        <div class="pagamento">
-            <li>
-                <img src="https://img.icons8.com/fluency/48/000000/visa.png" alt="ícone do cartão" />
-            </li>
-        </div>
-        <div class="pagamento">
-            <li>
-                <img src="https://img.icons8.com/fluency/48/000000/card-in-use-1.png" />
-            </li>
-        </div>
-        <div class="pagamento">
-            <li>
-                <img src="https://img.icons8.com/color/50/000000/mercado-pago.png" />
-            </li>
-        </div>
-        <div class="pagamento">
-            <li>
-                <img src="https://img.icons8.com/color/48/000000/paypal.png" />
-            </li>
-        </div>
-        <div class="pagamento">
-            <li>
-                <img src="https://img.icons8.com/fluency/48/000000/diners-club.png" />
-            </li>
-        </div>
-        <div class="pagamento">
-            <li>
-                <img src="https://img.icons8.com/color/48/000000/american-express-squared.png" />
-            </li>
-        </div>
-    </div>  -->` */
     footer.append(rodape)
 }
-
 
 function inicar() {
     rodapePrincipal();
@@ -368,37 +259,41 @@ function abrirModal() {
     var elementoBootstrap = new bootstrap.Modal(modal);
     elementoBootstrap.show();
 }
-function fecharModal(){
-   $("#modalLogin").modal("hide");
+function fecharModal() {
+    $("#modalLogin").modal("hide");
 }
 var dadosCNPJ = [];
-function getCNPJ(){
+function getCNPJ() {
     let cnpj = $("#cnpj").val();
     console.log(cnpj)
     consultaCNPJ(cnpj)
-    
+
 }
 function consultaCNPJ(cnpj) {
-   // Limpa o CNPJ para conter somente numeros, removendo traços e pontos
-   cnpj = cnpj.replace(/\D/g, '');
+    // Limpa o CNPJ para conter somente numeros, removendo traços e pontos
+    cnpj = cnpj.replace(/\D/g, '');
 
-   $.ajax({
-       'url': 'https://www.receitaws.com.br/v1/cnpj/' + cnpj,
-       'type': "GET",
+    $.ajax({
+        'url': 'https://www.receitaws.com.br/v1/cnpj/' + cnpj,
+        'type': "GET",
         'dataType': 'jsonp',
-        'success': function(dado){
+        'success': function (dado) {
             console.log(dado)
             tratarCNPJ(dado)
         }
-   })
-   
+    })
+
 }
-function tratarCNPJ(dado){
+function tratarCNPJ(dado) {
     var dadosCNPJ = dado
     console.log(dadosCNPJ.situacao)
-    if(dadosCNPJ.situacao != "ATIVA"){
-        console.log("Parar")
-    }else{
+    if (dadosCNPJ.situacao != "ATIVA") {
+        let form = document.getElementById("cadastro");
+        let elements = form.elements;
+        for (let i = 0; i < elements.length; ++i) {
+            elements[i].disabled = true;
+        }
+    } else {
         $("#situacao").val(dadosCNPJ.situacao);
         $("#razaoSocial").val(dadosCNPJ.nome);
         $("#nomeFantasia").val(dadosCNPJ.fantasia);
@@ -414,17 +309,17 @@ function tratarCNPJ(dado){
     }
 }
 
-function validarForm(){
+function validarForm() {
     if ($("#razaoSocial").val().length < 3) {
         alert("Preencha corretamente a razão social");
         document.cadastro.razaoSocial.focus()
         return false;
     }
-     if ($("#contato").val().length < 3) {
+    if ($("#contato").val().length < 3) {
         alert("Preencha o nome da pessoa de contato");
         document.cadastro.contato.focus()
         return false;
-    } 
+    }
     if ($("#email").val().length < 3) {
         alert("Preencha o e-mail para contato");
         document.cadastro.email.focus()
@@ -511,9 +406,9 @@ function validarForm(){
         return false;
     }
     salvarDados()
-} 
+}
 var mensagemWhatsapp = ''
-function salvarDados(){
+function salvarDados() {
     let orcamento = {}
     orcamento.cnpj = $("#cnpj").val()
     $("#modalcnpj").text($("#cnpj").val())
@@ -545,44 +440,44 @@ function salvarDados(){
     $("#modalcidade").text($("#cidade").val())
     orcamento.estado = $("#estado").val()
     $("#modalestado").text($("#estado").val())
-    orcamento.pais= $("#pais").val()
+    orcamento.pais = $("#pais").val()
     $("#modalpais").text($("#pais").val())
-    orcamento.transacao= $("#transacao").val()
+    orcamento.transacao = $("#transacao").val()
     $("#modaltipoTransacao").text($("#transacao").val())
-    orcamento.carga= $("#carga").val()
+    orcamento.carga = $("#carga").val()
     $("#modaltipoCarga").text($("#carga").val())
-    orcamento.quantidadeVol= $("#quantidadeVol").val()
+    orcamento.quantidadeVol = $("#quantidadeVol").val()
     $("#modalqtdVol").text($("#quantidadeVol").val())
-    orcamento.peso= $("#peso").val()
+    orcamento.peso = $("#peso").val()
     $("#modalpeso").text($("#peso").val())
-    orcamento.cubagem= $("#cubagem").val()
+    orcamento.cubagem = $("#cubagem").val()
     $("#modalcubagem").text($("#cubagem").val())
-    orcamento.origem= $("#origem").val()
+    orcamento.origem = $("#origem").val()
     $("#modalorigem").text($("#origem").val())
-    orcamento.destino= $("#destino").val()
+    orcamento.destino = $("#destino").val()
     $("#modaldestino").text($("#destino").val())
-    orcamento.valor= $("#valor").val()
+    orcamento.valor = $("#valor").val()
     $("#modalvalorMer").text($("#valor").val())
-    orcamento.descricaoMercadoria= $("#descricaoMercadoria").val()
+    orcamento.descricaoMercadoria = $("#descricaoMercadoria").val()
     $("#modaldescricaoMercadoria").text($("#descricaoMercadoria").val())
-    mensagemWhatsapp 
+    mensagemWhatsapp
     var mensagem = encodeURIComponent(JSON.stringify(orcamento));
     /* https://api.whatsapp.com/send?phone=5527996998347&text=Voc%C3%AA%20acaba%20de%20receber%20um%20or%C3%A7amento%3A%20 */
     mensagemWhatsapp = mensagem
     console.log(mensagem)
     console.log(orcamento)
     abrirModalCotacao()
-}  
-function enviarOrcamento(){
-    window.open("https://api.whatsapp.com/send?phone=5527996998347&text=Voc%C3%AA%20acaba%20de%20receber%20um%20or%C3%A7amento%3A%20"+mensagemWhatsapp, '_blank');
+}
+function enviarOrcamento() {
+    window.open("https://api.whatsapp.com/send?phone=5527996998347&text=Voc%C3%AA%20acaba%20de%20receber%20um%20or%C3%A7amento%3A%20" + mensagemWhatsapp, '_blank');
     document.getElementById("cadastro").reset();
     fecharModalCotacao()
 }
-function abrirModalCotacao(){
+function abrirModalCotacao() {
     var modal2 = document.getElementById("modalCotacao");
     var elementoBootstrap = new bootstrap.Modal(modal2);
     elementoBootstrap.show();
 }
-function fecharModalCotacao(){
+function fecharModalCotacao() {
     $("#modalCotacao").modal("hide");
 }
