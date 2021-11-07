@@ -15,6 +15,15 @@
 .link:hover{
     color: #1F6D69;
 }
+.card-title{
+    color: #F1BE07;;
+}
+.card-text{
+    color: #1F6D69;
+}
+.pointer{
+    cursor: pointer;
+}
 
 .flat-row{
     background-color:#ffffff;
