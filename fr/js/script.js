@@ -35,7 +35,7 @@ function consultaTempoReal() {
     fetch(`https://economia.awesomeapi.com.br/last/USD-BRL`)
         .then(response => {
             response.json()
-                .then(data => $('#cotacao').text('Tempo real: ' + data['USDBRL']['bid']))
+                .then(data => $('#cotacao').text('Temps réel: ' + data['USDBRL']['bid']))
         })
         .catch(x => alert("Par de moedas não encontrado"));
     setTimeout(consultaTempoReal, 10000)
@@ -80,7 +80,7 @@ function signOut() {
         logImg.src = "img/person-circle.svg"
         localStorage.clear();
         console.log('User signed out.');
-        console.log(localStorage)
+        console.log(localStorage);
 
     });
 }
@@ -101,7 +101,7 @@ function cabecalho() {
     let header = $('header')
     let cabecalho = `<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #1F6D69;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/queopsmaritime/index.html"><img src="./imagens/Keops.gif"
+        <a class="navbar-brand" href="/queopsmaritime/index.html"><img src="../imagens/Keops.gif"
                 style="width: 9vw; height: 6.5vw;" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNavDarkDropdown, #navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -138,17 +138,17 @@ function cabecalho() {
         </li>
             <li class="nav-item">
             <a class="nav-link" href="/queopsmaritime/fr/index.html">
-                <img src="imagens/france.png" alt="" class="traducao" >
+                <img src="../imagens/france.png" alt="" class="traducao" >
             </a>
         </li>
          <li class="nav-item">
              <a class="nav-link" href="/queopsmaritime/es/index.html">
-                <img src="imagens/spain.png" alt="" class="traducao" >
+                <img src="../imagens/spain.png" alt="" class="traducao" >
             </a>
          </li>
         <li class="nav-item">
             <a class="nav-link" href="/queopsmaritime/en/index.html">
-             <img src="imagens/united-kingdom.png" alt="" class="traducao" >
+             <img src="../imagens/united-kingdom.png" alt="" class="traducao" >
             </a>
         </li>
             </ul>
@@ -158,7 +158,7 @@ function cabecalho() {
                 <li class="nav-item dropdown">
                     <a id="dropHead" class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img id='loginImg' alt="" src="imagens/person-circle.svg" class="loginImg bi bi-person-circle"
+                        <img id='loginImg' alt="" src="../imagens/person-circle.svg" class="loginImg bi bi-person-circle"
                             viewBox="0 0 16 16">
                         <span id="dropText">S'inscrire / Login</span>
                     </a>
@@ -201,7 +201,7 @@ function rodapePrincipal() {
                 <div class="row d-flex justify-content-center pointer" onclick="window.location='/queopsmaritime/fr/sobreNos.html'" >À propos de nous</div>
                 <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/queopsmaritime/fr/servicos.html'">Prestations de service</div>
                 <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/queopsmaritime/fr/cotacao.html'">Prix</div>
-                 <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/queopsmaritime/fr/contato.html>Contact</div>
+                 <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/queopsmaritime/fr/contato.html'">Contact</div>
             </div>
             <div class="col-lg-5 col-md-12 my-3">
                 <div class="row justify-content-center">SUIVEZ NOS RÉSEAUX </div>
