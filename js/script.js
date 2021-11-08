@@ -296,7 +296,10 @@ function tratarCNPJ(dado) {
         let elements = form.elements;
         for (let i = 0; i < elements.length; ++i) {
             elements[i].disabled = true;
+            
         }
+        $('#alerta').text('Cotações apenas para CNPJs Ativos')
+            abrirModalAlerta()
     } else {
         $("#situacao").val(dadosCNPJ.situacao);
         $("#razaoSocial").val(dadosCNPJ.nome);
@@ -315,101 +318,240 @@ function tratarCNPJ(dado) {
 
 function validarForm() {
     if ($("#razaoSocial").val().length < 3) {
-        alert("Preencha corretamente a razão social");
+        $('#alerta').text('Preencha corretamente a razão social')
+            abrirModalAlerta()
         document.cadastro.razaoSocial.focus()
         return false;
     }
     if ($("#contato").val().length < 3) {
-        alert("Preencha o nome da pessoa de contato");
+        $('#alerta').text('Preencha o nome da pessoa de contato')
+            abrirModalAlerta()
         document.cadastro.contato.focus()
         return false;
     }
     if ($("#email").val().length < 3) {
-        alert("Preencha o e-mail para contato");
+        $('#alerta').text('Preencha o e-mail para contato')
+            abrirModalAlerta()
         document.cadastro.email.focus()
         return false;
     }
     if ($("#telefone").val().length < 10) {
-        alert("Preencha o telefone para contato");
+        $('#alerta').text('Preencha o telefone para contato')
+            abrirModalAlerta()
         document.cadastro.telefone.focus()
         return false;
     }
     if ($("#celular").val().length < 10) {
-        alert("Preencha o celular para contato");
+        $('#alerta').text('Preencha o celular para contato')
+            abrirModalAlerta()
         document.cadastro.celular.focus()
         return false;
     }
     if ($("#cep").val().length < 5) {
-        alert("Preencha o CEP para contato");
+        $('#alerta').text('Preencha o CEP para contato')
+            abrirModalAlerta()
         document.cadastro.cep.focus()
         return false;
     }
     if ($("#logradouro").val().length < 5) {
-        alert("Preencha a Rua corretamente");
+        $('#alerta').text('Preencha a Rua corretamente')
+            abrirModalAlerta()
         document.cadastro.logradouro.focus()
         return false;
     }
     if ($("#cidade").val().length < 5) {
-        alert("Preencha a cidade corretamente");
+        $('#alerta').text('Preencha a cidade corretamente')
+            abrirModalAlerta()
         document.cadastro.cidade.focus()
         return false;
     }
     if ($("#estado").val().length < 2) {
-        alert("Preencha o estado corretamente");
+        $('#alerta').text('Preencha o estado corretamente')
+            abrirModalAlerta()
         document.cadastro.estado.focus()
         return false;
     }
     if ($("#pais").val().length < 5) {
-        alert("Preencha o País corretamente");
+        $('#alerta').text('Preencha o País corretamente')
+            abrirModalAlerta()
         document.cadastro.pais.focus()
         return false;
     }
     if ($("#transacao").val() === "") {
-        alert("Selecione o Tipo de Transação");
+        $('#alerta').text('Selecione o Tipo de Transação')
+            abrirModalAlerta()
         document.cadastro.transacao.focus()
         return false;
     }
     if ($("#carga").val() === "") {
-        alert("Selecione o Tipo de Carga");
+        $('#alerta').text('Selecione o Tipo de Carga')
+            abrirModalAlerta()
         document.cadastro.carga.focus()
         return false;
     }
     if ($("#quantidadeVol").val().length < 1) {
-        alert("Selecione a Quantidade de volumes");
+        $('#alerta').text('Selecione a Quantidade de volumes')
+            abrirModalAlerta()
         document.cadastro.quantidadeVol.focus()
         return false;
     }
     if ($("#peso").val().length < 1) {
-        alert("Forneça o peso da carga");
+        $('#alerta').text('Forneça o peso da carga')
+            abrirModalAlerta()
         document.cadastro.peso.focus()
         return false;
     }
     if ($("#cubagem").val().length < 1) {
+        $('#alerta').text('Forneça a metragem da carga')
+            abrirModalAlerta()
         alert("Forneça a metragem da carga");
-        document.cadastro.cubagem.focus()
         return false;
     }
     if ($("#origem").val() === "") {
-        alert("Selecione o porto de Origem");
+        $('#alerta').text('Selecione o porto de Origem')
+            abrirModalAlerta()
         document.cadastro.origem.focus()
         return false;
     }
     if ($("#destino").val() === "") {
-        alert("Selecione o porto de Destino");
+        $('#alerta').text('Selecione o porto de Destino')
+            abrirModalAlerta()
         document.cadastro.destino.focus();
         return false;
     }
     if ($("#valor").val().length < 1) {
-        alert("Forneça o valor da mercadoria");
+        $('#alerta').text('Forneça o valor da mercadoria')
+            abrirModalAlerta()
         document.cadastro.valor.focus()
         return false;
     }
     if ($("#descricaoMercadoria").val() === "") {
-        alert("Forneça o valor da mercadoria");
+        $('#alerta').text('Forneça o valor da mercadoria')
+            abrirModalAlerta()
         document.cadastro.descricaoMercadoria.focus()
         return false;
     }
     salvarDados()
+}
+var dadosCNPJPessoal = [];
+function getCNPJPessoal() {
+    let cnpj = $("#cnpjCadastro").val();
+    console.log(cnpj)
+    consultaCNPJPessoal(cnpj)
+
+}
+function consultaCNPJPessoal(cnpj) {
+    // Limpa o CNPJ para conter somente numeros, removendo traços e pontos
+    cnpj = cnpj.replace(/\D/g, '');
+
+    $.ajax({
+        'url': 'https://www.receitaws.com.br/v1/cnpj/' + cnpj,
+        'type': "GET",
+        'dataType': 'jsonp',
+        'success': function (dado) {
+            console.log(dado)
+            tratarCNPJPessoal(dado)
+        }
+    })
+
+}
+function tratarCNPJPessoal(dado) {
+    var dadosCNPJ = dado
+    console.log(dadosCNPJ.situacao)
+    if (dadosCNPJ.situacao != "ATIVA") {
+        let form = document.getElementById("cadastro");
+        let elements = form.elements;
+        for (let i = 0; i < elements.length; ++i) {
+            elements[i].disabled = true;
+        }
+    } else {
+        $("#situacaoCadastro").val(dadosCNPJ.situacao);
+        $("#razaoSocialCadastro").val(dadosCNPJ.nome);
+        $("#nomeFantasiaCadastro").val(dadosCNPJ.fantasia);
+        $("#emailCadastro").val(dadosCNPJ.email);
+        $("#telefoneCadastro").val(dadosCNPJ.telefone);
+        $("#cepCadastro").val(dadosCNPJ.cep);
+        $("#logradouroCadastro").val(dadosCNPJ.logradouro);
+        $("#numeroCadastro").val(dadosCNPJ.numero);
+        $("#complementoCadastro").val(dadosCNPJ.complemento);
+        $("#bairroCadastro").val(dadosCNPJ.bairro);
+        $("#cidadeCadastro").val(dadosCNPJ.municipio);
+        $("#estadoCadastro").val(dadosCNPJ.uf);
+    }
+}
+function validarCadastro(){
+    if ($("#nome").val().length < 3) {
+        $('#alerta').text('Preencha corretamente o seu nome')
+            abrirModalAlerta()
+        document.cadastroPessoal.razaoSocial.focus()
+        return false;
+    }
+    if ($("#cpf").val().length < 11) {
+        $('#alerta').text('Preencha corretamente o seu CPF"')
+            abrirModalAlerta()
+        document.cadastroPessoal.razaoSocial.focus()
+        return false;
+    }
+    if ($("#razaoSocialCadastro").val().length < 3) {
+        $('#alerta').text('Preencha corretamente a razão social')
+            abrirModalAlerta()
+        document.cadastroPessoal.razaoSocial.focus()
+        return false;
+    }
+    if ($("#contatoCadastro").val().length < 3) {
+        $('#alerta').text('Preencha o nome da pessoa de contato')
+            abrirModalAlerta()
+        document.cadastroPessoal.contato.focus()
+        return false;
+    }
+    if ($("#emailCadastro").val().length < 3) {
+        $('#alerta').text('Preencha o e-mail para contato')
+            abrirModalAlerta()
+        document.cadastroPessoal.email.focus()
+        return false;
+    }
+    if ($("#telefoneCadastro").val().length < 10) {
+        $('#alerta').text('Preencha o telefone para contato')
+            abrirModalAlerta()
+        document.cadastroPessoal.telefone.focus()
+        return false;
+    }
+    if ($("#celularCadastro").val().length < 10) {
+        $('#alerta').text('Preencha o celular para contato')
+            abrirModalAlerta()
+        document.cadastroPessoal.celular.focus()
+        return false;
+    }
+    if ($("#cepCadastro").val().length < 5) {
+        $('#alerta').text('Preencha o CEP para contato')
+            abrirModalAlerta()
+        document.cadastroPessoal.cep.focus()
+        return false;
+    }
+    if ($("#logradouroCadastro").val().length < 5) {
+        $('#alerta').text('Preencha a Rua corretamente')
+            abrirModalAlerta()
+        document.cadastroPessoal.logradouro.focus()
+        return false;
+    }
+    if ($("#cidadeCadastro").val().length < 5) {
+        $('#alerta').text('Preencha a cidade corretamente')
+            abrirModalAlerta()
+        document.cadastroPessoal.cidade.focus()
+        return false;
+    }
+    if ($("#estadoCadastro").val().length < 2) {
+        $('#alerta').text('Preencha o estado corretamente')
+            abrirModalAlerta()
+        alert("Preencha o estado corretamente");
+        return false;
+    }
+    if ($("#paisCadastro").val().length < 5) {
+        $('#alerta').text('Preencha o País corretamente')
+            abrirModalAlerta()
+        document.cadastroPessoal.pais.focus()
+        return false;
+    }
 }
 var mensagemWhatsapp = ''
 function salvarDados() {
@@ -464,13 +606,7 @@ function salvarDados() {
     $("#modalvalorMer").text($("#valor").val())
     orcamento.descricaoMercadoria = $("#descricaoMercadoria").val()
     $("#modaldescricaoMercadoria").text($("#descricaoMercadoria").val())
-    mensagemWhatsapp
-    var mensagem = encodeURIComponent(JSON.stringify(orcamento));
-    /* https://api.whatsapp.com/send?phone=5527996998347&text=Voc%C3%AA%20acaba%20de%20receber%20um%20or%C3%A7amento%3A%20 */
-    mensagemWhatsapp = mensagem
-    console.log(mensagem)
-    console.log(orcamento)
-    abrirModalCotacao()
+    alert("Cadastro realizado com sucesso")
 }
 function enviarOrcamento() {
     window.open("https://api.whatsapp.com/send?phone=5527996998347&text=Voc%C3%AA%20acaba%20de%20receber%20um%20or%C3%A7amento%3A%20" + mensagemWhatsapp, '_blank');
@@ -484,4 +620,53 @@ function abrirModalCotacao() {
 }
 function fecharModalCotacao() {
     $("#modalCotacao").modal("hide");
+}
+
+function VerificaCPF() {
+    if (vercpf(document.getElementById("cpf").value)) { document.cadastroPessoal } else {
+        errors = "1"; if (errors) {
+            $('#alerta').text('CPF NÃO VÁLIDO')
+            abrirModalAlerta()
+        };
+        $('#botaoFechar').css({ marginTop: "120px" });
+        document.retorno = (errors == '');
+    }
+}
+function vercpf(cpf) {
+    let cpfSemTraco = cpf.replace("-", "");
+    cpf = cpfSemTraco.replaceAll(".", "");
+    if (cpf.length != 11 || cpf == "00000000000" || cpf == "11111111111" || cpf == "22222222222" || cpf == "33333333333" || cpf == "44444444444" || cpf == "55555555555" || cpf == "66666666666" || cpf == "77777777777" || cpf == "88888888888" || cpf == "99999999999")
+        return false;
+    add = 0;
+    for (i = 0; i < 9; i++)
+        add += parseInt(cpf.charAt(i)) * (10 - i);
+    rev = 11 - (add % 11);
+    if (rev == 10 || rev == 11)
+        rev = 0;
+    if (rev != parseInt(cpf.charAt(9)))
+        return false;
+    add = 0;
+    for (i = 0; i < 10; i++)
+        add += parseInt(cpf.charAt(i)) * (11 - i);
+    rev = 11 - (add % 11);
+    if (rev == 10 || rev == 11)
+        rev = 0;
+    if (rev != parseInt(cpf.charAt(10)))
+        return false;
+        $('#alerta').text('CPF Valido')
+            abrirModalAlerta()
+    
+    return true;
+}
+// função para fechar a janela que mostra os dados
+function fecharJanela() {
+    $('#confirmaCpf').css({ display: "none" });
+}
+function abrirModalAlerta() {
+    var modal3 = document.getElementById("modalAlerta");
+    var elementoBootstrap = new bootstrap.Modal(modal3);
+    elementoBootstrap.show();
+}
+function fecharModalAlerta() {
+    $("#modalAlerta").modal("hide");
 }
