@@ -24,22 +24,41 @@
 
 <body onload="inicar()">
     <div class="modal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLongTitle">Cadstre-se ou Faça seu login</h3>
+                    <h3 class="modal-title" id="exampleModalLongTitle">Cadastre-se ou Faça seu login</h3>
+
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="fecharModal()">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="container">
-                        <div id="loginBtn" class="g-signin2" data-onsuccess="onSignIn"></div>
+                    <div class="container my-5">
+                        <h5>Faça seu login via Google ou por e-mail e senha</h5>
+                        <div id="loginBtn" class="g-signin2 mt-5" data-onsuccess="onSignIn"></div>
+                        <div class="row my-5">
+                            <a href="/queopsmaritime/contato.html">Se ainda não é cadastrado clique aqui.</a>
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="container">
+                        <form action="">
+                            <div class="row">
+                                <label for="email">E-mail</label>
+                                <input type="email">
+                            </div>
+                            <div class="row">
+                                <label for="">Senha:</label>
+                                <input type="password">
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                    onclick="fecharModal()">Close</button>
+                                <button type="reset" class="btn btn-primary">Save changes</button>
+                            </div>
+                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -192,39 +211,80 @@
                 <div class="card" style="width: 25rem;">
                     <img src="./imagens/card1_caminhão.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Por que escolher os serviços Queops
-                            Maritime?</h5>
-                        <p class="card-text">Na Queops Maritime,
-                            sabemos que o tempo é essencial.
-                            Usamos nosso serviço legado de Truckload para moldar o que nossa empresa
-                            é hoje.</p>
-                        <a href="./servicos.html" class="link">Saiba mais...</a>
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary"></a>
+                        <div class="box-header">
+                            <h5 class="box-title">
+                                <a href="services-detail.html">Por que escolher os serviços Queops
+                                    Maritime?</a>
+                            </h5>
+                        </div>
+                        <div class="box-content">
+                            <div class="box-desc">Na Queops Maritime, sabemos que o tempo é essencial.
+                                Usamos nosso serviço legado de Truckload para moldar o que nossa empresa
+                                é hoje.</div>
+                            <div class="box-button">
+                                <a class="button bg-scheme3" href="./pages/page1.html">Leia mais <i
+                                        class="fa fa-chevron-right"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card" style="width: 25rem;">
                     <img src="./imagens/card3_estoque.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Você está otimizando o espaço do seu armazém?</h5>
-                        <p class="card-text">Algumas imagens destacando nosso armazém, transporte, experiência em carga e logística.</p>
-                        <a href="./servicos.html" class="link">Saiba mais...</a>
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary"></a>
+                        <div class="box-header">
+                            <h5 class="box-title">
+                                <a href="services-detail-v1.html">Você está otimizando o espaço no seu
+                                    armazém?</a>
+                            </h5>
+                        </div>
+                        <div class="box-content">
+                            <div class="box-desc">Serviços de armazenamento e 3PL(Third-party Logistics)
+                                oferecidos pelo
+                                grupo Quelps Maritime tornou-se parte integrante dos requisitos do nosso
+                                cliente.
+                                O nossos clientes continuaram a exigir maior economia e eficiência em
+                                seus negócios.</div>
+                            <div class="box-button">
+                                <a class="button bg-scheme3" href="about.html">Leia mais <i
+                                        class="fa fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div class="card" style="width: 25rem;">
                     <img src="./imagens/card2_conatainer.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Por que escolher os serviços Queops
-                            Maritime?</h5>
-                        <p class="card-text">Serviços de armazenamento e
-                            3PL(Third-party Logistics) oferecidos pelo
-                            grupo Quelps Maritime tornou-se parte integrante dos requisitos do nosso cliente.
-                            O nossos clientes continuaram a exigir maior economia e eficiência em
-                            seus negócios.</p>
-                        <a href="./servicos.html" class="link">Saiba mais...</a>
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary"></a>
+                        <div class="box-header">
+                            <h5 class="box-title">
+                                <a href="services-detail-v2.html">A galeria do transporte Quelps
+                                    Maritime</a>
+                            </h5>
+                        </div>
+                        <div class="box-content">
+                            <div class="box-desc">Algumas imagens destacando nosso armazém, transporte,
+                                experiência em carga e logística.</div>
+                            <div class="box-button">
+                                <a class="button bg-scheme3" href="about.html">Leia mais <i
+                                        class="fa fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
 
 
 
