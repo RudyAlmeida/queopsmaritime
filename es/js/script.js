@@ -111,24 +111,24 @@ function cabecalho() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color: #F1BE07";>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
                 <li class="nav-item fontColorNav" >
-                    <a class="nav-link active" aria-current="page" href="/es/index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/queopsmaritime/es/index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/es/sobreNos.html">
+                    <a class="nav-link" href="/queopsmaritime/es/sobreNos.html">
                     Sobre nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/es/servicos.html">
+                    <a class="nav-link" href="/queopsmaritime/es/servicos.html">
                     Servicios
                     </a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/es/cotacao.html">
+                <a class="nav-link" href="/queopsmaritime/es/cotacao.html">
                 Precio
             </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/es/contato.html">
+                    <a class="nav-link" href="/queopsmaritime/es/contato.html">
                     Contacto
                     </a>
                 </li>
@@ -138,17 +138,17 @@ function cabecalho() {
         </a>
         </li>
             <li class="nav-item">
-            <a class="nav-link" href="/fr/index.html">
+            <a class="nav-link" href="/queopsmaritime/fr/index.html">
                 <img src="imagens/france.png" alt="" class="traducao" >
             </a>
         </li>
          <li class="nav-item">
-             <a class="nav-link" href="/es/index.html">
+             <a class="nav-link" href="/queopsmaritime/es/index.html">
                 <img src="imagens/spain.png" alt="" class="traducao" >
             </a>
          </li>
         <li class="nav-item">
-            <a class="nav-link" href="/en/index.html">
+            <a class="nav-link" href="/queopsmaritime/en/index.html">
              <img src="imagens/united-kingdom.png" alt="" class="traducao" >
             </a>
         </li>
@@ -200,10 +200,10 @@ function rodapePrincipal() {
         <div class="row">
             <div class="col-lg-3 col-md-12 my-3">
                 <div class="row d-flex justify-content-center">INSTITUCIONAL</div>
-                <div class="row d-flex justify-content-center pointer" onclick="window.location='/es/sobreNos.html'" >Sobre nosotros</div>
-                <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/es/servicos.html'">Servicios</div>
-                <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/es/cotacao.html'">Precio</div>
-                 <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/es/contato.html>Contacto</div>
+                <div class="row d-flex justify-content-center pointer" onclick="window.location='/queopsmaritime/es/sobreNos.html'" >Sobre nosotros</div>
+                <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/queopsmaritime/es/servicos.html'">Servicios</div>
+                <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/queopsmaritime/es/cotacao.html'">Precio</div>
+                 <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/queopsmaritime/es/contato.html>Contacto</div>
             </div>
             <div class="col-lg-5 col-md-12 my-3">
                 <div class="row justify-content-center">SIGUE NUESTRAS REDES </div>
