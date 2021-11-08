@@ -1,6 +1,6 @@
 # queopsmaritime
 Projeto desenvolvido durante o curso de Web Full Stack da SoulCode Academy
-
+![plot](./imagens/Screenshot_59.png)
 
 SoulCode Challenge 💡
 Desafio de HTML, CSS , JAVASCRIPT , JQUERY  e BOOTSTRAP proposto pela Soul Code, EDTECH brasileira com inclusão social.
