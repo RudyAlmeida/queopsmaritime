@@ -21,13 +21,13 @@ function calcBid(bidList) {
         bidTotal += Number(element)
     });
     let menorBid = bidList.sort((a, b) => a - b)[0]
-    $('#menor').text('Menor cotação: R$:' + menorBid)
+    $('#menor').text('Menor cotação: R$' + menorBid)
     let maiorBid = bidList.sort((a, b) => a - b).at(-1)
-    $('#maior').text('Maior cotação: R$:' + parseFloat(maiorBid).toFixed(2) )
+    $('#maior').text('Maior cotação: R$' + parseFloat(maiorBid).toFixed(2) )
     let variacaoBid = (((maiorBid - menorBid) / menorBid) * 100).toFixed(2)
-    $('#variacao').text('Variação no Periodo: ' + variacaoBid+"%")
+    $('#variacao').text('Variação no período: ' + variacaoBid+"%")
     let bidMedio = (bidTotal / bidList.length).toFixed(2)
-    $('#media').text('Media no periodo: R$' + bidMedio)
+    $('#media').text('Média no período: R$' + bidMedio)
 
 }
 function consultaTempoReal() {
