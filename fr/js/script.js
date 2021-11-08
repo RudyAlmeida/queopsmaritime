@@ -77,7 +77,7 @@ function signOut() {
     auth2.signOut().then(function () {
         document.getElementById('dropText').innerText = "S'inscrire / Login"
         let logImg = document.getElementById('loginImg')
-        logImg.src = "img/person-circle.svg"
+        logImg.src = "imagens/person-circle.svg"
         localStorage.clear();
         console.log('User signed out.');
         console.log(localStorage);
