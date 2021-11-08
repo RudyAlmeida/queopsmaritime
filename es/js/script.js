@@ -21,13 +21,13 @@ function calcBid(bidList) {
         bidTotal += Number(element)
     });
     let menorBid = bidList.sort((a, b) => a - b)[0]
-    $('#menor').text('Menor cotação: R$:' + menorBid)
+    $('#menor').text('El precio más bajo: R$:' + menorBid)
     let maiorBid = bidList.sort((a, b) => a - b).at(-1)
-    $('#maior').text('Maior cotação: R$:' + parseFloat(maiorBid).toFixed(2) )
+    $('#maior').text('Cotización más alta: R$:' + parseFloat(maiorBid).toFixed(2) )
     let variacaoBid = (((maiorBid - menorBid) / menorBid) * 100).toFixed(2)
-    $('#variacao').text('Variação no Periodo: ' + variacaoBid+"%")
+    $('#variacao').text('Variación de período: ' + variacaoBid+"%")
     let bidMedio = (bidTotal / bidList.length).toFixed(2)
-    $('#media').text('Media no periodo: R$' + bidMedio)
+    $('#media').text('Promedio en el período: R$' + bidMedio)
 
 }
 function consultaTempoReal() {
@@ -75,7 +75,7 @@ function onSignIn(googleUser) {
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
-        document.getElementById('dropText').innerText = "Cadastre-se / Login"
+        document.getElementById('dropText').innerText = "Registrase / Login"
         let logImg = document.getElementById('loginImg')
         logImg.src = "img/person-circle.svg"
         localStorage.clear();
@@ -101,7 +101,7 @@ function cabecalho() {
     let header = $('header')
     let cabecalho = `<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #1F6D69;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/queopsmaritime/index.html"><img src="./imagens/Keops.gif"
+        <a class="navbar-brand" href="/queopsmaritime/es/index.html"><img src="./imagens/Keops.gif"
                 style="width: 9vw; height: 6.5vw;" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNavDarkDropdown, #navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -111,26 +111,47 @@ function cabecalho() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color: #F1BE07";>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
                 <li class="nav-item fontColorNav" >
-                    <a class="nav-link active" aria-current="page" href="/queopsmaritime/index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/queopsmaritime/es/index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/queopsmaritime/sobreNos.html">Sobre Nós</a>
+                    <a class="nav-link" href="/queopsmaritime/es/sobreNos.html">
+                    Sobre nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/queopsmaritime/servicos.html">
-                        Serviços
+                    <a class="nav-link" href="/queopsmaritime/es/servicos.html">
+                    Servicios
                     </a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/queopsmaritime/cotacao.html">
-                Cotação
+                <a class="nav-link" href="/queopsmaritime/es/cotacao.html">
+                Precio
             </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/queopsmaritime/contato.html">
-                        Contato
+                    <a class="nav-link" href="/queopsmaritime/es/contato.html">
+                    Contacto
                     </a>
                 </li>
+                <li class="nav-item">
+        <a class="nav-link" href="/queopsmaritime/index.html">
+            <img src="imagens/bandeira-do-brasil.png" alt="" class="traducao" >
+        </a>
+        </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/queopsmaritime/fr/index.html">
+                <img src="imagens/france.png" alt="" class="traducao" >
+            </a>
+        </li>
+         <li class="nav-item">
+             <a class="nav-link" href="/queopsmaritime/es/index.html">
+                <img src="imagens/spain.png" alt="" class="traducao" >
+            </a>
+         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/queopsmaritime/en/index.html">
+             <img src="imagens/united-kingdom.png" alt="" class="traducao" >
+            </a>
+        </li>
             </ul>
         </div>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDarkDropdown" style="background-color: #1F6D69;">
@@ -138,15 +159,16 @@ function cabecalho() {
                 <li class="nav-item dropdown">
                     <a id="dropHead" class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img id='loginImg' alt="" src="imagens/person-circle.svg" class="bi bi-person-circle"
+                        <img id='loginImg' alt="" src="imagens/person-circle.svg" class="loginImg bi bi-person-circle"
                             viewBox="0 0 16 16">
-                        <span id="dropText">Cadastre-se / Login</span>
+                        <span id="dropText">Registrase / Login</span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink" style="background-color: #e3f2fd;">
                         <li><button type="button" class="btn btn-primary dropdown-item" onclick="abrirModal()">
                         Perfil
                       </button></li>
-                        <li><a class="dropdown-item" href="#">Historico</a></li>
+                        <li><a class="dropdown-item" href="#">
+                        Histórico</a></li>
                         <li><button class="dropdown-item" onclick="signOut()">Logout</button></li>
                     </ul>
                 </li>
@@ -154,14 +176,15 @@ function cabecalho() {
         </div>
     </div>
 </nav>
+<div class="container-fluid">
 <div class="row d-flex justify-content-between" style="background-color: #F1BE07; color:#1F6D69">
     <div class="col-lg-2 col-md-4 col-sm-6" id="cotacao"></div>
-    <div class="col-lg-2 col-md-4 col-sm-6 font-weight-bold">Varição em 360 dias:</div>
+    <div class="col-lg-2 col-md-4 col-sm-6 font-weight-bold">Variación de 360 ​​días:</div>
     <div class="col-lg-2 col-md-4 col-sm-6"id="media"></div>
     <div class="col-lg-2 col-md-4 col-sm-6" id="menor"></div>
     <div class="col-lg-2 col-md-4 col-sm-6" id="maior"></div>
     <div class="col-lg-2 col-md-4 col-sm-6" id ="variacao"></div>
-</div>`
+</div></div>`
     header.append(cabecalho)
     $('a.active').removeClass('active');
     console.log(location.pathname)
@@ -177,13 +200,13 @@ function rodapePrincipal() {
         <div class="row">
             <div class="col-lg-3 col-md-12 my-3">
                 <div class="row d-flex justify-content-center">INSTITUCIONAL</div>
-                <div class="row d-flex justify-content-center pointer" onclick="window.location='/queopsmaritime/sobreNos.html'" >Sobre Nós</div>
-                <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/queopsmaritime/servicos.html'">Serviços</div>
-                <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/queopsmaritime/cotacao.html'">Cotação</div>
-                 <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/queopsmaritime/contato.html>Contato</div>
+                <div class="row d-flex justify-content-center pointer" onclick="window.location='/queopsmaritime/es/sobreNos.html'" >Sobre nosotros</div>
+                <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/queopsmaritime/es/servicos.html'">Servicios</div>
+                <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/queopsmaritime/es/cotacao.html'">Precio</div>
+                 <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/queopsmaritime/es/contato.html>Contacto</div>
             </div>
             <div class="col-lg-5 col-md-12 my-3">
-                <div class="row justify-content-center">SIGA NOSSAS REDES </div>
+                <div class="row justify-content-center">SIGUE NUESTRAS REDES </div>
                 <div class="row mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#F1BE07"
                     class="bi bi-twitter" viewBox="0 0 16 16">
                     <path
@@ -207,7 +230,7 @@ function rodapePrincipal() {
                 <div class="row border border-warning mt-2"></div>
             </div>
             <div class="col-lg-4 col-md-12-d my-3">
-                <div class="row d-flex justify-content-center">FALE CONOSCO</div>
+                <div class="row d-flex justify-content-center">HABLE CON NOSOTROS</div>
                 <div class="row-inline d-flex justify-content-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-telephone-fill" viewBox="0 0 16 16">
@@ -242,8 +265,9 @@ function rodapePrincipal() {
         </div>
         </div>
         <div class="row d-flex justify-content-center" style="background-color: #1F6D69; color:"#F1BE07">
-         Copyright © 2021 Queops Maritime | Todos os direitos reservados | Políticas de
-            Privacidade | Políticas de
+         Copyright © 2021 Queops Maritime | 
+         Todos los derechos reservados | Políticas de
+            Intimidad | Políticas de
              Cookies
             </div>
         </div>
@@ -298,7 +322,7 @@ function tratarCNPJ(dado) {
             elements[i].disabled = true;
             
         }
-        $('#alerta').text('Cotações apenas para CNPJs Ativos')
+        $('#alerta').text('Cotizaciones solo para CNPJs activos')
             abrirModalAlerta()
     } else {
         $("#situacao").val(dadosCNPJ.situacao);
@@ -318,115 +342,114 @@ function tratarCNPJ(dado) {
 
 function validarForm() {
     if ($("#razaoSocial").val().length < 3) {
-        $('#alerta').text('Preencha corretamente a razão social')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.razaoSocial.focus()
         return false;
     }
     if ($("#contato").val().length < 3) {
-        $('#alerta').text('Preencha o nome da pessoa de contato')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.contato.focus()
         return false;
     }
     if ($("#email").val().length < 3) {
-        $('#alerta').text('Preencha o e-mail para contato')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.email.focus()
         return false;
     }
     if ($("#telefone").val().length < 10) {
-        $('#alerta').text('Preencha o telefone para contato')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.telefone.focus()
         return false;
     }
     if ($("#celular").val().length < 10) {
-        $('#alerta').text('Preencha o celular para contato')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.celular.focus()
         return false;
     }
     if ($("#cep").val().length < 5) {
-        $('#alerta').text('Preencha o CEP para contato')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.cep.focus()
         return false;
     }
     if ($("#logradouro").val().length < 5) {
-        $('#alerta').text('Preencha a Rua corretamente')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.logradouro.focus()
         return false;
     }
     if ($("#cidade").val().length < 5) {
-        $('#alerta').text('Preencha a cidade corretamente')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.cidade.focus()
         return false;
     }
     if ($("#estado").val().length < 2) {
-        $('#alerta').text('Preencha o estado corretamente')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.estado.focus()
         return false;
     }
     if ($("#pais").val().length < 5) {
-        $('#alerta').text('Preencha o País corretamente')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.pais.focus()
         return false;
     }
     if ($("#transacao").val() === "") {
-        $('#alerta').text('Selecione o Tipo de Transação')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.transacao.focus()
         return false;
     }
     if ($("#carga").val() === "") {
-        $('#alerta').text('Selecione o Tipo de Carga')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.carga.focus()
         return false;
     }
     if ($("#quantidadeVol").val().length < 1) {
-        $('#alerta').text('Selecione a Quantidade de volumes')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.quantidadeVol.focus()
         return false;
     }
     if ($("#peso").val().length < 1) {
-        $('#alerta').text('Forneça o peso da carga')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.peso.focus()
         return false;
     }
     if ($("#cubagem").val().length < 1) {
-        $('#alerta').text('Forneça a metragem da carga')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
-        alert("Forneça a metragem da carga");
         return false;
     }
     if ($("#origem").val() === "") {
-        $('#alerta').text('Selecione o porto de Origem')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.origem.focus()
         return false;
     }
     if ($("#destino").val() === "") {
-        $('#alerta').text('Selecione o porto de Destino')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.destino.focus();
         return false;
     }
     if ($("#valor").val().length < 1) {
-        $('#alerta').text('Forneça o valor da mercadoria')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.valor.focus()
         return false;
     }
     if ($("#descricaoMercadoria").val() === "") {
-        $('#alerta').text('Forneça o valor da mercadoria')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastro.descricaoMercadoria.focus()
         return false;
@@ -481,73 +504,72 @@ function tratarCNPJPessoal(dado) {
 }
 function validarCadastro(){
     if ($("#nome").val().length < 3) {
-        $('#alerta').text('Preencha corretamente o seu nome')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastroPessoal.razaoSocial.focus()
         return false;
     }
     if ($("#cpf").val().length < 11) {
-        $('#alerta').text('Preencha corretamente o seu CPF"')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastroPessoal.razaoSocial.focus()
         return false;
     }
     if ($("#razaoSocialCadastro").val().length < 3) {
-        $('#alerta').text('Preencha corretamente a razão social')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastroPessoal.razaoSocial.focus()
         return false;
     }
     if ($("#contatoCadastro").val().length < 3) {
-        $('#alerta').text('Preencha o nome da pessoa de contato')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastroPessoal.contato.focus()
         return false;
     }
     if ($("#emailCadastro").val().length < 3) {
-        $('#alerta').text('Preencha o e-mail para contato')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastroPessoal.email.focus()
         return false;
     }
     if ($("#telefoneCadastro").val().length < 10) {
-        $('#alerta').text('Preencha o telefone para contato')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastroPessoal.telefone.focus()
         return false;
     }
     if ($("#celularCadastro").val().length < 10) {
-        $('#alerta').text('Preencha o celular para contato')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastroPessoal.celular.focus()
         return false;
     }
     if ($("#cepCadastro").val().length < 5) {
-        $('#alerta').text('Preencha o CEP para contato')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastroPessoal.cep.focus()
         return false;
     }
     if ($("#logradouroCadastro").val().length < 5) {
-        $('#alerta').text('Preencha a Rua corretamente')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastroPessoal.logradouro.focus()
         return false;
     }
     if ($("#cidadeCadastro").val().length < 5) {
-        $('#alerta').text('Preencha a cidade corretamente')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastroPessoal.cidade.focus()
         return false;
     }
     if ($("#estadoCadastro").val().length < 2) {
-        $('#alerta').text('Preencha o estado corretamente')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
-        alert("Preencha o estado corretamente");
         return false;
     }
     if ($("#paisCadastro").val().length < 5) {
-        $('#alerta').text('Preencha o País corretamente')
+        $('#alerta').text('Complete el formulario correctamente')
             abrirModalAlerta()
         document.cadastroPessoal.pais.focus()
         return false;
@@ -625,7 +647,7 @@ function fecharModalCotacao() {
 function VerificaCPF() {
     if (vercpf(document.getElementById("cpf").value)) { document.cadastroPessoal } else {
         errors = "1"; if (errors) {
-            $('#alerta').text('CPF NÃO VÁLIDO')
+            $('#alerta').text('CPF NO ES VÁLIDO')
             abrirModalAlerta()
         };
         $('#botaoFechar').css({ marginTop: "120px" });
@@ -653,7 +675,7 @@ function vercpf(cpf) {
         rev = 0;
     if (rev != parseInt(cpf.charAt(10)))
         return false;
-        $('#alerta').text('CPF Valido')
+        $('#alerta').text('CPF ES VÁLIDO')
             abrirModalAlerta()
     
     return true;
