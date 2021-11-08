@@ -27,34 +27,37 @@
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLongTitle">Cadastre-se ou Faça seu login</h3>
+                    <h3 class="modal-title" id="exampleModalLongTitle">
+                        S'inscrire ou se connecter</h3>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="fecharModal()">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="container my-5">
-                        <h5>Faça seu login via Google ou por e-mail e senha</h5>
+                        <h5>Connectez-vous via Google ou par email et mot de passe</h5>
                         <div id="loginBtn" class="g-signin2 mt-5" data-onsuccess="onSignIn"></div>
                         <div class="row my-5">
-                            <a href="/queopsmaritime/fr/cadastro.html">Se ainda não é cadastrado clique aqui.</a>
+                            <a href="/queopsmaritime/fr/cadastro.html">
+                                Si vous n'êtes pas inscrit, cliquez ici.</a>
                         </div>
                     </div>
                     <div class="container">
                         <form action="">
                             <div class="row">
-                                <label for="email">E-mail</label>
+                                <label for="email">Email</label>
                                 <input type="email">
                             </div>
                             <div class="row">
-                                <label for="">Senha:</label>
+                                <label for="">Mot de passe:</label>
                                 <input type="password">
 
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                                    onclick="fecharModal()">Close</button>
-                                <button type="reset" class="btn btn-primary">Save changes</button>
+                                    onclick="fecharModal()">
+                                    Fermer</button>
+                                <button type="reset" class="btn btn-primary">Envoyer</button>
                             </div>
                     </div>
                     </form>
@@ -67,7 +70,8 @@
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title text-center" id="exampleModalLongTitle">Alerta</h3>
+                    <h3 class="modal-title text-center" id="exampleModalLongTitle">
+                        Alerte</h3>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"
                         onclick="fecharModalAlerta()">
                         <span aria-hidden="true">&times;</span>
@@ -75,13 +79,14 @@
                 </div>
                 <div class="modal-body">
                     <div class="container my-5">
-                        <h5 id="alerta" class="text-center">Alerta</h5>
+                        <h5 id="alerta" class="text-center">
+                            Alerte</h5>
 
                     </div>
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                            onclick="fecharModalAlerta()">Close</button>
+                            onclick="fecharModalAlerta()">Fermer</button>
                     </div>
 
 
@@ -98,9 +103,10 @@
             <form class="row g-3 justify-content-center" id="cadastroPessoal" name="cadastro"
                 onclick="event.preventDefault()">
                 <fieldset class="border-none row g-3 w-75">
-                    <legend>Preencha seus dados e os dados da empresa que você representa:</legend>
+                    <legend>Renseignez vos coordonnées et les coordonnées de l'entreprise que vous représentez :</legend>
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="cnpj" class="form-label">Nome:</label>
+                        <label for="cnpj" class="form-label">
+                            Nom:</label>
                         <input type="text" class="form-control" id="nome">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
@@ -112,72 +118,87 @@
                         <input type="text" class="form-control" id="cnpjCadastro" onblur="getCNPJPessoal()">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="situacao" class="form-label">Situação:</label>
+                        <label for="situacao" class="form-label">
+                            Situation:</label>
                         <input type="text" class="form-control" id="situacaoCadastro" disabled>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="razaoSocial" class="form-label">Razão Social:</label>
+                        <label for="razaoSocial" class="form-label">
+                            Nom de la SOCIETE:</label>
                         <input type="text" class="form-control" id="razaoSocialCadastro" required>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="nomeFantasia" class="form-label">Nome Fantasia:</label>
+                        <label for="nomeFantasia" class="form-label">
+                            Nom de fantaisie:</label>
                         <input type="text" class="form-control" id="nomeFantasiaCadastro">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="contato" class="form-label">E-mail pessoal:</label>
+                        <label for="contato" class="form-label">
+                            Email personnel: </label>
                         <input type="text" class="form-control" id="contatoCadastro" required>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="email" class="form-label">E-mail empresarial:</label>
+                        <label for="email" class="form-label">E-mail professionnel: </label>
                         <input type="email" class="form-control" id="emailCadastro" required>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <label for="inscricaoEstadual" class="form-label">Inscrição Estadual:</label>
+                        <label for="inscricaoEstadual" class="form-label">Immatriculation d'État:</label>
                         <input type="text" class="form-control" id="inscricaoEstadualCadastro">
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <label for="telefone" class="form-label">Telefone:</label>
+                        <label for="telefone" class="form-label">
+                            Téléphone</label>
                         <input type="text" class="form-control" id="telefoneCadastro" required>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <label for="celular" class="form-label">Celular:</label>
+                        <label for="celular" class="form-label">
+                            Téléphone portable:</label>
                         <input type="text" class="form-control" id="celularCadastro" required>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <label for="cep" class="form-label">CEP:</label>
+                        <label for="cep" class="form-label">
+                            CODE POSTAL:</label>
                         <input type="text" class="form-control" id="cepCadastro" required>
                     </div>
                     <div class="col-lg-8 col-md-7 col-sm-12">
-                        <label for="logradouro" class="form-label">Rua/Av:</label>
+                        <label for="logradouro" class="form-label">
+                            Route:</label>
                         <input type="text" class="form-control" id="logradouroCadastro" required>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-12">
-                        <label for="numero" class="form-label">Número:</label>
+                        <label for="numero" class="form-label">
+                            Nombre:</label>
                         <input type="text" class="form-control" id="numeroCadastro">
                     </div>
                     <div class="col-lg-4 col-md-3 col-sm-12">
-                        <label for="complemento" class="form-label">Complemento:</label>
+                        <label for="complemento" class="form-label">
+                            Complément:</label>
                         <input type="text" class="form-control" id="complementoCadastro">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                        <label for="bairro" class="form-label">Bairro:</label>
+                        <label for="bairro" class="form-label">
+                            Quartier:</label>
                         <input type="text" class="form-control" id="bairroCadastro" required>
                     </div>
                     <div class="col-lg-5 col-md-6 col-sm-12">
-                        <label for="cidade" class="form-label">Cidade:</label>
+                        <label for="cidade" class="form-label">
+                            Ville:</label>
                         <input type="text" class="form-control" id="cidadeCadastro" required>
                     </div>
                     <div class="col-lg-2 col-md-6 col-sm-12">
-                        <label for="estado" class="form-label">Estado:</label>
+                        <label for="estado" class="form-label">
+                            Etat:</label>
                         <input id="estado" class="form-control" id="estadoCadastro" required>
                     </div>
                     <div class="col-lg-5 col-md-6 col-sm-12">
-                        <label for="pais" class="form-label">País:</label>
+                        <label for="pais" class="form-label">
+                            Pays:</label>
                         <input type="text" class="form-control" id="paisCadastro" required>
                     </div>
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-success mx-3 mt-3 mb-3" onclick="validarCadastro()"
-                            value="Exibir Alert">Enviar</button>
+                            value="Exibir Alert">
+                            Envie</button>
                         <button type="reset" class="btn btn-success mx-3 mt-3 mb-3">Limpar</button>
                     </div>
                 </fieldset>
