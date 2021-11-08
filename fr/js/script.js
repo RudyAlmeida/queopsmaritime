@@ -80,7 +80,7 @@ function signOut() {
         logImg.src = "img/person-circle.svg"
         localStorage.clear();
         console.log('User signed out.');
-        console.log(localStorage)
+        console.log(localStorage);
 
     });
 }

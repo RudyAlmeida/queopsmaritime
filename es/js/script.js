@@ -70,7 +70,7 @@ function onSignIn(googleUser) {
     userData.img = profile.getImageUrl()
     userData.id = profile.getId()
     localStorage.setItem('userData', JSON.stringify(userData))
-    console.log(localStorage)
+    console.log(localStorage);
 }
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
