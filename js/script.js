@@ -695,3 +695,6 @@ function fecharModalAlerta() {
 function limparFormulario(){
     document.getElementById("cadastro").reset();
 }
+function limparFormularioCadastro(){
+    document.getElementById("cadastroPessoal").reset();
+}
