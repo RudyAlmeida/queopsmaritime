@@ -625,7 +625,8 @@ function salvarDados() {
     $("#modalvalorMer").text($("#valor").val())
     orcamento.descricaoMercadoria = $("#descricaoMercadoria").val()
     $("#modaldescricaoMercadoria").text($("#descricaoMercadoria").val())
-    alert("Cadastro realizado com sucesso")
+    mensagemWhatsapp = JSON.stringify(orcamento)
+    abrirModalCotacao()
 }
 function enviarOrcamento() {
     window.open("https://api.whatsapp.com/send?phone=5527996998347&text=Voc%C3%AA%20acaba%20de%20receber%20um%20or%C3%A7amento%3A%20" + mensagemWhatsapp, '_blank');
