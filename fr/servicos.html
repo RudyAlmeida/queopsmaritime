@@ -18,7 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
@@ -37,7 +37,7 @@
                         <h5>Faça seu login via Google ou por e-mail e senha</h5>
                         <div id="loginBtn" class="g-signin2 mt-5" data-onsuccess="onSignIn"></div>
                         <div class="row my-5">
-                            <a href="/queopsmaritime/contato.html">Se ainda não é cadastrado clique aqui.</a>
+                            <a href="/queopsmaritime/fr/cadastro.html">Se ainda não é cadastrado clique aqui.</a>
                         </div>
                     </div>
                     <div class="container">
@@ -71,7 +71,7 @@
             <div class="row d-flex justify-content-around">
                 <div class="col-lg-2 col-md-6 col-sm-12 mt-3">
                     <div class="card" style="width: 15rem; height: 23rem">
-                        <img src="imagens/assesAduaneira.png" style="height: 12rem" class="card-img-top" alt="...">
+                        <img src="../imagens/assesAduaneira.png" style="height: 12rem" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center">Assessoria Aduaneira</h5>
                             <p class="card-text text-center">Análise de documentação (declarações, certificados e
@@ -81,7 +81,7 @@
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-12 mt-3">
                     <div class="card" style="width: 15rem; height: 23rem;">
-                        <img src="imagens/cargaFracionada1.png" style="height: 12rem" class="card-img-top" alt="...">
+                        <img src="../imagens/cargaFracionada1.png" style="height: 12rem" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center">Carga Fracionada (LCL)</h5>
                             <p class="card-text text-center">Less Than Container Load:ss operação de captação,
@@ -91,7 +91,7 @@
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-12 mt-3">
                     <div class="card" style="width: 15rem; height: 23rem">
-                        <img src="imagens/conteiner.png" style="height: 12rem" class="card-img-top" alt="...">
+                        <img src="../imagens/conteiner.png" style="height: 12rem" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center">Contêineres</h5>
                             <p class="card-text text-center">Compra, venda e locação dos principais tipos de contêineres
@@ -101,7 +101,7 @@
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-12 mt-3">
                     <div class="card" style="width: 15rem; height: 23rem">
-                        <img src="imagens/logistica.png" style="height: 12rem" class="card-img-top" alt="...">
+                        <img src="../imagens/logistica.png" style="height: 12rem" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center">Consultoria em logística</h5>
                             <p class="card-text text-center">Assessoria para a contratação do transporte mais adequado
@@ -111,7 +111,7 @@
                 </div>
                 <div class="col-lg-2   col-md-6 col-sm-12 mt-3">
                     <div class="card" style="width: 15rem; height: 23rem">
-                        <img src="imagens/armazenamento.png" style="height: 12rem" class="card-img-top" alt="...">
+                        <img src="../imagens/armazenamento.png" style="height: 12rem" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center">Seguro e armazenagem</h5>
                             <p class="card-text text-center">Seguro de cargas, operações portuárias e armazenamento de
@@ -177,7 +177,7 @@
                 <div class="d-flex justify-content-center">
                     <button type="submit" id="btn1" class="btn btn-success mx-3 mt-3 mb-3" onclick="validarServicos()"
                         value="Exibir Alert">Enviar</button>
-                    <button type="reset" class="btn btn-success mx-3 mt-3 mb-3">Limpar</button>
+                    <button type="reset" class="btn btn-success mx-3 mt-3 mb-3" onclick="limparFormulario()">Limpar</button>
                 </div>
 
             </form>
