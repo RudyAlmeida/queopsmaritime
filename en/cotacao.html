@@ -18,8 +18,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script src="js/script.js" defer></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/cotacao.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cotacao.css">
 </head>
 
 <body onload="inicar()">
@@ -27,7 +27,7 @@
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title text-center" id="exampleModalLongTitle">Alerta</h3>
+                    <h3 class="modal-title text-center" id="exampleModalLongTitle">Alert</h3>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"
                         onclick="fecharModalAlerta()">
                         <span aria-hidden="true">&times;</span>
@@ -60,7 +60,7 @@
                         <h5>Login via Google or by email and password</h5>
                         <div id="loginBtn" class="g-signin2 mt-5" data-onsuccess="onSignIn"></div>
                         <div class="row my-5">
-                            <a href="/queopsmaritime/contato.html">
+                            <a href="/queopsmaritime/en/contato.html">
                                 If you are not registered, click here.</a>
                         </div>
                     </div>
@@ -170,8 +170,8 @@
                     <label for="transacao" class="form-label">Tipo de Transação:</label>
                     <select id="transacao" class="form-select" required>
                         <option value="" selected>Selecione</option>
-                        <option value="Exportação">Exportação</option>
-                        <option value="Importação">Importação</option>
+                        <option value="Exportação">Export</option>
+                        <option value="Importação">Import</option>
                     </select>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4">
@@ -184,7 +184,7 @@
                     </select>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4">
-                    <label for="valor" id="valorMer" class="form-label">Merchandise Value:</label>
+                    <label for="valor" id="valorMer" class="form-label">Load Value:</label>
                     <input type="number" class="form-control" id="valor" required>
                 </div>
 
@@ -555,7 +555,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12">
 
                     <label for="descricaoMercadoria" class="form-label">
-                        Description of Merchandise:</label>
+                        Load description:</label>
                     <textarea class="form-control" id="descricaoMercadoria"
                         placeholder="Example: Is it chemical or hazardous cargo? Does it contain a battery? Do you need temperature control? Can it be stacked? Are there any boarding restrictions?"
                         aria-label="Química ou perigosa? Contém bateria? Necessita de controle de temperatura? Pode ser empilhado? Existe restrições de embarque?"
@@ -565,7 +565,7 @@
             <div class="d-flex justify-content-center">
                 <button type="submit" class="btn btn-success mx-3 mt-3 mb-3" onclick="validarForm()"
                     value="Exibir Alert">Send</button>
-                <button type="reset" class="btn btn-success mx-3 mt-3 mb-3">Clear</button>
+                <button type="reset" class="btn btn-success mx-3 mt-3 mb-3" onclick="fecharModalAlerta()">Clear</button>
             </div>
         </form>
     </div>
@@ -586,15 +586,15 @@
                             <div class="col" id="modalcnpj"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Razão Social:</div>
+                            <div class="col">Company Name:</div>
                             <div class="col" id="modalrazaoSocial"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Nome Fantasia:</div>
+                            <div class="col">Comercial Name:</div>
                             <div class="col" id="modalnomeFantasia"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Contato:</div>
+                            <div class="col">Contact:</div>
                             <div class="col" id="modalcontato"></div>
                         </div>
                         <div class="row">
@@ -602,11 +602,11 @@
                             <div class="col" id="modalemail"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Inscrição Estadual:</div>
+                            <div class="col">State Number:</div>
                             <div class="col" id="modalinscricaoEstadual"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Telefone:</div>
+                            <div class="col">Telephone:</div>
                             <div class="col" id="modaltelefone"></div>
                         </div>
                         <div class="row">
@@ -614,71 +614,73 @@
                             <div class="col" id="modalcelular"></div>
                         </div>
                         <div class="row">
-                            <div class="col">CEP:</div>
+                            <div class="col">ZIP Code:</div>
                             <div class="col" id="modalcep"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Rua/Av:</div>
+                            <div class="col">Street:</div>
                             <div class="col" id="modallogradouro"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Número:</div>
+                            <div class="col">Number:</div>
                             <div class="col" id="modalnumero"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Complemento:</div>
+                            <div class="col">Complement:</div>
                             <div class="col" id="modalcomplemento"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Bairro:</div>
+                            <div class="col">District:</div>
                             <div class="col" id="modalbairro"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Cidade:</div>
+                            <div class="col">City:</div>
                             <div class="col" id="modalcidade"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Estado:</div>
+                            <div class="col">State:</div>
                             <div class="col" id="modalestado"></div>
                         </div>
                         <div class="row">
-                            <div class="col">País:</div>
+                            <div class="col">Country:</div>
                             <div class="col" id="modalpais"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Tipo de Transação:</div>
+                            <div class="col">Transaction Type:</div>
                             <div class="col" id="modaltipoTransacao"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Tipo de Carga:</div>
+                            <div class="col">Type of load:</div>
                             <div class="col" id="modaltipoCarga"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Quantidade de Volumes:</div>
+                            <div class="col">
+                                Volume quantity:</div>
                             <div class="col" id="modalqtdVol"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Peso da Mercadoria:</div>
+                            <div class="col">
+                                Load Weight:</div>
                             <div class="col" id="modalpeso"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Cubagem:</div>
+                            <div class="col">Cubage:</div>
                             <div class="col" id="modalcubagem"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Porto de Origem:</div>
+                            <div class="col">Port of origin:</div>
                             <div class="col" id="modalorigem"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Porto de Destino:</div>
+                            <div class="col">Port of Destiny:</div>
                             <div class="col" id="modaldestino"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Valor da Mercadoria:</div>
+                            <div class="col">load value:</div>
                             <div class="col" id="modalvalorMer"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Descrição da Mercadoria:</div>
+                            <div class="col">load description:</div>
                             <div class="col" id="modaldescricaoMercadoria"></div>
                         </div>
                     </div>
@@ -686,8 +688,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"
                         onclick="fecharModalCotacao()">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="enviarOrcamento()"><img
-                            src="imagens/whatsapp.svg"></button>
+                    <button type="button" class="btn btn-primary" onclick="enviarOrcamento()"></button>
                 </div>
             </div>
         </div>
