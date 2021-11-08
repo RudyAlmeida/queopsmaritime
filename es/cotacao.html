@@ -39,7 +39,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                            onclick="fecharModalAlerta()">Close</button>
+                            onclick="fecharModalAlerta()">Cerrar</button>
                     </div>
                 </div>
             </div>
@@ -49,17 +49,19 @@
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLongTitle">Cadastre-se ou Faça seu login</h3>
+                    <h3 class="modal-title" id="exampleModalLongTitle">Regístrese o inicie sesión</h3>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="fecharModal()">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="container my-5">
-                        <h5>Faça seu login via Google ou por e-mail e senha</h5>
+                        <h5>
+                            Inicie sesión a través de Google o por correo electrónico y contraseña</h5>
                         <div id="loginBtn" class="g-signin2 mt-5" data-onsuccess="onSignIn"></div>
                         <div class="row my-5">
-                            <a href="/queopsmaritime/es/cadastro.html">Se ainda não é cadastrado clique aqui.</a>
+                            <a href="/queopsmaritime/es/cadastro.html">
+                                Si aún no estás registrado, haz clic aquí.</a>
                         </div>
                     </div>
                     <div class="container">
@@ -69,14 +71,15 @@
                                 <input type="email">
                             </div>
                             <div class="row">
-                                <label for="">Senha:</label>
+                                <label for="">
+                                    Contraseña:</label>
                                 <input type="password">
 
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                                    onclick="fecharModal()">Close</button>
-                                <button type="reset" class="btn btn-primary">Save changes</button>
+                                    onclick="fecharModal()">Cierrar</button>
+                                <button type="reset" class="btn btn-primary">Mandar</button>
                             </div>
                     </div>
                     </form>
@@ -92,37 +95,41 @@
 
         <form class="row g-3 justify-content-center" id="cadastro" name="cadastro" onclick="event.preventDefault()">
             <fieldset class="border-none row g-3 w-75">
-                <legend>DADOS DA EMPRESA:</legend>
+                <legend>
+                    DATOS DE LA EMPRESA:</legend>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <label for="cnpj" class="form-label">CNPJ:</label>
                     <input type="text" class="form-control" id="cnpj" onblur="getCNPJ()">
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <label for="situacao" class="form-label">Situação:</label>
+                    <label for="situacao" class="form-label">
+                        Situación:</label>
                     <input type="text" class="form-control" id="situacao" disabled>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <label for="razaoSocial" class="form-label">Razão Social:</label>
+                    <label for="razaoSocial" class="form-label">
+                        Razón social:</label>
                     <input type="text" class="form-control" id="razaoSocial" required>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <label for="nomeFantasia" class="form-label">Nome Fantasia:</label>
+                    <label for="nomeFantasia" class="form-label">Nombre de fantasía:</label>
                     <input type="text" class="form-control" id="nomeFantasia">
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <label for="contato" class="form-label">Contato:</label>
+                    <label for="contato" class="form-label">Contacto:</label>
                     <input type="text" class="form-control" id="contato" required>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <label for="email" class="form-label">E-mail:</label>
+                    <label for="email" class="form-label">Email:</label>
                     <input type="email" class="form-control" id="email" required>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                    <label for="inscricaoEstadual" class="form-label">Inscrição Estadual:</label>
+                    <label for="inscricaoEstadual" class="form-label">
+                        Inscripción Estadual:</label>
                     <input type="text" class="form-control" id="inscricaoEstadual">
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                    <label for="telefone" class="form-label">Telefone:</label>
+                    <label for="telefone" class="form-label">Telefono:</label>
                     <input type="text" class="form-control" id="telefone" required>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12">
@@ -130,11 +137,12 @@
                     <input type="text" class="form-control" id="celular" required>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                    <label for="cep" class="form-label">CEP:</label>
+                    <label for="cep" class="form-label">
+                        Código postal:</label>
                     <input type="text" class="form-control" id="cep" required>
                 </div>
                 <div class="col-lg-8 col-md-7 col-sm-12">
-                    <label for="logradouro" class="form-label">Rua/Av:</label>
+                    <label for="logradouro" class="form-label">Calle:</label>
                     <input type="text" class="form-control" id="logradouro" required>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-12">
@@ -146,11 +154,11 @@
                     <input type="text" class="form-control" id="complemento">
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <label for="bairro" class="form-label">Bairro:</label>
+                    <label for="bairro" class="form-label">Vecindario:</label>
                     <input type="text" class="form-control" id="bairro" required>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
-                    <label for="cidade" class="form-label">Cidade:</label>
+                    <label for="cidade" class="form-label">Ciudad:</label>
                     <input type="text" class="form-control" id="cidade" required>
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-12">
@@ -163,29 +171,34 @@
                 </div>
             </fieldset>
             <fieldset class="border-none row g-3 w-75 mb-3">
-                <legend>DADOS DA CARGA:</legend>
+                <legend>
+                    CARGAR DATOS:</legend>
                 <div class="col-lg-4 col-md-4 col-sm-4">
-                    <label for="transacao" class="form-label">Tipo de Transação:</label>
+                    <label for="transacao" class="form-label">Tipo de transacción</label>
                     <select id="transacao" class="form-select" required>
-                        <option value="" selected>Selecione</option>
-                        <option value="Exportação">Exportação</option>
-                        <option value="Importação">Importação</option>
+                        <option value="" selected>Seleccione</option>
+                        <option value="Exportação">
+                            Exportar</option>
+                        <option value="Importação">
+                            Importar</option>
                     </select>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4">
                     <label for="carga" class="form-label">Tipo de Carga:</label>
                     <select id="carga" class="form-select" required>
-                        <option value="" selected>Selecione</option>
-                        <option value="Refrigerada">Refrigerada</option>
-                        <option value="Seca">Seca</option>
+                        <option value="" selected>Seleccione</option>
+                        <option value="Refrigerada">Refrigerado</option>
+                        <option value="Seca">Seco</option>
                     </select>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4">
-                    <label for="valor" id="valorMer" class="form-label">Valor da Mercadoria:</label>
+                    <label for="valor" id="valorMer" class="form-label">
+                        Valor de la mercancía:</label>
                     <input type="number" class="form-control" id="valor" required>
                 </div>
 
-                <label for="tamanho" class="form-label">Tamanho da Remessa:</label>
+                <label for="tamanho" class="form-label">
+                    Tamaño del envío:</label>
                 <div class="col-lg-4  col-md-4 col-sm-12">
                     <input type="number" id="quantidadeVol" class="form-control" placeholder="Quantidade de Volumes"
                         aria-label="Quantidade de Volumes" required>
@@ -201,7 +214,8 @@
 
                 </label>
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <label for="origem" class="form-label">Porto de Origem:</label>
+                    <label for="origem" class="form-label">
+                        Puerto de origen:</label>
                     <select id="origem" class="form-select" required>
                         <option value="" selected>Selecione</option>s
                         <option value="CapeTown">África do Sul - Cape Town</option>
@@ -373,7 +387,7 @@
                     </select>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <label for="destino" class="form-label">Porto de Destino:</label>
+                    <label for="destino" class="form-label">Puerto de destino:</label>
                     <select id="destino" class="form-select" required>
                         <option value="" selected>Selecione</option>
                         <option value="CapeTown">África do Sul - Cape Town</option>
@@ -548,9 +562,11 @@
 
                 <div class="col-lg-12 col-md-12 col-sm-12">
 
-                    <label for="descricaoMercadoria" class="form-label">Descrição da Mercadoria:</label>
+                    <label for="descricaoMercadoria" class="form-label">
+                        Descripción de la mercancía:</label>
                     <textarea class="form-control" id="descricaoMercadoria"
-                        placeholder="Exemplo: É carga química ou perigosa? Contém bateria? Necessita de controle de temperatura? Pode ser empilhada? Existe restrições de embarque?"
+                        placeholder="
+                        Ejemplo: ¿Es una carga química o peligrosa? ¿Contiene batería? ¿Necesitas control de temperatura? ¿Se puede apilar? ¿Existe alguna restricción de embarque?"
                         aria-label="Química ou perigosa? Contém bateria? Necessita de controle de temperatura? Pode ser empilhado? Existe restrições de embarque?"
                         required></textarea>
                 </div>
@@ -558,7 +574,8 @@
             <div class="d-flex justify-content-center">
                 <button type="submit" class="btn btn-success mx-3 mt-3 mb-3" onclick="validarForm()"
                     value="Exibir Alert">Enviar</button>
-                <button type="reset" class="btn btn-success mx-3 mt-3 mb-3" onclick="limparFormulario()">Limpar</button>
+                <button type="reset" class="btn btn-success mx-3 mt-3 mb-3" onclick="limparFormulario()">
+                    Limpiar</button>
             </div>
         </form>
     </div>
@@ -566,7 +583,8 @@
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLongTitle">Confira seu orçamento</h3>
+                    <h3 class="modal-title" id="exampleModalLongTitle">
+                        Consulta tu presupuesto</h3>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"
                         onclick="fecharModalCotacao()">
                         <span aria-hidden="true">&times;</span>
@@ -579,27 +597,29 @@
                             <div class="col" id="modalcnpj"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Razão Social:</div>
+                            <div class="col">
+                                Razón social:</div>
                             <div class="col" id="modalrazaoSocial"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Nome Fantasia:</div>
+                            <div class="col">Nombre de fantasía:</div>
                             <div class="col" id="modalnomeFantasia"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Contato:</div>
+                            <div class="col">Contacto:</div>
                             <div class="col" id="modalcontato"></div>
                         </div>
                         <div class="row">
-                            <div class="col">E-mail:</div>
+                            <div class="col">Email:</div>
                             <div class="col" id="modalemail"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Inscrição Estadual:</div>
+                            <div class="col">
+                                Inscripción Estadual:</div>
                             <div class="col" id="modalinscricaoEstadual"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Telefone:</div>
+                            <div class="col">Telefono:</div>
                             <div class="col" id="modaltelefone"></div>
                         </div>
                         <div class="row">
@@ -607,11 +627,12 @@
                             <div class="col" id="modalcelular"></div>
                         </div>
                         <div class="row">
-                            <div class="col">CEP:</div>
+                            <div class="col">
+                                Código postal:</div>
                             <div class="col" id="modalcep"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Rua/Av:</div>
+                            <div class="col">Calle:</div>
                             <div class="col" id="modallogradouro"></div>
                         </div>
                         <div class="row">
@@ -623,11 +644,11 @@
                             <div class="col" id="modalcomplemento"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Bairro:</div>
+                            <div class="col">Vecindario:</div>
                             <div class="col" id="modalbairro"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Cidade:</div>
+                            <div class="col">Ciudad:</div>
                             <div class="col" id="modalcidade"></div>
                         </div>
                         <div class="row">
@@ -639,7 +660,7 @@
                             <div class="col" id="modalpais"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Tipo de Transação:</div>
+                            <div class="col">Tipo de transacción</div>
                             <div class="col" id="modaltipoTransacao"></div>
                         </div>
                         <div class="row">
@@ -647,31 +668,38 @@
                             <div class="col" id="modaltipoCarga"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Quantidade de Volumes:</div>
+                            <div class="col">
+                                Cantidad de volumen:</div>
                             <div class="col" id="modalqtdVol"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Peso da Mercadoria:</div>
+                            <div class="col">
+                                Peso de la mercancía:</div>
                             <div class="col" id="modalpeso"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Cubagem:</div>
+                            <div class="col">
+                                Cubicación:</div>
                             <div class="col" id="modalcubagem"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Porto de Origem:</div>
+                            <div class="col">
+                                Puerto de origen:</div>
                             <div class="col" id="modalorigem"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Porto de Destino:</div>
+                            <div class="col">
+                                Puerto de destino:</div>
                             <div class="col" id="modaldestino"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Valor da Mercadoria:</div>
+                            <div class="col">
+                                Valor de la mercancía:</div>
                             <div class="col" id="modalvalorMer"></div>
                         </div>
                         <div class="row">
-                            <div class="col">Descrição da Mercadoria:</div>
+                            <div class="col">
+                                Descripción de la mercancía:</div>
                             <div class="col" id="modaldescricaoMercadoria"></div>
                         </div>
                     </div>
@@ -679,8 +707,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"
                         onclick="fecharModalCotacao()">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="enviarOrcamento()"><img
-                            src="imagens/whatsapp.svg"></button>
+                    <button type="button" class="btn btn-primary" onclick="enviarOrcamento()">Mandar</button>
                 </div>
             </div>
         </div>
