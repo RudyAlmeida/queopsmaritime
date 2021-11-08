@@ -1,3 +1,4 @@
+//Tradução do script para inglês.
 // declaração de uma classe.
 class Servico {
   //definição dos atributos da classe
