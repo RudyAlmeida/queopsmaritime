@@ -11,6 +11,7 @@
 .link{
     text-decoration: none;
     color: #F1BE07;
+    text-align: center;
 }
 .link:hover{
     color: #1F6D69;
@@ -35,7 +36,7 @@
     float: left;
     padding: 0 15px;
 }
-.et_pb_section_3.et_pb_section {
+/* .et_pb_section_3.et_pb_section {
     padding-top: 0px;
     padding-bottom: 200px;
     background-color: #ffffff;
@@ -50,8 +51,8 @@
     background-color: #fff;
     background-position: 50%;
     background-size: cover;
-}
-.et_pb_blurb_content {
+} */
+/* .et_pb_blurb_content {
     max-width: 350px;
     margin: 0 auto;
     margin-top: 0px;
@@ -119,7 +120,7 @@
     position: absolute;
     left: 400px;
     display: none
-}
+} */
 .car-img-top{
     margin-bottom: 20px;
 }
