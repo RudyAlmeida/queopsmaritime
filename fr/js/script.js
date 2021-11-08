@@ -177,7 +177,7 @@ function cabecalho() {
 <div class="container-fluid">
 <div class="row d-flex justify-content-between" style="background-color: #F1BE07; color:#1F6D69">
     <div class="col-lg-2 col-md-4 col-sm-6" id="cotacao"></div>
-    <div class="col-lg-2 col-md-4 col-sm-6 font-weight-bold">Variation sur 360 jours :</div>
+    <div class="col-lg-2 col-md-4 col-sm-6 font-weight-bold">Variation Annuel :</div>
     <div class="col-lg-2 col-md-4 col-sm-6"id="media"></div>
     <div class="col-lg-2 col-md-4 col-sm-6" id="menor"></div>
     <div class="col-lg-2 col-md-4 col-sm-6" id="maior"></div>
