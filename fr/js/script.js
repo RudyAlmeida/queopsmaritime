@@ -133,7 +133,7 @@ function cabecalho() {
                 </li>
                 <li class="nav-item">
         <a class="nav-link" href="/queopsmaritime/index.html">
-            <img src="imagens/bandeira-do-brasil.png" alt="" class="traducao" >
+            <img src="../imagens/bandeira-do-brasil.png" alt="" class="traducao" >
         </a>
         </li>
             <li class="nav-item">
