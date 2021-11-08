@@ -93,7 +93,7 @@ function getUser() {
         logImg.src = img
         let nome = userData.nome
         document.getElementById('dropText').innerText = nome
-        $("#contato").val(userData.nome)
+        $("#contato").val(userData.nome);
     }
 }
 
