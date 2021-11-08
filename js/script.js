@@ -199,10 +199,10 @@ function rodapePrincipal() {
             <div class="col-lg-3 col-md-12 my-3">
                 <div class="row d-flex justify-content-center">INSTITUCIONAL</div>
 
-                <div class="row d-flex justify-content-center pointer" onclick="window.location='/queopsmaritime/sobreNos.html'">Sobre Nós</div>
-                <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/queopsmaritime/servicos.html'">Serviços</div>
-                <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/queopsmaritime/cotacao.html'">Cotação</div>
-                 <div class="row d-flex justify-content-center pointer" onclick="window.location='href="/queopsmaritime/contato.html'">Contato</div>
+                <div class="row d-flex justify-content-center pointer" onclick="window.location='/queopsmaritime/sobreNos.html'" >Sobre Nós</div>
+                <div class="row d-flex justify-content-center pointer" onclick="window.location='/queopsmaritime/servicos.html'">Serviços</div>
+                <div class="row d-flex justify-content-center pointer" onclick="window.location='/queopsmaritime/cotacao.html'">Cotação</div>
+                 <div class="row d-flex justify-content-center pointer" onclick="window.location='/queopsmaritime/contato.html'">Contato</div>
             </div>
             <div class="col-lg-5 col-md-12 my-3">
                 <div class="row justify-content-center">SIGA NOSSAS REDES </div>
