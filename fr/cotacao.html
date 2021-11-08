@@ -18,8 +18,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script src="js/script.js" defer></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/cotacao.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cotacao.css">
 </head>
 
 <body onload="inicar()">
@@ -59,7 +59,7 @@
                         <h5>Faça seu login via Google ou por e-mail e senha</h5>
                         <div id="loginBtn" class="g-signin2 mt-5" data-onsuccess="onSignIn"></div>
                         <div class="row my-5">
-                            <a href="/queopsmaritime/contato.html">Se ainda não é cadastrado clique aqui.</a>
+                            <a href="/queopsmaritime/fr/cadastro.html">Se ainda não é cadastrado clique aqui.</a>
                         </div>
                     </div>
                     <div class="container">
@@ -558,7 +558,7 @@
             <div class="d-flex justify-content-center">
                 <button type="submit" class="btn btn-success mx-3 mt-3 mb-3" onclick="validarForm()"
                     value="Exibir Alert">Enviar</button>
-                <button type="reset" class="btn btn-success mx-3 mt-3 mb-3">Limpar</button>
+                <button type="reset" class="btn btn-success mx-3 mt-3 mb-3" onclick="limparFormulario()">Limpar</button>
             </div>
         </form>
     </div>
@@ -679,8 +679,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"
                         onclick="fecharModalCotacao()">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="enviarOrcamento()"><img
-                            src="imagens/whatsapp.svg"></button>
+                    <button type="button" class="btn btn-primary" onclick="enviarOrcamento()">Enviar</button>
                 </div>
             </div>
         </div>
