@@ -18,7 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
@@ -27,17 +27,18 @@
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLongTitle">Cadastre-se ou Faça seu login</h3>
+                    <h3 class="modal-title" id="exampleModalLongTitle">S'inscrire ou se connecter</h3>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="fecharModal()">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="container my-5">
-                        <h5>Faça seu login via Google ou por e-mail e senha</h5>
+                        <h5>
+                            Connectez-vous via Google ou par email et mot de passe</h5>
                         <div id="loginBtn" class="g-signin2 mt-5" data-onsuccess="onSignIn"></div>
                         <div class="row my-5">
-                            <a href="/queopsmaritime/contato.html">Se ainda não é cadastrado clique aqui.</a>
+                            <a href="/queopsmaritime/fr/contato.html">Si vous n'êtes pas inscrit, cliquez ici.</a>
                         </div>
                     </div>
                     <div class="container">
@@ -47,14 +48,14 @@
                                 <input type="email">
                             </div>
                             <div class="row">
-                                <label for="">Senha:</label>
+                                <label for="">Mot de passe:</label>
                                 <input type="password">
 
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal"
                                     onclick="fecharModal()">Close</button>
-                                <button type="reset" class="btn btn-primary">Save changes</button>
+                                <button type="reset" class="btn btn-primary">Sauvegarder les modifications</button>
                             </div>
                     </div>
                     </form>
@@ -90,12 +91,12 @@
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden">Précédente</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden">Prochain</span>
         </button>
     </div>
     <div class="container-fluid justify-content-around">
@@ -105,7 +106,7 @@
                     <img src="./imagens/desembaraço-icone-1-150x150.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">
-                        <h3><a href="./servicos.html" class="link d-flex justify-content-center" style="font-size: 11pt;">Carga Fracionada</a>
+                        <h3><a href="./servicos.html" class="link d-flex justify-content-center" style="font-size: 11pt;">Frais fractionnés</a>
                         </h3>
                         </p>
                     </div>
@@ -116,7 +117,8 @@
                     <img src="./imagens/transporte-rodoviario-icone.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">
-                        <h3><a href="./servicos.html" class="link d-flex justify-content-center" style="font-size: 11pt;">Consultoria Logística</a>
+                        <h3><a href="./servicos.html" class="link d-flex justify-content-center" style="font-size: 11pt;">
+                            Conseil en logistique</a>
                         </h3>
                         </p>
                     </div>
@@ -127,7 +129,7 @@
                     <img src="./imagens/assesAduaneira.png" class="card-img-top" style="height: 210px; width: 230px;" alt="...">
                     <div class="card-body">
                         <p class="card-text">
-                        <h3><a href="./servicos.html" class="link d-flex justify-content-center" style="font-size: 11pt;">Assessoria Aduaneira</a>
+                        <h3><a href="./servicos.html" class="link d-flex justify-content-center" style="font-size: 11pt;">Assistance douanière</a>
                         </h3>
                         </p>
                     </div>
@@ -138,7 +140,7 @@
                     <img src="./imagens/armazenagem-icone-1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">
-                        <h3><a href="./servicos.html" class="link d-flex justify-content-center" style="font-size: 11pt;">Seguro e Armazenagem</a>
+                        <h3><a href="./servicos.html" class="link d-flex justify-content-center" style="font-size: 11pt;">Assurance et stockage</a>
                         </h3>
                         </p>
                     </div>
@@ -149,7 +151,8 @@
                     <img src="./imagens/transporte-marítimo-stwlogistica-icone-1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">
-                        <h3><a href="./servicos.html" class="link d-flex justify-content-center" style="font-size: 11pt;">Contêineres</a>
+                        <h3><a href="./servicos.html" class="link d-flex justify-content-center" style="font-size: 11pt;">
+                            Conteneurs</a>
                         </h3>
                         </p>
                     </div>
@@ -163,36 +166,39 @@
                 <div class="card mt-3" style="width: 25rem;">
                     <img src="./imagens/card1_caminhão.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Por que escolher os serviços Queops
+                        <h5 class="card-title">
+                            Pourquoi choisir les services Queops
                             Maritime?</h5>
-                        <p class="card-text">Na Queops Maritime,
-                            sabemos que o tempo é essencial.
-                            Usamos nosso serviço legado de Truckload para moldar o que nossa empresa
-                            é hoje.</p>
-                        <a href="./servicos.html" class="link">Saiba mais...</a>
+                        <p class="card-text">
+                            À Queops Maritime,
+                            nous savons que le temps presse.
+                            Nous utilisons notre ancien service Truckload pour façonner ce que fait notre entreprise.
+                            c'est aujourd'hui.</p>
+                        <a href="./servicos.html" class="link">Savoir plus...</a>
                     </div>
                 </div>
                 <div class="card mt-3" style="width: 25rem;">
                     <img src="./imagens/card3_estoque.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Você está otimizando o espaço do seu armazém?</h5>
-                        <p class="card-text">Algumas imagens destacando nosso armazém, transporte, experiência em
-                            carga
-                            e logística.</p>
-                        <a href="./servicos.html" class="link">Saiba mais...</a>
+                        <h5 class="card-title">
+                            Optimisez-vous l'espace de votre entrepôt?</h5>
+                        <p class="card-text">
+                            Quelques images mettant en valeur notre entrepôt, transport, expérience en
+                                                        charger et logistique.</p>
+                        <a href="./servicos.html" class="link">Savoir plus...</a>
                     </div>
                 </div>
                 <div class="card mt-3" style="width: 25rem;">
                     <img src="./imagens/card2_conatainer.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Por que escolher os serviços Queops
+                        <h5 class="card-title">Pourquoi choisir les services Queops
                             Maritime?</h5>
-                        <p class="card-text">Serviços de armazenamento e
-                            3PL(Third-party Logistics) oferecidos pelo
-                            grupo Quelps Maritime tornou-se parte integrante dos requisitos do nosso cliente.
-                            O nossos clientes continuaram a exigir maior economia e eficiência em
-                            seus negócios.</p>
-                        <a href="./servicos.html" class="link">Saiba mais...</a>
+                        <p class="card-text">Services de stockage et
+                            3PL (Third-party Logistics) offert par
+                            Le groupe Quelps Maritime est devenu partie intégrante des exigences de nos clients.
+                            Nos clients ont continué à exiger plus d'économies et d'efficacité dans
+                            votre entreprise.</p>
+                        <a href="./servicos.html" class="link">Savoir plus...</a>
                     </div>
                 </div>
             </div>
