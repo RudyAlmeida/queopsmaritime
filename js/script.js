@@ -137,17 +137,17 @@ function cabecalho() {
         </a>
         </li>
             <li class="nav-item">
-            <a class="nav-link" href="/fr/index.html">
+            <a class="nav-link" href="/queopsmaritime/fr/index.html">
                 <img src="imagens/france.png" alt="" class="traducao" >
             </a>
         </li>
          <li class="nav-item">
-             <a class="nav-link" href="/es/index.html">
+             <a class="nav-link" href="/queopsmaritime/es/index.html">
                 <img src="imagens/spain.png" alt="" class="traducao" >
             </a>
          </li>
         <li class="nav-item">
-            <a class="nav-link" href="/en/index.html">
+            <a class="nav-link" href="/queopsmaritime/en/index.html">
              <img src="imagens/united-kingdom.png" alt="" class="traducao" >
             </a>
         </li>
