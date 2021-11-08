@@ -154,7 +154,7 @@ function cabecalho() {
         </div>
     </div>
 </nav>
-<div class="row d-flex justify-content-between " style="background-color: #F1BE07; color:#1F6D69">
+<div class="row d-flex justify-content-between" style="background-color: #F1BE07; color:#1F6D69">
     <div class="col-lg-2 col-md-4 col-sm-6" id="cotacao"></div>
     <div class="col-lg-2 col-md-4 col-sm-6 font-weight-bold">Varição em 360 dias:</div>
     <div class="col-lg-2 col-md-4 col-sm-6"id="media"></div>
