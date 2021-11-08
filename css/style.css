@@ -162,9 +162,13 @@
     font-size: 20px;
 }
  
-#loginImg{
+.loginImg{
     border-radius: 50px;
     width: 4vw;
+}
+.traducao{
+    border-radius: 50px;
+    width: 2vw;
 }
 .nav-link{
     color:#F1BE07 !important;

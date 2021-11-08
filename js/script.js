@@ -131,6 +131,26 @@ function cabecalho() {
                         Contato
                     </a>
                 </li>
+                <li class="nav-item">
+        <a class="nav-link" href="/queopsmaritime/index.html">
+            <img src="imagens/bandeira-do-brasil.png" alt="" class="traducao" >
+        </a>
+        </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/queopsmaritime/fr/index.html">
+                <img src="imagens/france.png" alt="" class="traducao" >
+            </a>
+        </li>
+         <li class="nav-item">
+             <a class="nav-link" href="/queopsmaritime/es/index.html">
+                <img src="imagens/spain.png" alt="" class="traducao" >
+            </a>
+         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/queopsmaritime/en/index.html">
+             <img src="imagens/united-kingdom.png" alt="" class="traducao" >
+            </a>
+        </li>
             </ul>
         </div>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDarkDropdown" style="background-color: #1F6D69;">
@@ -138,7 +158,7 @@ function cabecalho() {
                 <li class="nav-item dropdown">
                     <a id="dropHead" class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img id='loginImg' alt="" src="imagens/person-circle.svg" class="bi bi-person-circle"
+                        <img id='loginImg' alt="" src="imagens/person-circle.svg" class="loginImg bi bi-person-circle"
                             viewBox="0 0 16 16">
                         <span id="dropText">Cadastre-se / Login</span>
                     </a>
@@ -154,6 +174,7 @@ function cabecalho() {
         </div>
     </div>
 </nav>
+<div class="container-fluid">
 <div class="row d-flex justify-content-between" style="background-color: #F1BE07; color:#1F6D69">
     <div class="col-lg-2 col-md-4 col-sm-6" id="cotacao"></div>
     <div class="col-lg-2 col-md-4 col-sm-6 font-weight-bold">Varição em 360 dias:</div>
@@ -161,7 +182,7 @@ function cabecalho() {
     <div class="col-lg-2 col-md-4 col-sm-6" id="menor"></div>
     <div class="col-lg-2 col-md-4 col-sm-6" id="maior"></div>
     <div class="col-lg-2 col-md-4 col-sm-6" id ="variacao"></div>
-</div>`
+</div></div>`
     header.append(cabecalho)
     $('a.active').removeClass('active');
     console.log(location.pathname)
