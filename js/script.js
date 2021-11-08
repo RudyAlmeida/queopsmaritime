@@ -692,3 +692,6 @@ function abrirModalAlerta() {
 function fecharModalAlerta() {
     $("#modalAlerta").modal("hide");
 }
+function limparFormulario(){
+    document.getElementById("cadastro").reset();
+}
