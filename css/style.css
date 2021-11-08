@@ -1,21 +1,44 @@
 
 * {
-    padding: 0;
-    margin: 0;
+    /* padding: 0;
+    margin: 0; */
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
     /* font-size: 1.5vw; */
 
 }
+.link{
+    text-decoration: none;
+    color: #F1BE07;
+    text-align: center;
+}
+.link:hover{
+    color: #1F6D69;
+}
+.card-title{
+    color: #F1BE07;;
+}
+.card-text{
+    color: #1F6D69;
+}
+.pointer{
+    cursor: pointer;
+}
 
 .flat-row{
-    background-color:rgb(36, 33, 33);
-
+    background-color:#ffffff;
+    width: 100%;
+    height: 100%;
+    
 }
-.et_pb_section_3.et_pb_section {
+.flat-imagebox .flat-item {
+    float: left;
+    padding: 0 15px;
+}
+/* .et_pb_section_3.et_pb_section {
     padding-top: 0px;
-    padding-bottom: 60px;
+    padding-bottom: 200px;
     background-color: #ffffff;
 }
 .et_pb_all_tabs, .et_pb_module, .et_pb_posts_nav a, .et_pb_tab, .et_pb_with_background {
@@ -28,8 +51,8 @@
     background-color: #fff;
     background-position: 50%;
     background-size: cover;
-}
-.et_pb_blurb_content {
+} */
+/* .et_pb_blurb_content {
     max-width: 350px;
     margin: 0 auto;
     margin-top: 0px;
@@ -40,10 +63,11 @@
     word-wrap: break-word;
     width: 200px;
     position: absolute;
-    right: 0;
+    right: 50px;
+    display: none;
 }
 .et_pb_blurb_content1 {
-    max-width: 350px;
+    max-width: 300px;
     margin: 0 auto;
     margin-top: 0px;
     margin-right: auto;
@@ -51,9 +75,9 @@
     margin-left: auto;
     text-align:center;
     word-wrap: break-word;
-    width: 200px;
     position: absolute;
-    right: 200px;
+    right: 0;
+    display: none
 }
 .et_pb_blurb_content2 {
     max-width: 350px;
@@ -66,7 +90,8 @@
     word-wrap: break-word;
     width: 200px;
     position: absolute;
-    right: 600px;
+    right: 400px;
+    display: none
 }
 .et_pb_blurb_content3 {
     max-width: 350px;
@@ -80,6 +105,7 @@
     width: 200px;
     position: absolute;
     left: 0;
+    display: none
 }
 .et_pb_blurb_content4 {
     max-width: 350px;
@@ -92,14 +118,18 @@
     word-wrap: break-word;
     width: 200px;
     position: absolute;
-    left: 200px;
+    left: 400px;
+    display: none
+} */
+.car-img-top{
+    margin-bottom: 20px;
 }
 
  #links {
     color: #0f0f0f;
     text-decoration: underline;
- }
- 
+ } 
+
 
 #btnNews{
    border: none;
@@ -149,7 +179,7 @@
 }
 
 @media(max-width: 540px){
-    img{
+    .img{
         width: 50% !important;        
     }
     .titulo{
