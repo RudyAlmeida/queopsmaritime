@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+    </script>
+    <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer>
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id"
+        content="113301151213-ikv65divt4p5v64laeidjmlsnfkmat5d.apps.googleusercontent.com">
+    <title>Queops Maritime</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body onload="inicar()">
+    <div class="modal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">Cadastre-se ou Faça seu login</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="fecharModal()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container my-5">
+                        <h5>Faça seu login via Google ou por e-mail e senha</h5>
+                        <div id="loginBtn" class="g-signin2 mt-5" data-onsuccess="onSignIn"></div>
+                        <div class="row my-5">
+                            <a href="/queopsmaritime/contato.html">Se ainda não é cadastrado clique aqui.</a>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <form action="">
+                            <div class="row">
+                                <label for="email">E-mail</label>
+                                <input type="email">
+                            </div>
+                            <div class="row">
+                                <label for="">Senha:</label>
+                                <input type="password">
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                    onclick="fecharModal()">Close</button>
+                                <button type="reset" class="btn btn-primary">Save changes</button>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <header id="header">
+    </header>
+
+    <main>
+        <div class="container-fluid  mt-4">
+            <div class="row d-flex justify-content-around">
+                <div class="col-lg-2 col-md-6 col-sm-12 mt-3">
+                    <div class="card" style="width: 15rem; height: 23rem">
+                        <img src="imagens/assesAduaneira.png" style="height: 12rem" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Assessoria Aduaneira</h5>
+                            <p class="card-text text-center">Análise de documentação (declarações, certificados e
+                                registros), pagamento de impostos e taxas, verificação presencial da carga.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 mt-3">
+                    <div class="card" style="width: 15rem; height: 23rem;">
+                        <img src="imagens/cargaFracionada1.png" style="height: 12rem" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Carga Fracionada (LCL)</h5>
+                            <p class="card-text text-center">Less Than Container Load:ss operação de captação,
+                                consolidação e desconsolidação de cargas fracionadas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 mt-3">
+                    <div class="card" style="width: 15rem; height: 23rem">
+                        <img src="imagens/conteiner.png" style="height: 12rem" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Contêineres</h5>
+                            <p class="card-text text-center">Compra, venda e locação dos principais tipos de contêineres
+                                para cargas refrigeradas e para cargas secas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 mt-3">
+                    <div class="card" style="width: 15rem; height: 23rem">
+                        <img src="imagens/logistica.png" style="height: 12rem" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Consultoria em logística</h5>
+                            <p class="card-text text-center">Assessoria para a contratação do transporte mais adequado
+                                para o escoamento da carga até o porto.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2   col-md-6 col-sm-12 mt-3">
+                    <div class="card" style="width: 15rem; height: 23rem">
+                        <img src="imagens/armazenamento.png" style="height: 12rem" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Seguro e armazenagem</h5>
+                            <p class="card-text text-center">Seguro de cargas, operações portuárias e armazenamento de
+                                cargas e contêineres em terminais parceiros.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+
+
+        <div class="container d-flex justify-content-center mt-4 mb-4">
+            <form class="row justify-content-center">
+
+                <section class="titulo">
+                    <h2>Especialistas / Empresas parceiras</h2>
+                    <h6>Cadastre-se! Conecte-se a novos clientes e seja descoberto por suas habilidades. Entraremos em
+                        contato para validar suas informações, avaliar seus serviços e verificar a viabilidade em tê-lo
+                        em nosso portfólio de serviços. </h6>
+                </section>
+
+                <div class="linhaDeInput">
+                    <label>Serviço:</label>
+                    <select id="nomeServico" nome="categoria" type="text">
+                        <option value="">Selecione o serviço</option>
+                        <option value="aduaneira">Assessoria Aduaneira</option>
+                        <option value="cargaFracionanada">Carga Fracionada</option>
+                        <option value="contêiner">Contêineres</option>
+                        <option value="logística">Consultoria em logistica</option>
+                        <option value="Seguro">Seguro e armazenagem</option>
+                    </select>
+                </div>
+
+                <div class="linhaInput">
+                    <label for="razaoSocial" class="form-label">Nome/Razão Social:</label>
+                    <input type="text" class="form-control" id="razaoSocial">
+                </div>
+
+                <div class="linhaInput">
+                    <label for="cnpj" class="form-label">CPF/CNPJ:</label>
+                    <input type="text" class="form-control" id="cnpj">
+                </div>
+
+                <div class="linhaInput">
+                    <label for="email" class="form-label">E-mail:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+
+                <div class="linhaInput">
+                    <label for="telefone" class="form-label">Celular/Telefone:</label>
+                    <input type="number" class="form-control" id="telefone">
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <button type="submit" id="btn1" class="btn btn-success mx-3 mt-3 mb-3" onclick="validarServicos()"
+                        value="Exibir Alert">Enviar</button>
+                    <button type="reset" class="btn btn-success mx-3 mt-3 mb-3">Limpar</button>
+                </div>
+
+            </form>
+        </div>
+
+        <section class="conteudo container mt-4 mb-4">
+            <table class="table table-success table-striped">
+
+                <thead>
+                    <th class="center">Serviço</th>
+                    <th>Nome/Razão Social</th>
+                    <th>CPF/CNPJ</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </thead>
+
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </section>
+
+
+    </main>
+
+    <footer id="footer">
+    </footer>
+    <section id="rodape">
+    </section>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
