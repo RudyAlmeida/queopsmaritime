@@ -22,7 +22,10 @@
 
 </head>
 
+<!-- Foi criado no body uma função onload, pois ao iniciar essa função irá puxar o header e footer do javascript -->
+
 <body onload="inicar()">
+    <!-- Criado um modal inserido no menu cadastra-se que irá abri-lo para inserir o login ou se cadastrar -->
     <div class="modal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -62,11 +65,13 @@
             </div>
         </div>
     </div>
+
+    <!-- Criado o header no HTML e seu conteúdo no javascript -->
     <header id="header">
     </header>
 
 
-
+    <!-- Criado um carrossel com bootsrap contendo 3 imagens passando automaticamente ou clicando no botão para passar -->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -98,6 +103,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <!-- Foram criados 5 cards com o bootstrap contendo imagem e um título com link para a página de serviços -->
     <div class="container-fluid justify-content-around">
         <div class="row d-flex justify-content-center">
             <div class="card1 col-lg-2 col-md-6 col-sm-12 my-1">
@@ -105,7 +111,8 @@
                     <img src="./imagens/desembaraço-icone-1-150x150.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">
-                        <h3><a href="./servicos.html" class="link d-flex justify-content-center" style="font-size: 11pt;">Carga Fracionada</a>
+                        <h3><a href="./servicos.html" class="link d-flex justify-content-center"
+                                style="font-size: 11pt;">Carga Fracionada</a>
                         </h3>
                         </p>
                     </div>
@@ -116,7 +123,8 @@
                     <img src="./imagens/transporte-rodoviario-icone.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">
-                        <h3><a href="./servicos.html" class="link d-flex justify-content-center" style="font-size: 11pt;">Consultoria Logística</a>
+                        <h3><a href="./servicos.html" class="link d-flex justify-content-center"
+                                style="font-size: 11pt;">Consultoria Logística</a>
                         </h3>
                         </p>
                     </div>
@@ -124,10 +132,12 @@
             </div>
             <div class="card1 col-lg-2 col-md-6 col-sm-12 my-1">
                 <div class="card1" style="width: 13rem;">
-                    <img src="./imagens/assesAduaneira.png" class="card-img-top" style="height: 210px; width: 230px;" alt="...">
+                    <img src="./imagens/assesAduaneira.png" class="card-img-top" style="height: 210px; width: 230px;"
+                        alt="...">
                     <div class="card-body">
                         <p class="card-text">
-                        <h3><a href="./servicos.html" class="link d-flex justify-content-center" style="font-size: 11pt;">Assessoria Aduaneira</a>
+                        <h3><a href="./servicos.html" class="link d-flex justify-content-center"
+                                style="font-size: 11pt;">Assessoria Aduaneira</a>
                         </h3>
                         </p>
                     </div>
@@ -138,7 +148,8 @@
                     <img src="./imagens/armazenagem-icone-1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">
-                        <h3><a href="./servicos.html" class="link d-flex justify-content-center" style="font-size: 11pt;">Seguro e Armazenagem</a>
+                        <h3><a href="./servicos.html" class="link d-flex justify-content-center"
+                                style="font-size: 11pt;">Seguro e Armazenagem</a>
                         </h3>
                         </p>
                     </div>
@@ -149,7 +160,8 @@
                     <img src="./imagens/transporte-marítimo-stwlogistica-icone-1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">
-                        <h3><a href="./servicos.html" class="link d-flex justify-content-center" style="font-size: 11pt;">Contêineres</a>
+                        <h3><a href="./servicos.html" class="link d-flex justify-content-center"
+                                style="font-size: 11pt;">Contêineres</a>
                         </h3>
                         </p>
                     </div>
@@ -157,18 +169,17 @@
             </div>
         </div>
     </div>
+    <!-- Criado 3 cards com bootstrap contendo imagens e textos, cada card contem título, parágrafo e um link para a página de serviços -->
     <main>
         <div class="container-fluid">
             <div class="row d-flex justify-content-around">
                 <div class="card mt-3" style="width: 25rem;">
                     <img src="./imagens/card1_caminhão.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Por que escolher os serviços Queops
-                            Maritime?</h5>
-                        <p class="card-text">Na Queops Maritime,
-                            sabemos que o tempo é essencial.
-                            Usamos nosso serviço legado de Truckload para moldar o que nossa empresa
-                            é hoje.</p>
+                        <h5 class="card-title">Por que escolher os serviços Queops Maritime?</h5>
+                        <p class="card-text">Na Queops Maritime, sabemos que o tempo é essencial.
+                            Usamos nosso serviço legado de Less Than Truckload(Carga Compartilhada) para moldar o que
+                            nossa empresa é hoje.</p>
                         <a href="./servicos.html" class="link">Saiba mais...</a>
                     </div>
                 </div>
@@ -176,8 +187,7 @@
                     <img src="./imagens/card3_estoque.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Você está otimizando o espaço do seu armazém?</h5>
-                        <p class="card-text">Algumas imagens destacando nosso armazém, transporte, experiência em
-                            carga
+                        <p class="card-text">Algumas imagens destacando nosso armazém, transporte, experiência em carga
                             e logística.</p>
                         <a href="./servicos.html" class="link">Saiba mais...</a>
                     </div>
@@ -185,23 +195,23 @@
                 <div class="card mt-3" style="width: 25rem;">
                     <img src="./imagens/card2_conatainer.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Por que escolher os serviços Queops
-                            Maritime?</h5>
-                        <p class="card-text">Serviços de armazenamento e
-                            3PL(Third-party Logistics) oferecidos pelo
+                        <h5 class="card-title">Por que escolher os serviços Queops Maritime?</h5>
+                        <p class="card-text">Serviços de armazenamento e 3PL(Third-party Logistics) oferecidos pelo
                             grupo Quelps Maritime tornou-se parte integrante dos requisitos do nosso cliente.
-                            O nossos clientes continuaram a exigir maior economia e eficiência em
-                            seus negócios.</p>
+                            O nossos clientes continuaram a exigir maior economia e eficiência em seus negócios.</p>
                         <a href="./servicos.html" class="link">Saiba mais...</a>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
+    <!-- Criado o footer no HTML e seu conteúdo no javascript -->
     <footer id="footer">
     </footer>
     <div vw class="enabled">
 
+        <!-- Adicionando o vlibras ao html -->
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper"></div>
@@ -213,6 +223,7 @@
 
     </script>
 
+    <!-- Criado um efeito hide e slidown para os cards, onde o hide esconde e o slideDown aparece com o tempo de 4000 milessegundos -->
     <script language="javascript">
         $(document).ready(function () {
             $(".card").hide();
