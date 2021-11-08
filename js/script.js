@@ -259,7 +259,7 @@ function rodapePrincipal() {
                     <path
                         d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
                 </svg>
-                Rua Coronel Lisboa, Vila Mariana-SP, Brasil, CEP 04041-050.
+                Av. Mal. Mascarenhas de Moraes - Centro, Vitória/ES, Brasil, CEP 29050-667.
             </div>
         </div>
         </div>
@@ -382,13 +382,13 @@ function validarForm() {
         return false;
     }
     if ($("#cidade").val().length < 5) {
-        $('#alerta').text('Preencha a cidade corretamente')
+        $('#alerta').text('Preencha a Cidade corretamente')
             abrirModalAlerta()
         document.cadastro.cidade.focus()
         return false;
     }
     if ($("#estado").val().length < 2) {
-        $('#alerta').text('Preencha o estado corretamente')
+        $('#alerta').text('Preencha o Estado corretamente')
             abrirModalAlerta()
         document.cadastro.estado.focus()
         return false;
