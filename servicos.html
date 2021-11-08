@@ -18,11 +18,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
+    <script src="js/servicos.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body onload="inicar()">
+<body onload="inicar(), servico.listaDados()">
     <div class="modal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -67,13 +68,14 @@
     </header>
 
     <main>
+        <!-- Inserção dos 5 cards de serviços, através de modelo do bootstra, com imagem e texto -->
         <div class="container-fluid  mt-4">
             <div class="row d-flex justify-content-around">
                 <div class="col-lg-2 col-md-6 col-sm-12 mt-3">
                     <div class="card" style="width: 15rem; height: 23rem">
-                        <img src="imagens/assesAduaneira.png" style="height: 12rem" class="card-img-top" alt="...">
+                        <img src="imagens/assesAduaneira2.png" style="height: 12rem" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Assessoria Aduaneira</h5>
+                            <h6 class="card-title text-center">Assessoria Aduaneira</h6>
                             <p class="card-text text-center">Análise de documentação (declarações, certificados e
                                 registros), pagamento de impostos e taxas, verificação presencial da carga.</p>
                         </div>
@@ -81,10 +83,10 @@
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-12 mt-3">
                     <div class="card" style="width: 15rem; height: 23rem;">
-                        <img src="imagens/cargaFracionada1.png" style="height: 12rem" class="card-img-top" alt="...">
+                        <img src="imagens/cargaFracionada1.png" style="height: 14rem" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Carga Fracionada (LCL)</h5>
-                            <p class="card-text text-center">Less Than Container Load:ss operação de captação,
+                            <h6 class="card-title text-center">Carga Fracionada (LCL)</h6>
+                            <p class="card-text text-center">Less Than Container Load: operação de captação,
                                 consolidação e desconsolidação de cargas fracionadas.</p>
                         </div>
                     </div>
@@ -93,7 +95,7 @@
                     <div class="card" style="width: 15rem; height: 23rem">
                         <img src="imagens/conteiner.png" style="height: 12rem" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Contêineres</h5>
+                            <h6 class="card-title text-center">Contêineres</h6>
                             <p class="card-text text-center">Compra, venda e locação dos principais tipos de contêineres
                                 para cargas refrigeradas e para cargas secas.</p>
                         </div>
@@ -103,7 +105,7 @@
                     <div class="card" style="width: 15rem; height: 23rem">
                         <img src="imagens/logistica.png" style="height: 12rem" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Consultoria em logística</h5>
+                            <h6 class="card-title text-center">Consultoria Logística</h6>
                             <p class="card-text text-center">Assessoria para a contratação do transporte mais adequado
                                 para o escoamento da carga até o porto.</p>
                         </div>
@@ -113,7 +115,7 @@
                     <div class="card" style="width: 15rem; height: 23rem">
                         <img src="imagens/armazenamento.png" style="height: 12rem" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Seguro e armazenagem</h5>
+                            <h6 class="card-title text-center">Seguro e Armazenagem</h6>
                             <p class="card-text text-center">Seguro de cargas, operações portuárias e armazenamento de
                                 cargas e contêineres em terminais parceiros.</p>
                         </div>
@@ -121,87 +123,65 @@
                 </div>
             </div>
         </div>
-
-
-
-        <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
-            </div>
-        </div>
-
-
+<!--Abertura de formúlario para a inserção de inputs para dados de possíveis parceiros/especialistas de serviços.-->
         <div class="container d-flex justify-content-center mt-4 mb-4">
-            <form class="row justify-content-center">
-
-                <section class="titulo">
-                    <h2>Especialistas / Empresas parceiras</h2>
-                    <h6>Cadastre-se! Conecte-se a novos clientes e seja descoberto por suas habilidades. Entraremos em
-                        contato para validar suas informações, avaliar seus serviços e verificar a viabilidade em tê-lo
-                        em nosso portfólio de serviços. </h6>
-                </section>
-
-                <div class="linhaDeInput">
-                    <label>Serviço:</label>
-                    <select id="nomeServico" nome="categoria" type="text">
-                        <option value="">Selecione o serviço</option>
-                        <option value="aduaneira">Assessoria Aduaneira</option>
-                        <option value="cargaFracionanada">Carga Fracionada</option>
-                        <option value="contêiner">Contêineres</option>
-                        <option value="logística">Consultoria em logistica</option>
-                        <option value="Seguro">Seguro e armazenagem</option>
-                    </select>
+            <form class="row justify-content-center" onsubmit="event.preventDefault()">
+                <div class="form-group">
+                    <h2 class="text-center mt-3 mb-3">Especialistas e Empresas Parceiras</h2>
+                    <h6 class="text-center mt-3 mb-3">Cadastre-se! Conecte-se a novos clientes e seja descoberto por suas habilidades. Entraremos em contato para validar suas informações, avaliar seus serviços e verificar a viabilidade em tê-lo em nosso portfólio de serviços.</h6>
                 </div>
-
-                <div class="linhaInput">
-                    <label for="razaoSocial" class="form-label">Nome/Razão Social:</label>
-                    <input type="text" class="form-control" id="razaoSocial">
+                <div class="col-lg-6 col-md-6 col-sm-12 mt-2 mb-2">                
+                        <label class="form-label">Serviço:</label>
+                        <select id="categoriaServico" class="form-select" nome="categoria">
+                            <option value="">Selecione o serviço</option>
+                            <option value="Assessoria Aduaneira">Assessoria Aduaneira</option>
+                            <option value="Carga Fracionada">Carga Fracionada</option>
+                            <option value="Contêineres">Contêineres</option>
+                            <option value="Consultoria Logística">Consultoria Logistica</option>
+                            <option value="Seguro e Armazenagem">Seguro e Armazenagem</option>
+                        </select>                
                 </div>
-
-                <div class="linhaInput">
+                <div class="col-lg-6 col-md-6 col-sm-12 mt-2 mb-2">
                     <label for="cnpj" class="form-label">CPF/CNPJ:</label>
-                    <input type="text" class="form-control" id="cnpj">
+                    <input type="text" class="form-control" id="cpfCnpjServico">
                 </div>
-
-                <div class="linhaInput">
+                <div class="col-lg-12 col-md-12 col-sm-12 mt-2 mb-2">
+                    <label for="razaoSocial" class="form-label">Nome/Razão Social:</label>
+                    <input type="text" class="form-control" id="nomeRazaoSocialServico">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mt-2 mb-2">
                     <label for="email" class="form-label">E-mail:</label>
-                    <input type="email" class="form-control" id="email">
+                    <input type="email" class="form-control" id="emailServico">
                 </div>
-
-                <div class="linhaInput">
+                <div class="col-lg-6 col-md-6 col-sm-12 mt-2 mb-2">
                     <label for="telefone" class="form-label">Celular/Telefone:</label>
-                    <input type="number" class="form-control" id="telefone">
+                    <input type="text" class="form-control" id="telefoneServico">
                 </div>
-
                 <div class="d-flex justify-content-center">
-                    <button type="submit" id="btn1" class="btn btn-success mx-3 mt-3 mb-3" onclick="validarServicos()"
-                        value="Exibir Alert">Enviar</button>
-                    <button type="reset" class="btn btn-success mx-3 mt-3 mb-3">Limpar</button>
+                    <!--Inserção de botões para salvar/atualizar e limpar o formulário.-->
+                    <button type="submit" id="btn1" class="btn btn-success mx-3 mt-3 mb-3" onclick="servico.salvar()"
+                        value="Exibir Alert">Salvar</button>
+                    <button type="reset" class="btn btn-success mx-3 mt-3 mb-3" onclick="servico.cancelar()">Limpar</button>
                 </div>
-
             </form>
         </div>
-
+        <!-- Inserção de tabela com dados de parceiros/especialistas de serviços já aprovados e visualização dos dados de novos inputs salvos. -->
         <section class="conteudo container mt-4 mb-4">
-            <table class="table table-success table-striped">
-
-                <thead>
-                    <th class="center">Serviço</th>
-                    <th>Nome/Razão Social</th>
-                    <th>CPF/CNPJ</th>
-                    <th>E-mail</th>
-                    <th>Telefone</th>
-                    <th>Ações</th>
-                </thead>
-
-                <tbody id="tbody">
-
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-sm table-success table-striped">
+                    <thead>
+                        <th class="text-center">Serviço</th>
+                        <th class="text-center">Nome/Razão Social</th>
+                        <th class="text-center">CPF/CNPJ</th>
+                        <th class="text-center">E-mail</th>
+                        <th class="text-center">Telefone</th>
+                        <th class="text-center">Ações</th>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
         </section>
-
-
     </main>
 
     <footer id="footer">
