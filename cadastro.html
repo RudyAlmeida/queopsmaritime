@@ -23,6 +23,7 @@
 </head>
 
 <body onload="inicar()">
+    <!-- Modal para login  -->
     <div class="modal" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -63,6 +64,7 @@
 
         </div>
     </div>
+    <!-- Modal para os alertas da pagina -->
     <div class="modal" id="modalAlerta" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -76,25 +78,20 @@
                 <div class="modal-body">
                     <div class="container my-5">
                         <h5 id="alerta" class="text-center">Alerta</h5>
-
                     </div>
-
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                            onclick="fecharModalAlerta()">Close</button>
+                            onclick="fecharModalAlerta()">Fechar</button>
                     </div>
-
-
                 </div>
             </div>
-
         </div>
     </div>
     <header id="header">
     </header>
     <main>
         <div class="container-fluid d-flex justify-content-center mt-4 mb-4">
-
+<!-- Formulario para cadastro  -->
             <form class="row g-3 justify-content-center" id="cadastroPessoal" name="cadastro"
                 onclick="event.preventDefault()">
                 <fieldset class="border-none row g-3 w-75">
@@ -186,6 +183,7 @@
     </main>
     <footer id="footer">
     </footer>
+    <!-- Vlibras  -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>

@@ -1,3 +1,4 @@
+// API para pegar a cotação de moedas por um periodo especifico
 var getBid = new Array()
 function consultaCotação() {
 
@@ -15,6 +16,7 @@ function consultaCotação() {
         calcBid(getBid);
     }).catch(e => console.log(e));
 };
+// Tratamento para gerar os calculos de acordo com o nosso projeto
 function calcBid(bidList) {
     let bidTotal = 0
     bidList.forEach(element => {
@@ -30,6 +32,7 @@ function calcBid(bidList) {
     $('#media').text('Média no período: R$' + bidMedio)
 
 }
+// API para pegar a cotação de moedas em tempo real
 function consultaTempoReal() {
     $('#cotacao').text('Dentro')
     fetch(`https://economia.awesomeapi.com.br/last/USD-BRL`)
@@ -40,12 +43,12 @@ function consultaTempoReal() {
         .catch(x => alert("Par de moedas não encontrado"));
     setTimeout(consultaTempoReal, 10000)
 }
+// API de Login do google incluindo autenticação e Logout
 function start() {
     gapi.load('auth2', function () {
         auth2 = gapi.auth2.init({
             client_id: '113301151213-ikv65divt4p5v64laeidjmlsnfkmat5d.apps.googleusercontent.com',
-            // Scopes to request in addition to 'profile' and 'email'
-            //scope: 'additional_scope'
+
         });
     });
 }
@@ -69,6 +72,7 @@ function onSignIn(googleUser) {
     userData.mail = profile.getEmail()
     userData.img = profile.getImageUrl()
     userData.id = profile.getId()
+    // Salvando o login no Local Storage
     localStorage.setItem('userData', JSON.stringify(userData))
     console.log(localStorage)
 }
@@ -83,7 +87,7 @@ function signOut() {
         console.log(localStorage)
     });
 }
-
+// Recuperando o login do Local Storage
 function getUser() {
     let userData = JSON.parse(localStorage.getItem("userData"));
     if (userData != null) {
@@ -95,7 +99,7 @@ function getUser() {
         $("#contato").val(userData.nome)
     }
 }
-
+// Gerando cabeçalho dinimico para todas as paginas
 function cabecalho() {
     let header = $('header')
     let cabecalho = `<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #1F6D69;">
@@ -190,6 +194,7 @@ function cabecalho() {
 $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')
 })
+// Footer para todas as paginas
 function rodapePrincipal() {
     let footer = $("#footer")
     let rodape = `
@@ -271,7 +276,7 @@ function rodapePrincipal() {
     `
     footer.append(rodape)
 }
-
+// Função chamada no Onload para carregar os itens
 function inicar() {
     rodapePrincipal();
     cabecalho();
@@ -279,6 +284,7 @@ function inicar() {
     consultaTempoReal();
     getUser();
 }
+// Função para abrir e fechar o modal, por economia de tempo fiz uma para cada Modal. Mas o melhor seria seguir para QuerySelectorAll e fazer o tratamento.
 function abrirModal() {
     var modal = document.getElementById("modalLogin");
     var elementoBootstrap = new bootstrap.Modal(modal);
@@ -287,6 +293,7 @@ function abrirModal() {
 function fecharModal() {
     $("#modalLogin").modal("hide");
 }
+// Tratamento da API do CNPJ
 var dadosCNPJ = [];
 function getCNPJ() {
     let cnpj = $("#cnpj").val();
@@ -295,7 +302,6 @@ function getCNPJ() {
 
 }
 function consultaCNPJ(cnpj) {
-    // Limpa o CNPJ para conter somente numeros, removendo traços e pontos
     cnpj = cnpj.replace(/\D/g, '');
 
     $.ajax({
@@ -336,7 +342,7 @@ function tratarCNPJ(dado) {
         $("#estado").val(dadosCNPJ.uf);
     }
 }
-
+// validação dos formularios
 function validarForm() {
     if ($("#razaoSocial").val().length < 3) {
         $('#alerta').text('Preencha corretamente a razão social')
@@ -461,8 +467,9 @@ function getCNPJPessoal() {
     consultaCNPJPessoal(cnpj)
 
 }
+// função foi repitida para tratar o segundo formulario poderia ter usado o mesmo id nas paginas, trocado para evitar conflitos
 function consultaCNPJPessoal(cnpj) {
-    // Limpa o CNPJ para conter somente numeros, removendo traços e pontos
+    
     cnpj = cnpj.replace(/\D/g, '');
 
     $.ajax({
@@ -574,6 +581,7 @@ function validarCadastro(){
         return false;
     }
 }
+// Tratamento para enviar a mensagem para o Whatsapp no formato Json
 var mensagemWhatsapp = ''
 function salvarDados() {
     let orcamento = {}
@@ -630,11 +638,13 @@ function salvarDados() {
     mensagemWhatsapp = JSON.stringify(orcamento)
     abrirModalCotacao()
 }
+// Enviando o Json pela api do Whatsapp
 function enviarOrcamento() {
     window.open("https://api.whatsapp.com/send?phone=5527996998347&text=Voc%C3%AA%20acaba%20de%20receber%20um%20or%C3%A7amento%3A%20" + mensagemWhatsapp, '_blank');
     document.getElementById("cadastro").reset();
     fecharModalCotacao()
 }
+// Função para abrir e fechar o modal, por economia de tempo fiz uma para cada Modal. Mas o melhor seria seguir para QuerySelectorAll e fazer o tratamento.
 function abrirModalCotacao() {
     var modal2 = document.getElementById("modalCotacao");
     var elementoBootstrap = new bootstrap.Modal(modal2);
@@ -643,7 +653,7 @@ function abrirModalCotacao() {
 function fecharModalCotacao() {
     $("#modalCotacao").modal("hide");
 }
-
+// Tratamento de CPF para o formulario de de cadastro pessoal
 function VerificaCPF() {
     if (vercpf(document.getElementById("cpf").value)) { document.cadastroPessoal } else {
         errors = "1"; if (errors) {
@@ -684,6 +694,7 @@ function vercpf(cpf) {
 function fecharJanela() {
     $('#confirmaCpf').css({ display: "none" });
 }
+// Função para abrir e fechar o modal, por economia de tempo fiz uma para cada Modal. Mas o melhor seria seguir para QuerySelectorAll e fazer o tratamento.
 function abrirModalAlerta() {
     var modal3 = document.getElementById("modalAlerta");
     var elementoBootstrap = new bootstrap.Modal(modal3);
@@ -692,6 +703,7 @@ function abrirModalAlerta() {
 function fecharModalAlerta() {
     $("#modalAlerta").modal("hide");
 }
+// Os forms foram travados com event.preventDefault
 function limparFormulario(){
     document.getElementById("cadastro").reset();
 }

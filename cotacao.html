@@ -23,6 +23,7 @@
 </head>
 
 <body onload="inicar()">
+    <!-- Modal de Login -->
     <div class="modal" id="modalAlerta" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -82,14 +83,13 @@
                     </form>
                 </div>
             </div>
-
         </div>
     </div>
     <header id="header">
     </header>
 
     <div class="container-fluid d-flex justify-content-center mt-4 mb-4">
-
+<!-- Formulario de cotação -->
         <form class="row g-3 justify-content-center" id="cadastro" name="cadastro" onclick="event.preventDefault()">
             <fieldset class="border-none row g-3 w-75">
                 <legend>DADOS DA EMPRESA:</legend>
@@ -562,6 +562,7 @@
             </div>
         </form>
     </div>
+    <!-- Modal para validar a cotação e enviar para o Whatsapp -->
     <div class="modal" id="modalCotacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
